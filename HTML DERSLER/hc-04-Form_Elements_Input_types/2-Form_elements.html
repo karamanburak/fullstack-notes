@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: rgb(198, 228, 151);
+        width: 350px;
+      }
+      .header {
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+      }
+      .header img {
+        padding: 10px;
+      }
+      form {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="./images/avatar-men.png" alt="" width="20%" />
+        <h4>Personel Tanima Formu</h4>
+      </div>
+      <form action="./assets/result.html">
+        <div>
+          <label for="ad">Adiniz:</label>
+          <br />
+          <input type="text" id="ad" name="AD" placeholder="Ad Giriniz" />
+        </div>
+        <br />
+        <div>
+          <label for="soyad">Soy Adiniz:</label>
+          <br />
+          <input
+            type="text"
+            id="soyad"
+            name="SOYAD"
+            placeholder="Soy Ad Giriniz"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="sifre">Sifreniz:</label> <br />
+          <input
+            type="password"
+            id="sifre"
+            name="SIFRE"
+            placeholder="Sifre Giriniz"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="email">Email:</label> <br />
+          <input
+            type="email"
+            name="EMAIL"
+            id="email"
+            placeholder="E-Mail Giriniz"
+            required
+          />
+        </div>
+        <br />
+
+        <div>
+          <label for="yas">Yasiniz:</label> <br />
+          <input
+            type="number"
+            name="YAS"
+            id="yas"
+            min=""
+            max=""
+            placeholder="Yas Giriniz"
+          />
+        </div>
+        <br />
+        <div>
+          <!-- ----------------------------------------------------------------------- -->
+          <!--                                  Radio                                  -->
+          <!-- ----------------------------------------------------------------------- -->
+          <label for="cinsiyet">Cinsiyet:</label> <br />
+
+          <input type="radio" name="CINSIYET" id="kadin" value="Kadin" />
+          <label for="kadin">Kadin</label>
+          <br />
+          <input
+            type="radio"
+            name="CINSIYET"
+            id="erkek"
+            value="Erkek"
+            checked
+          />
+          <label for="erkek">Erkek</label>
+        </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                Checkbox                                 -->
+        <!-- ----------------------------------------------------------------------- -->
+        <br />
+        <div>
+          <label for="">Müsait günleriniz:</label>
+          <br />
+          <input type="checkbox" name="gün" id="" value="Pazartesi" />
+          <label for="">Pazartesi</label>
+          <br />
+          <input type="checkbox" name="gün" id="" value="Sali" />
+          <label for="">Sali</label>
+          <br />
+          <input type="checkbox" name="gün" id="" value="Carsamba" />
+          <label for="">Carsamba</label>
+          <br />
+          <input type="checkbox" name="gün" id="" value="Persembe" />
+          <label for="">Persembe</label>
+          <br />
+          <input type="checkbox" name="gün" id="" value="Cuma" checked />
+          <label for="">Cuma</label>
+          <br />
+          <div>
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                                  color                                  -->
+            <!-- ----------------------------------------------------------------------- -->
+            <label for="renk">Sevdiginiz Renk</label>
+            <input type="color" name="RENK" id="renk" value="#458767" />
+
+            <br />
+            <div>
+              <br />
+              <label for="tarih">Dogum Tarihiniz:</label>
+              <br />
+              <input
+                type="date"
+                name="Dogum_Tarihi"
+                id="tarih"
+                min="2002-01-01"
+                max="2023-12-31"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="foto">Fotograf:</label>
+              <br />
+              <input type="file" name="Fotograf" id="foto" />
+            </div>
+            <br />
+            <label for="tel">Telefon:</label> <br />
+            <input
+              type="tel"
+              name="TELEFON"
+              id="tel"
+              placeholder="XXX-XXX-XX-XX"
+              pattern="[0-9] {3}-[0-9] {3}-[0-9] {2}-[0-9]{2}"
+            />
+          </div>
+          <br />
+          <div>
+            <label for="hobi">Hobinizi Secin:</label> <br />
+            <select name="HOBI" id="">
+              <option value="muzik">Müzik</option>
+              <option value="resim">Resim</option>
+              <option value="yüzme">Yüzme</option>
+              <option value="satranc">Satranc</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="spor">Sevdiginiz Spor Dali:</label> <br />
+            <select name="" id="">
+              <optgroup label="Su Sporlari">
+                <option value="sutopu">SuTopu</option>
+                <option value="dalis">Dalis</option>
+                <option value="sörf">Sörf</option>
+              </optgroup>
+              <optgroup label="Dövüs Sporlari">
+                <option value="karate">Karate</option>
+                <option value="judo">Judo</option>
+              </optgroup>
+            </select>
+          </div>
+          <br />
+
+          <div>
+            <label for="yorum">Yorum:</label> <br />
+            <textarea
+              name="Yorum"
+              id="yorum"
+              cols="40"
+              rows="10"
+              style="resize: none"
+            ></textarea>
+          </div>
+          <br />
+
+          <div>
+            <label for="ülke">Görmek Istediginiz Ülkeler:</label> <br />
+            <input type="text" list="ülke" />
+            <datalist name="ÜLKE" id="ülke">
+              <option value="Almanya"></option>
+              <option value="USA"></option>
+              <option value="Fransa"></option>
+              <option value="Sili"></option>
+              <option value="Nikaragua"></option>
+            </datalist>
+          </div>
+        </div>
+        <br />
+
+        <div>
+          <fieldset>
+            <br />
+            <legend>ID ve Vize Bilgisi</legend>
+            <label for="id">ID:</label> <br />
+            <input type="text" />
+            <br />
+            <br />
+            <label for="vizeTürü">Vize Türü:</label> <br />
+            <input type="text" />
+          </fieldset>
+        </div>
+        <br />
+        <input type="submit" value="KAYDET" />
+      </form>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

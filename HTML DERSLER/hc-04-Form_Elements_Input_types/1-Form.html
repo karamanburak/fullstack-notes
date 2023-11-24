@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="Burak" />
+    <title>FORM</title>
+  </head>
+  <body>
+    <!-- Bir form oluşturabilmek için öncelikle form etiketi ile başlanır.
+          Form içinde kullanıcı adı,şifre gibi bilgileri yazı ile yazmak için label etiketi kullanılır.
+          Form içinde en fazla kullanılan etiketlerden biri input etiketidir.İnput ile text,password,number,email,tel,date radio,checkbox özellikleri kullanılabilir.-->
+    <form action="./assets/result.html">
+      <div>
+        <label for="kullaniciadi">Kullanici Adi:</label>
+        <br />
+        <input type="text" id="kullaniciadi" name="kullaniciAdi" />
+      </div>
+      <br />
+      <div>
+        <label for="sifre">Sifre</label> <br />
+        <input type="password" name="sifre" id="sifre" />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="KAYDET" />
+        <input type="reset" value="TEMIZLE" />
+      </div>
+    </form>
+  </body>
+</html>
