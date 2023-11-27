@@ -1,0 +1,36 @@
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,121,71,1) 37%, rgba(0,212,255,1) 100%); background-repeat: no-repeat;
+height: 100vh;
+}
+.box1{
+    /* ilim ile renk kullanimi */
+    background-color: indianred;
+    color: antiquewhite;
+   
+}
+
+.box2{
+        /* rgb degeri ile renk kullanimi */
+        background-color: rgb(200, 66, 60);
+        background-color: rgb(110, 207, 175);
+}
+
+.wrapper {
+    background-color: black;
+}
+.box3{
+        /* rgb-alpha degeri */
+        background-color: rgba(12, 230, 80, 0.7);
+}
+
+.box4{
+        /* Hexadecimal deger kullanimi */
+        background-color: #2321ef;
+}
+
+.box5{
+    background-color: #E51A59;
+    color: #FFD700;
+}
+

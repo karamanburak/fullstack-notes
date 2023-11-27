@@ -1,0 +1,13 @@
+p{
+    background-color: darkcyan;
+}
+#baslik{
+    background-color: green;
+}
+
+.external{
+    background-color: rgb(139, 87, 24);
+    color: white;
+    padding: 10px;
+    font-size: 20 px;
+}

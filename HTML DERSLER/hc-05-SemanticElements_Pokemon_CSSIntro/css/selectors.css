@@ -1,0 +1,27 @@
+ *{
+    background-color: rgb(112, 107, 101);
+    color: white;
+    margin:0;
+    padding: 0;
+} 
+
+h1{
+    background-color: brown;
+    border: inset; 
+    padding: 5px;
+}
+
+ul{
+    background-color: chocolate;
+}
+
+.parag{
+    background-color: aqua;
+}
+    
+.parag h2{
+    background-color: rgb(14, 51, 214)5, 247, 240);
+}
+.parag p{
+    background-color: blueviolet;
+}

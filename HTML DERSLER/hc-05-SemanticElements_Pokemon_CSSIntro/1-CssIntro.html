@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Internal Styling -->
+    <style>
+      .parag {
+        background-color: rgb(16, 172, 50) !important;
+      }
+      #baslik {
+        background-color: rgb(226, 43, 43);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS INTRO</h1>
+    <!-- * Inline CSS, HTML elementlerine style keyword'u ile eklenir.
+   * style kelimesinin ici aslinda CSS alanidir.
+   * Sadece eklenen element icin bir stillendirme gerceklestirir.
+   * Bu sebeple cok pratik bir yontem degildir.
+   * HTML kodlarini kalabaliklastirdigi icin kodun gorunumunu karmasiklastirir. -->
+
+    <!-- Inline styling style attribute(özellik) ile sagliyoruz -->
+    <p
+      style="
+        background-color: rgb(48, 17, 224);
+        color: white;
+        padding: 5px;
+        border: inset;
+        color: aquamarine;
+      "
+    >
+      Inline Styling
+    </p>
+    <!-- Internal Styling -->
+    <p id="baslik" class="parag">Internal Styling</p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, autem
+      delectus quo consequatur optio molestiae minus corrupti debitis totam
+      nemo.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam cumque
+      autem ducimus aspernatur! Nostrum, aliquid mollitia. Et officiis odio sint
+      tempora excepturi! Animi nulla aspernatur rerum iusto accusantium et
+      laudantium.
+    </p>
+    <!-- External Styling -->
+    <p class="external">External Styling</p>
+  </body>
+</html>
