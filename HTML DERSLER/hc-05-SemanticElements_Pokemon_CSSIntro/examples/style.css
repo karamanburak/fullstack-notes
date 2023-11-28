@@ -1,0 +1,35 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+} 
+
+.header{
+    background-color:red;
+    font-family: tahoma;
+    text-align: center;
+    padding: 6px 12px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    
+}
+.h1{
+    border: 5px solid white;
+    border-radius: 2rem;
+}
+
+.nav{
+    /* border: 2px solid red; */
+   display: flex;
+   font-size: 24px;
+   font-family: tahoma;
+   text-align: center;
+   justify-content: space-between;
+   margin: 1rem 15rem; 
+   
+}

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: indianred;
+    margin: 10px;
+}
+
+.box1{
+    background-color: cadetblue;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.box2 p{
+background-color: coral;
+padding: 10px 30px 10px 50px  ;
+
+}
+
+.box3{
+    background-color: cyan;
+    padding: 10px;
+    border: 10px solid gray;
+}
+
+.box4{
+    box-sizing: border-box;
+    background-color: maroon;
+    padding: 10px;
+
+}

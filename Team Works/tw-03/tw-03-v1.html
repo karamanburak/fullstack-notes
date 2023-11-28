@@ -4,59 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .a {
-        margin-top: 3px;
-        margin-left: 95px;
-      }
-      .b {
-        margin-top: 3px;
-        margin-left: 78px;
-      }
-      .c {
-        margin-top: 3px;
-        margin-left: 42px;
-      }
-      .d {
-        margin-top: 3px;
-        margin-left: 30px;
-      }
-      .e {
-        margin-top: 3px;
-        margin-left: 60px;
-      }
-      .f {
-        margin-top: 0;
-        margin-left: 120px;
-      }
-      .g {
-        margin-top: 3px;
-        margin-left: 140px;
-      }
-      .h {
-        margin-top: 3px;
-        margin-left: 253px;
-      }
-      .i {
-        margin-top: 3px;
-        margin-left: 253px;
-      }
-      .j {
-        margin-top: 3px;
-        margin-left: 253px;
-      }
-      .k {
-        margin-top: 3px;
-        margin-left: 115px;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 HEADER                                  -->
+    <!-- ----------------------------------------------------------------------- -->
     <div class="container">
       <div class="header">
         <h2 align="center">ABC Tasarim Programi Kurulum ve Satis Sözlesmesi</h2>
       </div>
       <form action="">
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              Sözlesme Onay                              -->
+        <!-- ----------------------------------------------------------------------- -->
         <div>
           <fieldset>
             <legend>Sözlesme Onay</legend>
@@ -70,6 +31,9 @@
             <input type="reset" value="Formu Temizle" />
           </fieldset>
         </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Kisisel Bilgiler                             -->
+        <!-- ----------------------------------------------------------------------- -->
         <div>
           <fieldset>
             <legend>Kisisel Bilgiler</legend>
@@ -77,54 +41,96 @@
             <input type="text" placeholder="asdfgh" id="form-güvenlik-id" />
             <br />
             <label for="ad">AD </label>
-            <input type="text" id="ad" class="a" /> <br />
+            <input type="text" id="ad" class="a" />
+            <br />
             <label for="soyad">Soyad </label>
-            <input type="text" id="soyad" class="b" /> <br />
+            <input type="text" id="soyad" class="b" />
+            <br />
             <label for="yas">Yas </label>
             <input type="number" name="" id="" class="a" min="18" max="80" />
             <br />
             <label for="mail">Mail Adresi </label>
-            <input type="email" name="MAIL" id="mail" class="c" /> <br />
+            <input type="email" name="MAIL" id="mail" class="c" />
+            <br />
             <label for="fotograf">Fotograf Ekle </label>
             <input type="file" name="FOTO" id="fotograf" class="d" />
           </fieldset>
         </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                             Diger Bilgiler                              -->
+        <!-- ----------------------------------------------------------------------- -->
         <div>
           <fieldset>
             <legend>Diger Bilgiler</legend>
-            <h5 class="e">Buradaki alanlar Mesleki Deneyimi Kapsar</h5>
-            <label for="sektöregiristarihi">Sektöre Giris Tarihi </label>
-            <input type="date" name="" id="sektöregiristarihi" class="f" />
-            <br />
-            <label for="sektördeneyimi">Sektör Deneyimi </label>
-            <input type="radio" name="tecrübe" id="" class="g" />
-            <label for="yil">1-5 yil</label> <br />
-            <input type="radio" name="tecrübe" id="" class="h" />
-            <label for="yil"> 6-10 yil </label> <br />
-            <input type="radio" name="tecrübe" id="" class="i" />
-            <label for="yil">11-15 yil</label> <br />
-            <input type="radio" name="tecrübe" id="" class="j" />
-            <label for="yil">15-üzeri</label> <br />
+            <h4>Buradaki alanlar Mesleki Deneyimi Kapsar</h4>
+            <table class="table">
+              <tr>
+                <td class="table1">Sektöre Giris Tarihi</td>
+                <td><input type="date" name="" id="" /></td>
+              </tr>
+              <tr>
+                <td rowspan="4">Sektör Deneyimi</td>
+                <td>
+                  <input type="radio" name="" id="" />
+                  <label for="">1-5 yil</label>
+                </td>
+              </tr>
+              <tr>
+                <td class="table1">
+                  <input type="radio" name="" id="" />
+                  <label for="">6-10 yil</label>
+                </td>
+              </tr>
+              <tr>
+                <td class="table2">
+                  <input type="radio" />
+                  <label for="">11-15 yil</label>
+                </td>
+              </tr>
+              <tr>
+                <td class="table1">
+                  <input type="radio" />
+                  <label for="">15-üzeri</label>
+                </td>
+              </tr>
+            </table>
+
             <div>
-              <label for="programlamadilleri">Programlama Dilleri</label>
-              <select class="k">
-                <option value="c#">C#</option>
-                <option value="php">PHP</option>
-                <option value="java">Java</option>
-                <option value="java">Java</option>
-                <option value="javascript">JavaScript</option>
-              </select>
+              <table>
+                <tr>
+                  <td rowspan="2">
+                    <label for="programlamadilleri">Programlama Dilleri</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="select">
+                    <select class="k" size="5">
+                      <option value="c#">C#</option>
+                      <option value="php" selected>PHP</option>
+                      <option value="java">Java</option>
+                      <option value="java">Java</option>
+                      <option value="javascript">JavaScript</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
             </div>
           </fieldset>
         </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                            Sözlesme Kopyasi                             -->
+        <!-- ----------------------------------------------------------------------- -->
         <div>
           <fieldset>
             <legend>Sözlesme Kopyasi</legend>
             <textarea name="" id="" cols="40" rows="5" style="resize: none">
- Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid at cumque doloribus dolore expedita deleniti? Id amet, quaerat quas perferendis odit voluptatibus ipsum ducimus, veritatis blanditiis numquam, praesentium tempore quae corporis? .</textarea
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid at cumque doloribus dolore expedita deleniti? Id amet, quaerat quas perferendis odit voluptatibus ipsum ducimus, veritatis blanditiis numquam, praesentium tempore quae corporis? .</textarea
             >
           </fieldset>
         </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              Mail Listesi                               -->
+        <!-- ----------------------------------------------------------------------- -->
         <div>
           <fieldset>
             <legend>Mail Listesi</legend>
