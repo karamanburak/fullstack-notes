@@ -1,68 +1,61 @@
 *{
-  /* margin: 0;
-  padding: 0; */
-    /* border: 1px solid red; */
+  margin: 0 3px;
+  padding: 3px;
+  /* border: 1px solid red; */
+  
 }
-.a {
-    margin-top: 3px;
-    margin-left: 95px;
-  }
-  .b {
-    margin-top: 3px;
-    margin-left: 78px;
-  }
-  .c {
-    margin-top: 3px;
-    margin-left: 42px;
-  }
-  .d {
-    margin-top: 3px;
-    margin-left: 30px;
-  }
-  .e {
-    margin-top: 3px;
-    margin-left: 60px;
-  }
-  .f {
-    margin-top: 0;
-    margin-left: 120px;
-  }
-  .g {
-    display: inline-block;
-    display: flex;
-    margin-bottom:00px;
-    /* margin-left: 140px; */
-  }
-  .gg{
-    display: flex;
-    margin-left: 250px;
-    margin-top: 0;
-    padding: 0;
-  }
-  .h {
-    margin-top: 3px;
-    margin-left: 253px;
-  }
-  .i {
-    margin-top: 3px;
-    margin-left: 253px;
-  }
-  .j {
-    margin-top: 3px;
-    margin-left: 253px;
-  }
-  .k {
-    margin-top: 3px;
-    margin-left: 115px;
-  }
-  .table1{
-    display: flex;
-    display: inline-block;
-    margin-right: 120px;
-  }
-h4{
-  margin-top: 5px;
-  margin-left: 50px;
-  margin-bottom: 3px;
+.container{
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  
+}
+header{
+  text-align: center;
+}
+.ad{
+  margin-left: 102px;
+  margin-top: 2px;
+}
+.soyad{
+  margin-top: 2px;
+  margin-left: 82px;
+}
+.yas{
+  margin-top: 2px;
+  margin-left: 100px;
+}
+.mail{
+  margin-top: 2px;
+  margin-left: 45px;
+}
+.foto{
+  margin-top: 2px;
+  margin-left: 30px;
+}
 
+h4{
+  padding-left: 60px;
+}
+.date{
+  display: flex;
+  display: inline-block;
+  margin-left: 120px;
+}
+.radio{
+  display: flex;
+  display: inline-block;
+  margin-left: 120px;
+}
+.option{
+  margin-left: 120px;
+}
+.textarea{
+  resize: none;
+}
+.parag{
+  margin-top:-4px;
+}
+.footer{
+  margin-left: -5px;
+  margin-right: -5px;
 }

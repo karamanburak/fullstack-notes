@@ -3,154 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>ABC</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                 HEADER                                  -->
-    <!-- ----------------------------------------------------------------------- -->
     <div class="container">
-      <div class="header">
-        <h2 align="center">ABC Tasarim Programi Kurulum ve Satis Sözlesmesi</h2>
-      </div>
       <form action="">
         <!-- ----------------------------------------------------------------------- -->
-        <!--                              Sözlesme Onay                              -->
+        <!--                                 HEADER                                  -->
         <!-- ----------------------------------------------------------------------- -->
-        <div>
+        <div class="header">
+          <header>
+            <h1>ABC Tasarim Programi Kurulum ve Satis Sözlesmesi</h1>
+          </header>
+        </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              SÖZLESME ONAY                              -->
+        <!-- ----------------------------------------------------------------------- -->
+        <div class="sözlesmeonay">
           <fieldset>
             <legend>Sözlesme Onay</legend>
-            <input type="checkbox" name="" id="" />
-            <label for="formbilgisi"
+            <input type="checkbox" name="" id="checkbox" />
+            <label for="checkbox"
               >Asagidaki Bilgilerin dogrulugunu kabul ediyorum ve sözlesmesini
               onayliyorum.</label
             >
             <br />
-            <input type="submit" value="Formu kaydet" />
+            <input type="submit" value="Formu Kaydet" />
             <input type="reset" value="Formu Temizle" />
           </fieldset>
         </div>
         <!-- ----------------------------------------------------------------------- -->
-        <!--                            Kisisel Bilgiler                             -->
+        <!--                            KISISEL BILGILER                             -->
         <!-- ----------------------------------------------------------------------- -->
-        <div>
+        <div class="kisiselbilgiler">
           <fieldset>
             <legend>Kisisel Bilgiler</legend>
-            <label for="form-güvenlik-id">Form Güvenlik ID </label>
-            <input type="text" placeholder="asdfgh" id="form-güvenlik-id" />
+            <label for="formgüvenlikid">Form Güvenlik ID</label>
+            <input
+              type="text"
+              name=""
+              id="formgüvenlikid"
+              placeholder="asdfgh"
+            />
             <br />
-            <label for="ad">AD </label>
-            <input type="text" id="ad" class="a" />
+            <label for="ad">Ad</label>
+            <input type="text" id="ad" class="ad" />
             <br />
-            <label for="soyad">Soyad </label>
-            <input type="text" id="soyad" class="b" />
+            <label for="soyad">Soyad</label>
+            <input type="text" id="soyad" class="soyad" />
             <br />
-            <label for="yas">Yas </label>
-            <input type="number" name="" id="" class="a" min="18" max="80" />
+            <label for="yas">Yas</label>
+            <input
+              type="number"
+              name=""
+              id="yas"
+              class="yas"
+              min="18"
+              max="80"
+            />
             <br />
-            <label for="mail">Mail Adresi </label>
-            <input type="email" name="MAIL" id="mail" class="c" />
+            <label for="mail">Mail Adresi</label>
+            <input type="email" name="" id="mail" class="mail" />
             <br />
-            <label for="fotograf">Fotograf Ekle </label>
-            <input type="file" name="FOTO" id="fotograf" class="d" />
+            <label for="foto">Fotograf Ekle</label>
+            <input type="file" name="" id="foto" class="foto" />
           </fieldset>
         </div>
         <!-- ----------------------------------------------------------------------- -->
-        <!--                             Diger Bilgiler                              -->
+        <!--                             DIGER BILGILER                              -->
         <!-- ----------------------------------------------------------------------- -->
-        <div>
+        <div class="digerbilgiler">
           <fieldset>
             <legend>Diger Bilgiler</legend>
             <h4>Buradaki alanlar Mesleki Deneyimi Kapsar</h4>
-            <table class="table">
+            <table>
               <tr>
-                <td class="table1">Sektöre Giris Tarihi</td>
-                <td><input type="date" name="" id="" /></td>
+                <td>Sektöre Giris Tarihi</td>
+                <td class="date"><input type="date" name="" id="" /></td>
               </tr>
               <tr>
                 <td rowspan="4">Sektör Deneyimi</td>
-                <td>
+                <td class="radio">
                   <input type="radio" name="" id="" />
                   <label for="">1-5 yil</label>
                 </td>
               </tr>
               <tr>
-                <td class="table1">
+                <td class="radio">
                   <input type="radio" name="" id="" />
                   <label for="">6-10 yil</label>
                 </td>
               </tr>
               <tr>
-                <td class="table2">
-                  <input type="radio" />
+                <td class="radio">
+                  <input type="radio" name="" id="" />
                   <label for="">11-15 yil</label>
                 </td>
               </tr>
               <tr>
-                <td class="table1">
-                  <input type="radio" />
+                <td class="radio">
+                  <input type="radio" name="" id="" />
                   <label for="">15-üzeri</label>
                 </td>
               </tr>
+              <tr>
+                <td>Programlama Dilleri</td>
+                <td rowspan="4">
+                  <select name="" id="" size="5" class="option">
+                    <option value="c#">C#</option>
+                    <option value="php" selected>PHP</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="c++">C++</option>
+                  </select>
+                </td>
+              </tr>
             </table>
-
-            <div>
-              <table>
-                <tr>
-                  <td rowspan="2">
-                    <label for="programlamadilleri">Programlama Dilleri</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="select">
-                    <select class="k" size="5">
-                      <option value="c#">C#</option>
-                      <option value="php" selected>PHP</option>
-                      <option value="java">Java</option>
-                      <option value="java">Java</option>
-                      <option value="javascript">JavaScript</option>
-                    </select>
-                  </td>
-                </tr>
-              </table>
-            </div>
           </fieldset>
         </div>
         <!-- ----------------------------------------------------------------------- -->
-        <!--                            Sözlesme Kopyasi                             -->
+        <!--                            SÖZLESME KOPYASI                             -->
         <!-- ----------------------------------------------------------------------- -->
         <div>
           <fieldset>
             <legend>Sözlesme Kopyasi</legend>
-            <textarea name="" id="" cols="40" rows="5" style="resize: none">
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid at cumque doloribus dolore expedita deleniti? Id amet, quaerat quas perferendis odit voluptatibus ipsum ducimus, veritatis blanditiis numquam, praesentium tempore quae corporis? .</textarea
+            <textarea name="" id="" cols="45" rows="5" class="textarea">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus quibusdam dolorem natus. Beatae corporis aliquam consequuntur possimus maiores distinctio quis debitis ea explicabo corrupti, quod enim reiciendis doloremque totam, voluptate quasi ad quo natus iste quisquam nostrum? Illum, alias vitae. Qui a, possimus quis adipisci numquam consequuntur harum quia.</textarea
             >
           </fieldset>
         </div>
         <!-- ----------------------------------------------------------------------- -->
-        <!--                              Mail Listesi                               -->
+        <!--                                 FOOTER                                  -->
         <!-- ----------------------------------------------------------------------- -->
-        <div>
-          <fieldset>
-            <legend>Mail Listesi</legend>
-            <label for="mail"
-              >Mail Listesine Katilmak <strong>Istiyorum</strong></label
-            >
-            <input type="radio" name="mailListesi" id="mail" checked />
-            <br />
-            <label for="mail"
-              >Mail Listesine Katilmak
-              <strong> <ins>Istemiyorum</ins></strong></label
-            >
-            <input type="radio" name="" id="mail" />
-          </fieldset>
+        <div class="footer">
+          <footer>
+            <fieldset>
+              <legend>Mail Listesi</legend>
+              <p>
+                Mail Listesine Katilmak <strong>Istiyorum</strong>
+                <input type="radio" name="" id="" checked />
+              </p>
+              <p class="parag">
+                Mail Listesine Katilmak <strong><ins>Istemiyorum</ins></strong>
+                <input type="radio" name="" id="" />
+              </p>
+            </fieldset>
+          </footer>
         </div>
+        <!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
       </form>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
-<!-- 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp; -->
