@@ -1,0 +1,137 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <header>
+        <h2>ABC Tasarim Programi Kurulumu ve Satis Sozlesmesi</h2>
+      </header>
+      <form action="">
+        <fieldset>
+          <legend>Sozlesme Onay</legend>
+          <input type="checkbox" id="id-onay" required />
+          <label for="id-onay"
+            >Asagidaki bilgilerin dogrulugunu kabul ediyorum ve sozlesmesini
+            onayliyorum.</label
+          ><br />
+          <input type="submit" value="Formu Kaydet" />
+          <input type="reset" value="Formu Temizle" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Kisisel Bilgiler</legend>
+          <div class="form-kisisel">
+            <div>
+              <label for="id">Form Guvenlik ID</label>
+              <input type="text" id="id" disabled value="asdfgh" />
+            </div>
+            <div>
+              <label for="ad">Ad</label>
+              <input type="text" id="ad" />
+            </div>
+            <div>
+              <label for="soyad">Soyad</label>
+              <input type="text" id="soyad" />
+            </div>
+            <div>
+              <label for="yas">Yas</label>
+              <input type="number" id="yas" min="18" max="100" />
+            </div>
+            <div>
+              <label for="mail">Mail Adresi</label>
+              <input type="email" id="mail" />
+            </div>
+            <div>
+              <label for="fotograf">Fotograf Ekle</label>
+              <input type="file" id="fotograf" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Diger Bilgiler</legend>
+          <p>Buradaki alanlar mesleki deneyimi kapsar.</p>
+          <div>
+            <div>
+              <div class="label-container">
+                <label for="">Sektore Giris Tarihi</label>
+              </div>
+              <input type="date" id="baslangic-tarihi" />
+            </div>
+            <div>
+              <div class="label-container" id="sektor">
+                <label for="">Sektor Deneyimi</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="deneyim" id="bes" /><label for="bes"
+                  >1-5 yil</label
+                ><br />
+                <input type="radio" name="deneyim" id="on" /><label for="on"
+                  >6-10 yil</label
+                ><br />
+                <input type="radio" name="deneyim" id="onbes" /><label
+                  for="onbes"
+                  >11-15 yil</label
+                ><br />
+                <input type="radio" name="deneyim" id="onbes-uzeri" /><label
+                  for="onbes-uzeri"
+                  >15-uzeri</label
+                >
+              </div>
+              <div>
+                <div class="label-container">
+                  <label for="programlama-dilleri">Programlama Dilleri</label>
+                </div>
+                <div class="select-container">
+                  <select name="programlama-dilleri" id="" multiple>
+                    <option value="csharp">C#</option>
+                    <option value="php">PHP</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sozlesme Kopyasi</legend>
+          <textarea name="sozlesme-kopyasi" id="" cols="40" rows="5">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quam voluptate aperiam quibusdam laborum laudantium dignissimos facilis et commodi, veniam cum ut quod corporis dolorem placeat veritatis recusandae officia deleniti consectetur iure dolore? Nobis ex rem temporibus nulla? Quaerat dolores assumenda voluptas tenetur quas quam molestias eum qui, iste hic.</textarea
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Mail Listesi</legend>
+          <div>
+            <label for="mail-listesi-onay"
+              >Mail Listesine Katilmak <b>Istiyorum.</b></label
+            >
+            <input
+              type="radio"
+              name="mail-listesi-onay"
+              checked
+              id="mail-listesi-onay"
+            />
+            <br />
+            <label for="mail-listesi-red">
+              Mail Listesine Katilmak <b><ins>Istemiyorum.</ins></b></label
+            >
+            <input
+              type="radio"
+              name="mail-listesi-onay"
+              id="mail-listesi-red"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
