@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.tcolor{
+color: brown;
+background-color: beige;
+}
+.alignProp{
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+    
+}
+.alignment{
+    
+    background-color: blueviolet;
+    text-align: center;
+}
+.decoration{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline overline wavy 3px indianred;
+    line-height: 1.5rem;
+
+}
+
+a{
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    margin-top: 1rem;
+
+}
+.transform{
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+.indent{
+    margin-top: 10px;
+    text-indent: 1rem;
+}
+
+.letter{
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.wordspace{
+    word-spacing: 8px;
+}
+
+.lineheight{
+    margin-top: 20px;
+   background-color: indianred;
+   line-height: 25px;
+}
+
+.shadow{
+    margin: 25px;
+    line-height: 25px;
+
+    /* yatay,dikey,bugu sirasiyla */
+    text-shadow: 2px 2px 5px red;
+}
+
+.box_shadow{
+    background-color: aquamarine;
+    width: 50%;
+    box-shadow: 5px 10px 10px red;
+}

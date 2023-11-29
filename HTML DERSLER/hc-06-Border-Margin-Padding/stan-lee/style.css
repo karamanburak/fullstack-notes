@@ -1,3 +1,6 @@
+*{
+    /* border: 1px solid red; */
+}
 body{
     background-color: black;
     color: white;
@@ -27,4 +30,42 @@ span{
 img {
     border-radius: 40px;
     box-shadow: 5px 5px 300px red;
+}
+.info{
+    width: 80%;
+    margin: auto;   
+    text-align: justify;
+    font-size: 18px;
+}
+.heading.marvel{
+    color: red;
+    margin-left: 10%;
+    font-size: 18px;
+}
+.comics ul{
+    width: 80%;
+    margin: auto;
+}
+
+.comics ul li{
+    margin-bottom: 10px;
+}
+
+footer{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px solid darkorange;
+}
+.link:hover{
+    background-color: #272626;
+    color: red;
 }
