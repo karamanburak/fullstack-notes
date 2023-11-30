@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/netflix-background-image\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    /* border: 1px solid red; */
+    max-width: 1240px;
+    background-color: rgba(0, 0, 0, 0.308);
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+
+}
+#title{
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 3.1rem;
+}
+
+span{
+    color: red;
+}
+#description{
+    font-family: 'Sorts Mill Goudy', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+
+}
+
+.header{
+    text-align: center;
+}
+#survey-form-container{
+    background-color: rgba(0, 0, 0, 0.658);
+    width: 500px;
+    margin: auto;
+    padding: 30px 40px;
+}
+.input-box{
+    /* border: 2px solid red; */
+    margin-top: 20px;
+}
+
+#name, 
+#number,
+#email,
+#dropdown,
+#feedback{
+    width: 100%;
+    padding: 12px 10px;
+    margin-top: 10px;
+}
+textarea{
+    resize: none;
+    height: 92px;
+}
+.radio, checkbox{
+margin-top: 40px;
+}
+
+.form-submit{
+    text-align: center;
+    /* width: 160px;
+    margin: auto; */
+    margin-top: 16px;
+
+}
+.form-button{
+    background-color: red;
+    width: 160px;
+    height: 45px;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+}
