@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./bg-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 20px;
+    
+    
+
+}
+
+.container{
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 65px 55px 54px;
+    border-radius: 10px;
+   
+    
+
+}
+
+#title{
+    text-align: center;
+    margin-bottom: 49px;
+    padding: 0 20px;
+    
+
+}
+
+.login-info{
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+    
+.login-info input{
+    border:none ;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+
+
+
+.placeholder{
+    border-bottom: 1px solid black;
+    
+}
+
+.placeholder input{
+    width: 80%;
+}
+
+
+
+.username,.password{
+    /* padding-left: 20px; */
+    margin-left: 30px;
+    width: 80%;
+}
+
+.password{
+    margin-top: 20px;
+}
+
+.forgot{
+    margin-top: 10px;
+    display: block;
+    text-align:right ;
+    text-decoration: none;
+}
+
+.login{
+    width:100%;
+    margin:auto;
+    text-align: center;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+    
+   
+
+}
+
+.login input{
+    width: 80%;
+    background-image: url(bg-01.jpg);
+    border-radius: 50px;
+    color: white;
+}
+
+.login-with{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+.buton{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+ 
+}
+
+.fa-brands{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    margin: 5px;
+    padding-top: 10px ;
+    
+}
+
+.fa-facebook-f{
+    background-color: #3B5998;
+    font-size: 20px;
+
+}
+
+.fa-twitter{
+    background-color: #1DA1F2;
+    font-size: 20px;
+}
+.fa-google{
+background-color: #EA4335;
+font-size: 20px;
+}
+
+.fa-brands:hover{
+    background-color: black;
+    transition-duration: 0.5s;
+}
+
+.placeholder input:focus{
+    outline: none;
+}
+
+.sign-up{
+    display:inline-block;
+    margin-top: 75px;
+    margin-left: 120px;
+    text-align: center;
+    /* border: 2px solid red; */
+    
+}
+.signup{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+
+    /* border: 2px solid red; */
+   
+    
+}
