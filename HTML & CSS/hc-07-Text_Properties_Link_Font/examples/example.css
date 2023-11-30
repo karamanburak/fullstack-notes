@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100&family=Rubik+Beastly&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+
+ 
+    /* border: 2px solid red; */
+}
+header{
+    display: flex;
+    margin-left:  2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    font-family: 'Rubik Beastly';font-size: 16px;
+    
+    
+}
+.face{
+    
+}
+
+.x{
+    margin-left: 10px;
+    
+
+}
+.instagram{
+    margin-left: 10px;
+    
+}
+.home{
+   
+        margin-left: 50px;
+        
+}
+
+.artist{
+    margin-left: 25px;
+ 
+}
+
+.muzik{
+    margin-left: 25px;
+   
+}
+
+.video{
+    margin-left: 25px;
+    
+}
+
+.blog{
+    margin-left: 25px;
+
+}
+.kontakt{
+    margin-left: 25px;
+    
+}
+
+.image{
+    display: inline-block;
+    margin: auto; */
+    position: relative; 
+    /* overflow: hidden; */
+
+  
+   
+ 
+}
+.newrelease{
+    font-family: 'Roboto', sans-serif; 
+    text-decoration: underline;
+    text-decoration-color: hotpink;
+    margin-top: -1050px ;
+    text-align: center;
+    font-variant: small-caps;
+    letter-spacing: 4px;
+    
+
+}
+
+.permanent{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 26px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.kücükharf{
+text-align: center;
+margin-top: 50px;
+}
+
+.button{
+margin-top: 50px;
+    margin-left: 930px;
+    background-color:hotpink;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.button:hover{
+    background-color: white;
+    color: hotpink;
+}
