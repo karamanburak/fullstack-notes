@@ -38,3 +38,32 @@ p{
     /* display: none; */
     background-color: brown;
 }
+
+.box3::-webkit-scrollbar{
+    /* width: 0; */
+    /* display: none; */
+    background-color: brown;
+}
+
+/* Scrollbar'ın genel stilini ayarlar */
+.box3::-webkit-scrollbar {
+    width: 12px; /* Scrollbar genişliği */
+  }
+  
+  /* Scrollbar'ın arka planını ayarlar */
+  .box3::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Arka plan rengi */
+    border-radius: 10px; /* Köşeleri yuvarlak yapar */
+  }
+  
+  /* Scrollbar'ın kaydırma çubuğunu (thumb) stilize eder */
+  .box3::-webkit-scrollbar-thumb {
+    background: #888; /* Kaydırma çubuğunun rengi */
+    border-radius: 5px; /* Köşeleri yuvarlak yapar */
+  }
+  
+  /* Scrollbar'ın kaydırma çubuğu üzerine gelindiğindeki stilini ayarlar */
+  .box3::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Mouse üzerine geldiğinde rengi değiştirir */
+  }
+  
