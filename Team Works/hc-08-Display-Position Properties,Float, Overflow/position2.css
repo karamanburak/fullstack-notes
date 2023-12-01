@@ -1,0 +1,50 @@
+main{
+    background-color: aqua;
+    height: 1000px;
+}
+.box1{
+    background-color: rgba(0, 255, 55, 0.8);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 3;  
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.inside{
+    width:50px ;
+    height: 50px ;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box2{
+    background-color: rgba(255, 0, 0, 0.856);
+    width: 100px;
+    height: 100px;
+
+    position: relative;
+    z-index: 2;
+    
+}
+.box3{
+    background-color: rgba(47, 0, 255, 0.8);
+    width: 100px;
+    height: 100px;
+
+    position: relative;
+    z-index:1;
+
+}
+
+p{
+    background-color: fuchsia;
+    border-radius: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
