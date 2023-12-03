@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 15px 0 15px;
+    
+}
+.header-left{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    width: 120px;
+    gap: 20px;
+
+    
+}
+
+.header-left a{
+
+    text-decoration: none;
+}
+
+
+.header-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 201px;
+    gap: 10px;
+    /* border: 2px solid red; */
+}
+
+.header-right a{
+    display: flex;
+    text-decoration: none;
+    /* border: 2px solid red; */
+    margin-top:  11px;
+    ;
+
+
+}
+
+.appicon{
+    color:  rgba(0, 0, 0, 0.089);
+
+}
+header img{
+    width: 30px;
+}
+
+header button{
+    background-color:#4285f4;
+    border: none;
+    color: white;
+    padding-left:   10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    
+
+}
+
+
+.container{
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+}
+
+.google-logo{  
+    width: 272px;
+    height: 95px;
+    display: block;
+    margin-left: 635px;
+    margin-top: 205px;
+}
+
+.google-logo img{
+    flex-wrap: wrap;
+}
+
+.placeholder{
+    border: 2px solid rgba(0, 0, 0, 0.089);
+    text-align: center;
+    width: 525px;
+    height: 45px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+
+/* .placeholder input{
+    border: 2px solid rgba(0, 0, 0, 0.089);
+    text-align: center;
+    width: 525px;
+    height: 45px;
+    border-radius: 25px;
+    margin: auto;
+    width: 525px;
+    height: 45px;
+} */
+
+
+
+.button-container{
+    text-align: center;
+    display: flex;
+    margin-top: 30px;
+   
+}
+
+.büyütec{
+    width: 30px;
+    margin-right: 425px;
+    margin-top: 7px;
+    
+}
+
+.microphone img{
+    width: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+
+.button-container{
+    display: flex;
+    width: 280px;
+    gap: 1.5rem;
+    margin: auto;
+    margin-top: 20px;    
+}
+
+.button-container button{ 
+    width: 120px;
+    height: 36px;
+    border: none;
+    color: #5F6368;
+    
+}
+
+
+.button-container button:hover{
+    color: black;
+border: 1px solid lightgray;
+box-shadow: 0.7px 0.7px 0.7px lightgray;
+cursor: pointer;
+}
+
+.dil{
+    width: 280px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+footer{
+    background-color: #f2f2f2;
+
+    
+    
+    
+
+    }
+.first-footer{
+    margin-top: 155px;
+    border-bottom: 1px solid #e4e4e4;
+    margin-left: 13px;
+    margin-left: 13px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    
+
+
+}
+
+.second-footer{
+    display: inline-block;
+    border: 1px solid e4e4e4;
+    margin-top: 13px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    width: 300px;
+ 
+
+}
+
+.second-footer a{
+    text-decoration: none;
+    margin-left: 15px;
+   
+
+    
+}
+
+.third-footer{
+    display: inline-block;
+    width: 200px;
+    margin-left: 1000px;
+
+}
+.third-footer a{
+    text-decoration: none;
+    padding-bottom:  15px;
+    margin-left: 15px;
+   
+    
+}
+
+
+
