@@ -5,6 +5,7 @@
     color: black;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
+    /* border: 2px solid red; */
 
     
 }
@@ -34,17 +35,16 @@ header{
 
 
 .header-right{
+    margin-right: 10px;
     display: flex;
     flex-wrap: wrap;
-    width: 201px;
+    width: 210px;
     gap: 10px;
-    /* border: 2px solid red; */
 }
 
 .header-right a{
     display: flex;
     text-decoration: none;
-    /* border: 2px solid red; */
     margin-top:  11px;
     ;
 
@@ -72,19 +72,24 @@ header button{
 
 
 .container{
-    flex-wrap: wrap;
-    /* border: 2px solid red; */
+   
+     flex-wrap: wrap;
 }
 
 .google-logo{  
+    display: flex;
+    flex-wrap: wrap;
     width: 272px;
     height: 95px;
-    display: block;
-    margin-left: 635px;
+    
+    margin: auto;
     margin-top: 205px;
 }
 
 .google-logo img{
+    display: flex;
+    width: 100%;
+    height: auto;
     flex-wrap: wrap;
 }
 
@@ -151,7 +156,7 @@ header button{
 
 
 .button-container button:hover{
-    color: black;
+color: black;
 border: 1px solid lightgray;
 box-shadow: 0.7px 0.7px 0.7px lightgray;
 cursor: pointer;
@@ -168,58 +173,81 @@ cursor: pointer;
 
 footer{
     background-color: #f2f2f2;
+    width: 100%;
+    height: 100px;
+    flex-wrap: wrap;
     
     
+  
     
     
+    }
+
+    .first-footer{
+        /* border: 2px solid red; */
+        border-bottom: 1px solid #e4e4e4;
+        color: #5f6368;
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;        
+        padding-top: 15px;
+        padding-left: 10px;        
+    
+
 
     }
-.first-footer{
-    margin-top: 155px;
-    border-bottom: 1px solid #e4e4e4;
-    margin-left: 13px;
-    margin-left: 13px;
-    padding-bottom: 10px;
-    padding-top: 15px;
-    margin-top: 5px;
+
+
+    .second-footer{
+        /* border: 2px solid red; */
+
+        color: #5f6368;
+        display: inline-block;
+        flex-wrap: wrap;
+        width: 290px;
+        padding-top: 15px;
+
+        
+
+    }
+    .second-footer a{
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+
+    .third-footer{
+        /* border: 2px solid red; */
+        color: #5f6368;
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
+        margin-right: 25px;
+        padding-top: 15px;
+        height: 35px;
+        gap: 2rem;
+
+
+    }
+
+    .third-footer a{
+        text-decoration: none;
+    }
 
 
 
-}
 
-.second-footer{
-    display: inline-block;
-    border: 1px solid e4e4e4;
-    margin-top: 13px;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    width: 290px;
+
+
+
  
 
-}
 
-.second-footer a{
-    text-decoration: none;
-    margin-left: 15px;
    
 
-    
-}
 
-.third-footer{
-    display: inline-block;
-    width: 200px;
-    margin-left: 1000px;
-    margin-top: -50px;
 
-}
-.third-footer a{
-    text-decoration: none;
-    padding-bottom:  15px;
-    margin-left: 15px;
-   
-    
-}
+
 
 
 
