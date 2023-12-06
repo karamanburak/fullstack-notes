@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+.header-links {
+  padding: 10px 7px;
+}
+
+nav a,
+nav button {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.app-icon {
+  opacity: 0.5;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.app-icon:hover {
+  opacity: 1;
+}
+
+.sign-in-btn {
+  padding: 10px 7px;
+  background-color: #4285f4;
+  border: none;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.sign-in-btn:hover {
+}
+
+header {
+  text-align: center;
+  margin-top: 10px;
+  /* border: 1px solid black; */
+}
+
+.header-left {
+  float: left;
+  margin-left: 15px;
+  margin-top: 8px;
+}
+.header-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.google-logo {
+  display: block;
+  margin: 200px auto 0;
+  width: 272px;
+  height: 92px;
+}
+
+.mag {
+  width: 30px;
+  top: 8px;
+  right: 535px;
+  position: absolute;
+}
+
+.mic {
+  width: 17px;
+  position: relative;
+  top: 8px;
+  right: 20px;
+  position: absolute;
+}
+
+.search-bar {
+  text-align: center;
+  border-radius: 40px;
+  margin: 10px auto;
+  width: 580px;
+  height: 44px;
+  position: relative;
+  border: 1px solid gray;
+}
+
+.search-input {
+  width: 480px;
+  height: 34px;
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  border: none;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.btn-container button {
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 30px;
+  color: gray;
+  border-radius: 6px;
+}
+
+.btn-container button:hover {
+  color: black;
+  box-shadow: 0.7px 0.7px 0 rgb(211, 211, 211);
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+}
+
+.lang {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.lang a {
+  color: navy;
+}
+
+.lang p {
+  font-size: 13px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 10px;
+  line-height: 40px;
+  font-size: 0.8rem;
+}
+
+.country {
+  border-bottom: 1px solid #e4e4e4;
+  margin-left: 13px;
+  color: #5f6368;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+  margin-right: 16px;
+}
+
+nav a {
+  color: #5f6368;
+}
