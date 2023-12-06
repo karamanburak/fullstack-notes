@@ -1,5 +1,213 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /* border: 2px solid red; */
+}
+
+.first-page {
+  background-image: url(images/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  opacity: 0.7;
+}
+
+.first-page h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem;
+  background-color: #161515;
+  color: white;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 1rem;
+}
+
+.full-stack {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 0 90px;
+  color: #666673;
+}
+
+.full-stack h2 {
+  padding: 80px 0 32px;
+}
+
+.full-stack p {
+  text-align: center;
+  padding-bottom: 75px;
+
+  line-height: 1.7rem;
+}
+
+.second-page {
+  background-image: url(images/bg2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+  opacity: 0.7;
+}
+
+.second-page img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 30%;
+  min-width: 5%;
+}
+
+.aws {
+  position: relative;
+  text-align: center;
+  color: #dddddd;
+  line-height: 1.7rem;
+  background-color: #282e34;
+}
+.aws h2 {
+  padding-top: 80px;
+  padding-bottom: 2px;
+}
+
+.aws p {
+  padding: 0 90px 75px 90px;
+}
+
+.third-page {
+  background-image: url(images/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  height: 600px;
+  opacity: 0.7;
+}
+
+.third-page h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 1.6rem;
+  background-color: #161515;
+  color: white;
+  letter-spacing: 0.4rem;
+  font-size: 2.5rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 1rem;
+}
+
+.data {
+  position: relative;
+  color: #666666;
+  background-color: #f1f1f1;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.data h2 {
+  text-align: center;
+  width: 100%;
+  top: 80px;
+  bottom: 35px;
+}
+
+.data p {
+  padding: 30px 90px;
+  line-height: 1.7rem;
+}
+
+.fourth-page {
+  background-image: url(images/bg4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  height: 600px;
+  opacity: 0.7;
+}
+
+.fourth-page h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 1.6rem;
+  color: white;
+  letter-spacing: 0.4rem;
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: #4c4c4c;
+  outline: 0.5rem inset purple;
+  outline-offset: 1rem;
+}
+
+.why-clarusway {
+  text-align: center;
+  padding-top: 60px;
+  background-color: #282e34;
+  color: white;
+}
+
+.why-clarusway h2 {
+  text-align: center;
+  width: 100%;
+  top: 80px;
+  bottom: 35px;
+}
+
+.why-clarusway p {
+  padding: 30px 90px;
+  line-height: 1.7rem;
+}
+
+.fifth-page {
+  background-image: url(images/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  opacity: 0.7;
+}
+
+.fifth-page h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem;
+  background-color: #161515;
+  color: white;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  outline: 0.5rem inset purple;
+  outline-offset: 1rem;
 }
