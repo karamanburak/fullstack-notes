@@ -1,0 +1,31 @@
+/*! grup selector */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div p{
+    /* background-color: magenta; */
+}
+
+.container div p{
+    /* background-color: red; */
+}
+
+.box p{
+    /* background-color: aqua; */
+}
+
+div + p{
+    background-color: aquamarine;
+}
+
+p + div {
+    /* background-color: darkgoldenrod; */
+    }
+    
+    .container ~ p{
+        background-color: forestgreen;
+    }
