@@ -1,0 +1,64 @@
+body{
+    background-color: #3EECAC;
+    background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container{
+    border: 2px solid red;
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+    /* background-image: url(../img/resim-2.jpg); */
+    background: linear-gradient( 
+    to right,
+     rgba(255, 255, 0, 0.548),
+      rgba(238, 130, 238, 0.596)),
+       url(../img/resim-2.jpg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    text-align: justify;
+    padding: 10px;
+    box-sizing: border-box;
+    color: aquamarine;
+    text
+
+}
+
+.container::-webkit-scrollbar{
+display: none;
+}
+
+img{
+    width: 20%;
+}
+
+#img1,
+#img2,
+#img3,
+#img4{
+    opacity: 0.7;
+}
+#img1:hover,
+#img2:hover,
+#img3:hover,
+#img4:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: ease-in 2s;
+}
+
+.container2{
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+    background-image: url(../img/stock-photo-109292217.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,10 +1,6 @@
 /*! grup selector */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 div p{
     /* background-color: magenta; */
@@ -26,6 +22,31 @@ p + div {
     /* background-color: darkgoldenrod; */
     }
     
-    .container ~ p{
+    /* .container ~ p{
         background-color: forestgreen;
+    } */
+
+
+    /*! Attribute selector */
+
+    h2[title="baslik2"]{
+        background-color: olive;
+    }
+    p[title="part1"]{
+        background-color: fuchsia;
+    }
+    a[target="_blank"] {
+        background-color: darkorange;
+    }
+
+
+    /*! Psudo Selector */
+
+    p[title="par2"]::first-line{
+        font-size: 2rem;
+        color: green;
+    }
+    p[title="par1"]::first-letter{
+        font-size: 3rem;
+        color: yellow;
     }
