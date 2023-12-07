@@ -19,6 +19,10 @@ div i {
   animation-timing-function: ease-in-out;
 }
 
+.fa-dollar-sign {
+  animation: snake 0.5s ease-in-out infinite alternate;
+}
+
 @keyframes shake {
   0% {
     transform: rotate(15deg);
@@ -28,5 +32,17 @@ div i {
   100% {
     transform: rotate(-15deg);
     transform-origin: top;
+  }
+}
+
+@keyframes snake {
+  from {
+    /* transform: skew(45deg); */
+    color: magenta;
+  }
+
+  to {
+    /* transform: skew(-45deg); */
+    color: yellowgreen;
   }
 }
