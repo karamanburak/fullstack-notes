@@ -56,8 +56,6 @@ nav.sticky a {
   color: black;
   font-family: "DynaPuff", sans-serif;
   margin: 0.8rem;
-  position: sticky;
-  top: 0px;
 }
 nav.sticky a:hover {
   color: white;
