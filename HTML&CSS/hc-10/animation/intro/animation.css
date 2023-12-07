@@ -1,0 +1,42 @@
+.outher {
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+}
+
+.inner {
+  background-color: gray;
+  width: 50%;
+  height: 50%;
+  /* animation-name: travel;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-delay: 2s;
+  animation-fill-mode: both; */
+  animation: travel 2s ease-in-out alternate infinite both;
+}
+
+@keyframes travel {
+  0% {
+    transform: translateY(0);
+    background-color: orange;
+    border-radius: 50%;
+  }
+  25% {
+    transform: translateY(100%);
+    background-color: red;
+  }
+  50% {
+    transform: translate(100%, 100%);
+    background-color: yellow;
+  }
+  75% {
+    transform: translateX(100%);
+    background-color: fuchsia;
+  }
+  100% {
+    transform: translate(0);
+  }
+}

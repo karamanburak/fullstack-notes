@@ -1,0 +1,32 @@
+div {
+  text-align: center;
+}
+
+div i {
+  font-size: 10rem;
+  color: rgb(145, 71, 19);
+}
+
+.fa-bell {
+  /* transform: rotate(-25deg); */
+}
+
+.fa-bell:hover {
+  animation-name: shake;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(15deg);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: rotate(-15deg);
+    transform-origin: top;
+  }
+}
