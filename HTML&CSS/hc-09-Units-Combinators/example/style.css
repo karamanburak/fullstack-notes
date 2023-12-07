@@ -20,6 +20,7 @@ header {
 }
 
 header a img {
+  position: relative;
   width: 60px;
 }
 
@@ -109,4 +110,28 @@ nav.banner button:hover {
 /*! MAIN */
 main {
   padding: 10px;
+}
+
+/*! SLACK  */
+/*! ------------------------------- */
+
+.slack {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #920101;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  padding-top: 0.12rem;
+}
+
+.slack:hover {
+  cursor: pointer;
+  outline: 2px solid #920101;
+  outline-offset: 3px;
+  color: black;
 }
