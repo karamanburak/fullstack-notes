@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  background-color: brown;
+  font-family: "lato", sans-serif;
+}
+
+body {
+  padding: 1rem 8rem;
+}
+
+header {
+  display: flex;
+  flex: 1;
+  background-color: royalblue;
+  padding-bottom: 6rem;
+}
+
+.smallbox1 {
+}
+.smallbox2 {
+}
+.smallbox3 {
+}
+
+.sidebar {
+}
