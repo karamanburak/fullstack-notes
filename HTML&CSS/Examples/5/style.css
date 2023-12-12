@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.808);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.container {
+  background-color: rgb(199, 160, 113);
+  display: flex;
+  text-align: center;
+  padding: 3px 5px;
+  gap: 5px;
+  margin-bottom: 1.7rem;
+}
+
+.col3 {
+  background-color: rgb(16, 199, 16);
+  border: 2px solid black;
+  width: 26%;
+  padding: 1rem 0;
+}
+
+.col9 {
+  background-color: cornflowerblue;
+  border: 2px solid black;
+  width: 73.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-banner {
+  background-color: red;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.container-yesil {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 3rem;
+  height: 100px;
+}
+
+.col4 {
+  background-color: rgb(30, 238, 30);
+  width: 33%;
+}
+
+.container-turuncu {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.turuncu2 {
+  background-color: darkorange;
+  height: 100%;
+  width: 16.5%;
+}
+
+.turuncu4 {
+  background-color: darkorange;
+  width: 33%;
+}
+
+.container-koyuyesil {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+}
+
+.koyuyesil3 {
+  background-color: green;
+  width: 26%;
+}
+.koyuyesil2 {
+  background-color: green;
+  width: 16.5%;
+}

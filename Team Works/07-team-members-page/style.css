@@ -19,10 +19,11 @@ header {
 
 .blok1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
   position: relative;
-  /* border: 2px solid red; */
+  min-width: 100%;
 }
 
 .img1 {
@@ -35,11 +36,12 @@ header {
 
 span {
   position: absolute;
-  /* border: 2px solid red; */
   transform: rotate(90deg);
   top: 90px;
+  font-size: 13px;
   margin-left: -40px;
 }
+
 .img2 {
   width: 15%;
   display: block;
@@ -57,12 +59,15 @@ span {
 .img3 {
   width: 15%;
 }
-.img3 span {
-  margin-left: 0;
-}
 
 .img3 img {
   width: 100%;
+}
+
+.span3 {
+  position: absolute;
+  padding-left: 30px;
+  top: 50px;
 }
 
 .img1 img,
@@ -76,9 +81,64 @@ span {
 .img2,
 .img3,
 p {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .blok2 {
   position: relative;
+}
+
+.blok2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  gap: 3rem;
+}
+
+.img4 {
+  margin-top: 50px;
+  width: 15%;
+}
+
+.img4 img {
+  width: 100%;
+}
+.img5 {
+  width: 15%;
+  margin-top: 50px;
+  padding-top: 100px;
+}
+
+.img5 img {
+  width: 100%;
+}
+.img6 {
+  width: 15%;
+  margin-top: 50px;
+}
+
+.img6 img {
+  width: 100%;
+}
+
+.img4 img,
+.img5 img,
+.img6 img {
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.span2 {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 90px;
+  font-size: 13px;
+  padding-left: 18px;
+}
+
+.span4 {
+  position: absolute;
+  padding-left: 18px;
+  top: 180px;
 }
