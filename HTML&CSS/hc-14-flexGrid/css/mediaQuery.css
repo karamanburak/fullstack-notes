@@ -19,6 +19,7 @@ h1 {
   margin: 1rem auto;
   border-radius: 50px;
   padding: 10px 0;
+  font-size: 50px;
 }
 .header {
   background-color: var(--koyu-yesil);
@@ -63,4 +64,37 @@ h1 {
 .col4 {
   background-color: var(--gri-8);
   width: 15%;
+}
+
+/*! üstteki stiller  en büyük ekranlarda kullanılsın. ta ki 992px e kadar (tablete kadar). 992px den sonra (tablette) alttaki stiller kullanılmaya başlansın */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: var(--acik-kirmizi);
+    color: white;
+  }
+
+  .col {
+    width: 50%;
+    margin: 0.5rem 0;
+  }
+}
+
+/*! 576px e kadar üstteki stiller kullanılsın (ilk baştakiler ve tablet koduyla ezilenler varsa onlar)  576px ve altında bir alttaki stiller kullanılsın*/
+
+@media screen and (max-width: 576px) {
+  body {
+    background-color: var(--mor-1);
+  }
+
+  .header {
+    display: none;
+  }
+  .col {
+    width: 100%;
+    /* margin vermedik çünkü tabletlerde verdiğimiz margin burada da geçerli */
+  }
+  .navbar a {
+    display: block;
+    text-align: center;
+  }
 }
