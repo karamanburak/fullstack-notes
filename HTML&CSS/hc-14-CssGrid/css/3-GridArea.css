@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  grid-template-rows: 20% 40% 20% 20%;
+
+  height: 100vh;
+
+  grid-template-areas:
+    "burak burak burak"
+    "ali ali veli"
+    "ece ece ece"
+    "ece ece ece";
+}
+
+.box {
+  background-color: bisque;
+  border: 1px solid red;
+}
+
+.box1 {
+  background-color: cadetblue;
+  grid-area: burak;
+}
+.box2 {
+  background-color: chartreuse;
+  grid-area: ali;
+}
+
+.box3 {
+  background-color: crimson;
+  grid-area: veli;
+}
+
+.box4 {
+  background-color: chocolate;
+  grid-area: ece;
+}
