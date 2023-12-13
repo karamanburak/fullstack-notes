@@ -10,12 +10,12 @@
 .container {
   display: grid;
   height: 100vh;
-  grid-template-rows: 30% 30% 20% 10% 10%;
-  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 30% 30% 5% 15% 20%;
+  grid-template-columns: 25% 40% 35%;
 }
 
 .box {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 ul li {
@@ -36,6 +36,11 @@ a {
   padding: 0.5rem;
 }
 
+.header-right {
+  text-align: end;
+  margin-right: 20px;
+}
+
 .header-right button {
   background-color: #4285f4;
   color: white;
@@ -44,4 +49,45 @@ a {
   height: 2.5rem;
   font-weight: 700;
   border-radius: 2px;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 80%;
+}
+
+.buyutec,
+.mikrofon {
+  vertical-align: middle;
+}
+
+.buyutec {
+  margin: 3px 0 0 10px;
+}
+.box8 {
+  border: 1px solid #d3d3d3;
+  border-radius: 25px;
+}
+
+.box11 {
+  margin-left: 100px;
+}
+.box11 button {
+  /* inline elementlerden sadece button width height alır, padding-margin alır */
+  margin-top: 30px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box5 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.box1 {
+  margin-top: 7px;
 }
