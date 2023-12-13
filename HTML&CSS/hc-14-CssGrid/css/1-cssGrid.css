@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: 250px 400px 300px;
+  grid-template-rows: 250px 300px 100px;
+}
+
+.parca {
+  /* border: 2px solid red; */
+  text-align: center;
+}
+
+.parca:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.parca:nth-child(even) {
+  background-color: cornflowerblue;
+}
+
+.bir {
+  background-image: url(../../hc-04-Form_Elements_Input_types/images/avatar-women.png);
+  background-size: cover;
+}
+
+.dört {
+  overflow: auto;
+  background-color: aqua !important ;
+  /* pseudo ile verdigimiz still baskindir */
+}
