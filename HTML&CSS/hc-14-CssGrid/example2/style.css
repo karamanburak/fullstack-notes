@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  gap: 1rem 0.5rem;
+}
+body {
+  background-color: rgb(9, 9, 95);
+}
+
+.container {
+  margin: 100px;
+  display: grid;
+  grid-template-rows: 25% 25% 25%;
+  grid-template-columns: 15% 15% 15% 15%;
+
+  height: 100vh;
+
+  grid-template-areas:
+    "osman cemal cemal kubilay"
+    "osman ali veli mehmet"
+    "osman ahmet gülsah mehmet";
+}
+.box {
+  border: 2px solid red;
+}
+
+.box1 {
+  background-color: rgb(17, 212, 17);
+  grid-area: osman;
+}
+.box2 {
+  background-color: greenyellow;
+  grid-area: cemal;
+}
+
+.box4 {
+  background-color: yellow;
+  grid-area: kubilay;
+}
+
+.box5 {
+  background-color: rgb(154, 154, 16);
+  grid-area: ali;
+}
+
+.box6 {
+  background-color: maroon;
+  grid-area: veli;
+}
+
+.box7 {
+  background-color: aqua;
+  grid-area: mehmet;
+}
+
+.box9 {
+  background-color: rgb(238, 136, 12);
+  grid-area: ahmet;
+}
+
+.box10 {
+  background-color: cornflowerblue;
+  grid-area: gülsah;
+}
