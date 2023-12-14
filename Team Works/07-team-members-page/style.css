@@ -36,10 +36,10 @@ header {
 
 span {
   position: absolute;
-  transform: rotate(90deg);
-  top: 90px;
+  /* transform: rotate(90deg); */
+  writing-mode: vertical-lr;
   font-size: 13px;
-  margin-left: -40px;
+  margin-top: 20px;
 }
 
 .img2 {
@@ -62,12 +62,6 @@ span {
 
 .img3 img {
   width: 100%;
-}
-
-.span3 {
-  position: absolute;
-  padding-left: 30px;
-  top: 50px;
 }
 
 .img1 img,
@@ -131,14 +125,11 @@ p {
 
 .span2 {
   position: absolute;
-  transform: rotate(90deg);
-  top: 90px;
+  /* transform: rotate(90deg); */
+  writing-mode: vertical-lr;
   font-size: 13px;
-  padding-left: 18px;
 }
 
-.span4 {
-  position: absolute;
-  padding-left: 18px;
-  top: 180px;
+.span3 {
+  margin-top: -40px;
 }
