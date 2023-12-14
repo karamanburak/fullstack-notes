@@ -14,7 +14,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
-  margin-left: 8rem;
+  margin: 0 0 1rem 8rem;
 }
 
 .blok1 {
@@ -30,8 +30,25 @@ header {
   width: 15%;
 }
 
-.img1 img {
+.img2 {
+  width: 15%;
+  display: block;
+  padding-top: 140px;
+}
+
+.img3 {
+  width: 15%;
+}
+
+.img1 img,
+.img2 img,
+.img3 img,
+.img4 img,
+.img5 img,
+.img6 img {
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
 }
 
 span {
@@ -40,46 +57,6 @@ span {
   writing-mode: vertical-lr;
   font-size: 13px;
   margin-top: 20px;
-}
-
-.img2 {
-  width: 15%;
-  display: block;
-  padding-top: 100px;
-}
-
-.img2 span {
-  position: absolute;
-  top: 190px;
-}
-
-.img2 img {
-  width: 100%;
-}
-.img3 {
-  width: 15%;
-}
-
-.img3 img {
-  width: 100%;
-}
-
-.img1 img,
-.img2 img,
-.img3 img {
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px black;
-}
-
-.img1,
-.img2,
-.img3,
-p {
-  margin-top: 20px;
-}
-
-.blok2 {
-  position: relative;
 }
 
 .blok2 {
@@ -95,41 +72,13 @@ p {
   width: 15%;
 }
 
-.img4 img {
-  width: 100%;
-}
 .img5 {
   width: 15%;
   margin-top: 50px;
   padding-top: 100px;
 }
 
-.img5 img {
-  width: 100%;
-}
 .img6 {
   width: 15%;
   margin-top: 50px;
-}
-
-.img6 img {
-  width: 100%;
-}
-
-.img4 img,
-.img5 img,
-.img6 img {
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px black;
-}
-
-.span2 {
-  position: absolute;
-  /* transform: rotate(90deg); */
-  writing-mode: vertical-lr;
-  font-size: 13px;
-}
-
-.span3 {
-  margin-top: -40px;
 }
