@@ -39,10 +39,33 @@
 .carousel-indicators button {
   background-color: var(--red) !important;
   padding: 0.1rem !important;
+  width: 3rem !important;
 }
 /*! -------------- 3- ABOUT SECTION ---------------- */
 
+.bi {
+  font-size: 3rem;
+}
+
 /*! -------------- 4- INSTRUCTORS ------------------ */
+
+.card .bi {
+  font-size: 2rem;
+  color: var(--red);
+  transition: all 0.5s;
+}
+
+.card .bi:hover {
+  opacity: 0.5;
+}
+
+section#instructor .card {
+  transition: all 0.5s;
+}
+
+section#instructor .card:hover {
+  transform: scale(1.1);
+}
 
 /*! -------------- 4- STUDENTS SECTION ------------- */
 
