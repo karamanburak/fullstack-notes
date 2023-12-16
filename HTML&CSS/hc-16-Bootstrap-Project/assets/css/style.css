@@ -78,6 +78,10 @@ section#courses {
   color: white;
 }
 
+section#courses a {
+  opacity: 0.7;
+}
+
 /*! -------------- 6- CONTACT SECTION -------------- */
 
 /*! -------------- 7- FOOTER ----------------------- */
