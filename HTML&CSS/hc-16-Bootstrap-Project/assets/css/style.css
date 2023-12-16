@@ -84,4 +84,8 @@ section#courses a {
 
 /*! -------------- 6- CONTACT SECTION -------------- */
 
+.map-container {
+  border: 2px solid red;
+}
+
 /*! -------------- 7- FOOTER ----------------------- */
