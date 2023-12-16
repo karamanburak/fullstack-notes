@@ -89,3 +89,14 @@ section#courses a {
 }
 
 /*! -------------- 7- FOOTER ----------------------- */
+
+footer#footer a {
+  color: white;
+}
+
+.social-media a:hover {
+  color: var(red);
+}
+.up-btn {
+  color: var(--red) !important;
+}
