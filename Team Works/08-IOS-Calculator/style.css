@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+}
+
+body {
+  border: 2px solid red;
+  /* background-color: black; */
+}
+.container {
+  background-color: black;
+  width: 500px;
+  height: 720px;
+  margin: auto;
+  color: white;
+  font-size: 3rem;
+}
+
+.btns-container {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.num0 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-row: 5;
+}
+
+.ac,
+.plus-minus,
+.percent {
+  background-color: #a5a5a5;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
