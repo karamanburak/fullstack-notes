@@ -94,9 +94,10 @@ footer#footer a {
   color: white;
 }
 
-.social-media a:hover {
-  color: var(red);
-}
 .up-btn {
   color: var(--red) !important;
+}
+
+.footer .socialmedia a:hover {
+  color: var(red);
 }
