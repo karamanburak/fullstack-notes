@@ -101,6 +101,16 @@ section#contact a {
 
 /*! -------------- 7- FOOTER ----------------------- */
 
+footer i {
+  color: white;
+  font-size: 2rem;
+  margin-right: 0.8rem;
+  transition: color 0.6s;
+}
+footer i:hover {
+  color: var(--red);
+}
+
 footer#footer a {
   color: white;
 }
