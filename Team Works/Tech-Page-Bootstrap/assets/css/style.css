@@ -12,6 +12,12 @@
   width: 100%;
 }
 
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.navbar-toggler-icon {
+  color: rgba(255, 255, 255, 1) !important;
+}
 .navbar a {
   color: white !important;
 }
