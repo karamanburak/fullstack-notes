@@ -1,8 +1,20 @@
+* {
+  scroll-behavior: smooth;
+}
 :root {
   --red: #dc3545;
 }
 
+section {
+  scroll-margin-top: 85px;
+}
+
 /*! -------------- 1- NAVBAR ----------------------- */
+
+.navbar {
+  background-color: rgba(234, 232, 232, 0.797) !important;
+}
+
 .navbar-nav {
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -101,12 +113,12 @@ section#contact a {
 
 /*! -------------- 7- FOOTER ----------------------- */
 
-footer i {
-  color: white;
-  font-size: 2rem;
-  margin-right: 0.8rem;
-  transition: color 0.6s;
+.up-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
 }
+
 footer i:hover {
   color: var(--red);
 }

@@ -16,8 +16,8 @@
     <!--             NAVBAR              -->
     <!-- ------------------------------- -->
 
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-light position-fixed w-100 z-3">
+        <div class=" container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="./assets/img/CLARUSWAY_LOGO.png" alt="" />
             </a>
@@ -176,7 +176,7 @@
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <div class="d-flex justify-content-evenly">
+                            <div class="d-flex justify-content-evenly ">
                                 <i class="bi bi-facebook"></i>
                                 <i class="bi bi-instagram"></i>
                                 <i class="bi bi-twitter-x"></i>
@@ -194,7 +194,7 @@
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <div class="d-flex justify-content-evenly">
+                            <div class="d-flex justify-content-evenly mt-auto">
                                 <i class="bi bi-facebook"></i>
                                 <i class="bi bi-instagram"></i>
                                 <i class="bi bi-twitter-x"></i>
@@ -212,7 +212,7 @@
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <div class="d-flex justify-content-evenly">
+                            <div class="d-flex justify-content-evenly ">
                                 <i class="bi bi-facebook"></i>
                                 <i class="bi bi-instagram"></i>
                                 <i class="bi bi-twitter-x"></i>
@@ -230,7 +230,7 @@
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <div class="d-flex justify-content-evenly">
+                            <div class="d-flex justify-content-evenly ">
                                 <i class="bi bi-facebook"></i>
                                 <i class="bi bi-instagram"></i>
                                 <i class="bi bi-twitter-x"></i>
@@ -489,13 +489,20 @@
             <a href="#"> <i class="bi bi-instagram"></i></a>
         </article>
         <article>
-            &copy; 2023 Copyright by B.Karaman
-            <a class="up-btn d-flex justify-content-end" href="#body">
-                <i class="bi bi-arrow-up-circle-fill"></i>
-            </a>
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
 
+            Copyright by B.Karaman
         </article>
     </footer>
+    <!-- ------------------------------- -->
+    <!--             BUTTON              -->
+    <!-- ------------------------------- -->
+    <a class="up-btn d-flex justify-content-end" href="#body">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
