@@ -71,13 +71,16 @@ section#instructor .card:hover {
 
 /*! -------------- 5- COURSES SECTION -------------- */
 
-section#courses .nav-item .nav-link.active {
+section#courses .nav-link.active {
   background-color: var(--red);
 }
-section#courses {
+section#courses .nav-link {
   color: white;
 }
 
+section#courses .nav-phills {
+  font-size: 0.8rem;
+}
 section#courses a {
   opacity: 0.7;
 }
