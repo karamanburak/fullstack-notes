@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #212529 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  color: white !important;
+}
+.navbar ul a {
+  color: white !important;
+  opacity: 0.6;
+}
+
+.navbar ul a:hover {
+  opacity: 0.8;
+}
+
+.banner {
+  background-image: url(../img/banner.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: purple;
+}
+
+.banner h3,
+h4 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+#Services i {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  background-color: #dc3545;
+  border-radius: 50%;
+  font-size: 5rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
