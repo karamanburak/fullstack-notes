@@ -91,6 +91,14 @@ section#courses a {
   border: 2px solid red;
 }
 
+section#contact i {
+  color: var(--red);
+}
+section#contact a {
+  color: var(--red) !important;
+  text-decoration: none;
+}
+
 /*! -------------- 7- FOOTER ----------------------- */
 
 footer#footer a {
