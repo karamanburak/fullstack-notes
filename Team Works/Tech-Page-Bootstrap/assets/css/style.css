@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 55px;
+}
+
 .navbar {
   background-color: #212529 !important;
   position: fixed;
@@ -59,4 +63,50 @@ h4 {
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.staff {
+  max-width: 270px;
+  max-height: 270px;
+}
+
+.staff img {
+  width: 100%;
+  border-radius: 50%;
+  border: 10px solid #cccccc;
+}
+
+.client {
+  padding: 3rem 0;
+}
+
+.client img {
+  height: auto;
+  max-height: 50px;
+}
+
+.social-media i {
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+}
+
+#ContactUs {
+  background-image: url(../img/map.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 65vh;
+}
+
+#ContactUs input {
+  width: 640px;
+  margin-left: 100px;
+}
+#ContactUs .form-floating {
+  width: 640px;
 }
