@@ -65,17 +65,6 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.staff {
-  max-width: 270px;
-  max-height: 270px;
-}
-
-.staff img {
-  width: 100%;
-  border-radius: 50%;
-  border: 10px solid #cccccc;
-}
-
 .client {
   padding: 3rem 0;
 }
@@ -101,4 +90,17 @@ h4 {
   background-position: center;
   background-size: cover;
   height: 80vh;
+}
+#ContactUs textarea {
+  resize: none;
+}
+
+.team img {
+  width: 250px;
+}
+
+.team img {
+  width: 100%;
+  border-radius: 50%;
+  border: 10px solid #cccccc;
 }
