@@ -100,13 +100,5 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 75vh;
-}
-
-#ContactUs input {
-  width: 640px;
-  margin-left: 100px;
-}
-#ContactUs .form-floating {
-  width: 640px;
+  height: 80vh;
 }
