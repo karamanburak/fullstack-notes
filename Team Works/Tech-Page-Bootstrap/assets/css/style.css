@@ -96,11 +96,7 @@ h4 {
 }
 
 .team img {
-  width: 250px;
-}
-
-.team img {
-  width: 100%;
+  width: 50%;
   border-radius: 50%;
   border: 10px solid #cccccc;
 }
