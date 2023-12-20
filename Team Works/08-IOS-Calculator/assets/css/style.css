@@ -24,11 +24,6 @@ body {
   padding: 2rem;
   border-radius: 60px;
 }
-.ac,
-.plus-minus,
-.percent {
-  color: black;
-}
 
 .btns-container {
   cursor: pointer;
@@ -51,6 +46,8 @@ body {
 .plus-minus,
 .percent {
   background-color: #a5a5a5;
+  color: black;
+
   width: 100px;
   height: 100px;
   border-radius: 50%;
