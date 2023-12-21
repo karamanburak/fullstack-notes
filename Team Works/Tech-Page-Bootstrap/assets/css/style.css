@@ -84,6 +84,11 @@ h4 {
   line-height: 40px;
 }
 
+#Portfolio h3,
+p {
+  margin: 20px 0;
+}
+
 #ContactUs {
   background-image: url(../img/map.jpeg);
   background-repeat: no-repeat;
