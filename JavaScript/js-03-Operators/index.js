@@ -118,4 +118,67 @@ console.log(Boolean(NaN))
 console.log(NaN == false)
 console.log(NaN == true)
 
+//^ Symbol
+// Objelerin properti isimleri kullanilabilir.
+// uniq yani benzersiz degerlerdir.
+const sym1 = Symbol('Hello')
+const sym2 = Symbol('Hello')
 
+console.log(sym1, sym2)
+
+console.log(sym1 == sym2)
+
+//^ type conversions
+
+let a= 10
+let b= '5'
+
+console.log('Toplama', a + b)        //105
+console.log('Cikarma', a - b)       // 5
+console.log('Carpma', a * b)       // 50
+console.log('Bölme', a / b)       // 2
+
+console.log(a+ Number(b))        // 15
+console.log(typeof b)
+
+
+let c = Number(b)
+let d = b
+console.log(typeof c)
+console.log(typeof d)
+console.log(b,c,d)
+
+console.log(b**'2')
+console.clear()
+
+let e = '123.45'
+
+
+console.log(parseInt (e))          // Noktasiz kismi alir
+console.log(parseFloat (e))       // Noktali kismi da alir
+console.log(Math.trunc(123.45))  // Noktasiz kismi alir
+
+
+//* .toString() Metodu numberlari stringe cevirir.
+let f = 123.456
+let g = '123.456'
+
+console.log(f.toString())
+
+let i = + g // + operatörü stringi number a cevirir.
+console.log(typeof i)
+console.clear()
+
+//* .toFixed() noktadan sonra kac basamak alacagimizi belirtir.
+
+//* Sayiyi stringe cevirir.
+let j = 0.123456789
+console.log(j)
+console.log(j.toFixed(4))       // sonuc string 
+console.log(+j.toFixed(4))     // sonuc number + operatöründen dolayi
+
+console.log(typeof j, j)
+
+//* 0.1 + 0.2
+// https://0.30000000000000004.com/
+console.log(0.1 + 0.2)
