@@ -89,3 +89,15 @@
 // console.log(`Biggest : ${result2}`);
 
 
+/* ---------------------------------- */
+/*             3. EXAMPLE             */
+/* ---------------------------------- */
+
+
+// const number1 = +prompt("Enter your first number!")
+// const number2 = +prompt("Enter your second number!")
+
+
+// const result = number1 % number2 <= 0 ? console.log("Cift sayi girdiniz! ") : console.log("Tek sayi girdiniz!");
+
+
