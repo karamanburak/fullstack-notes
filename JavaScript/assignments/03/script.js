@@ -2,51 +2,51 @@
 /*             1. EXAMPLE             */
 /* ---------------------------------- */
 
-// const number = prompt("Please enter a number between (1-12)")
-// let result
+const number = prompt("Enter a Month name")
+let result
 
-// switch (number) {
-//     case '1':
-//         result = "january"
-//         break
-//     case '2':
-//         result = "february"
-//         break
-//     case '3':
-//         result = "march"
-//         break
-//     case '4':
-//         result = "april"
-//     case '5':
-//         result = "may"
-//         break
-//     case '6':
-//         result = "juni 😎"
-//         break
-//     case '7':
-//         result = "juli"
-//         break
-//     case '8':
-//         result = "august"
-//         break
-//     case '9':
-//         result = "september"
-//         break
-//     case '10':
-//         result = "october"
-//         break
-//     case '11':
-//         result = "november"
-//         break
-//     case '12':
-//         result = "december"
-//         break
-//     default:
-//         result = "Please enter a valid Number!"
-// }
+switch (number) {
+    case 'January':
+        result = "1"
+        break
+    case 'february':
+        result = "2"
+        break
+    case 'march':
+        result = "3"
+        break
+    case 'april':
+        result = "4"
+    case 'may':
+        result = "5"
+        break
+    case 'juni':
+        result = "6"
+        break
+    case 'juli':
+        result = "7"
+        break
+    case 'august':
+        result = "8"
+        break
+    case 'september':
+        result = "9"
+        break
+    case 'october':
+        result = "10"
+        break
+    case 'november':
+        result = "11"
+        break
+    case 'december':
+        result = "13"
+        break
+    default:
+        result = "Please enter a valid month name!"
+}
 
 
-// console.log(`Your lucky month is : ${result}`);
+console.log(`Your lucky month is : ${result}`)
 
 
 /* ---------------------------------- */
@@ -57,7 +57,7 @@
 // const number1 = parseInt(+prompt("Enter your first number!"))
 // const number2 = parseInt(+prompt("Enter your second number!"))
 // const number3 = parseInt(+prompt("Enter your third number!"))
-// const plus = number1 + number2 + number3
+// const addition = number1 + number2 + number3
 // const multiply = number1 * number2 * number3
 // let result
 // let result2
@@ -83,21 +83,23 @@
 //     result = "Try Again!"
 // }
 
-// console.log(`Addition : ${plus}`);
+// console.log(`Addition : ${addition}`);
 // console.log(`Multiplication : ${multiply}`);
 // console.log(`Smallest : ${result}`);
 // console.log(`Biggest : ${result2}`);
 
 
-/* ---------------------------------- */
-/*             3. EXAMPLE             */
-/* ---------------------------------- */
+
+
+// /* ---------------------------------- */
+// /*             3. EXAMPLE             */
+// /* ---------------------------------- */
 
 
 // const number1 = +prompt("Enter your first number!")
 // const number2 = +prompt("Enter your second number!")
 
 
-// const result = number1 % number2 <= 0 ? console.log("Cift sayi girdiniz! ") : console.log("Tek sayi girdiniz!");
+// const result = number1 % number2 == 0 ? console.log("Cift sayi girdiniz! ") : console.log("Tek sayi girdiniz!");
 
 
