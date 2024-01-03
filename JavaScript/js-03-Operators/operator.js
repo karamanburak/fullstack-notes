@@ -185,6 +185,14 @@ console.log(v4);
 //! olumsuzu
 
 console.log(!v4); // false
-
 console.log(!v2); // true
 
+
+//! genel kültür
+
+
+console.log(Number("0b101")); // b = binary 2 lik taban
+
+console.log(Number("0o75")) // o = octal 8 lik taban = 61 (5*8**0 = 5*1 = 5 7*8**1 = 7*8 = 56 // 56+5 = 61)
+
+console.log(Number("0x11")); // x = hexa 16 lik taban = 17
