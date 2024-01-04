@@ -95,3 +95,41 @@ padding: 1rem;
     }
 
 }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   @MIXIN                                   */
+/* -------------------------------------------------------------------------- */
+
+@mixin myBox($backColor, $color ) {
+    background-color: $backColor;
+    width: 25%;
+    height: 15rem;
+    border-radius: 10px;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cards{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+
+    .card1{
+        @include myBox(red, yellow)
+    }
+    .card2{
+   @include myBox(green, yellow)
+    }
+    .card3{
+       @include myBox(magenta, white )
+    }
+    .card4{
+       @include myBox(blue, indianred )
+    }
+
+}
