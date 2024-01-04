@@ -2,51 +2,51 @@
 /*             1. EXAMPLE             */
 /* ---------------------------------- */
 
-const number = prompt("Enter a Month name")
-let result
+// const number = prompt("Enter a Month name")
+// let result
 
-switch (number) {
-    case 'January':
-        result = "1"
-        break
-    case 'february':
-        result = "2"
-        break
-    case 'march':
-        result = "3"
-        break
-    case 'april':
-        result = "4"
-    case 'may':
-        result = "5"
-        break
-    case 'juni':
-        result = "6"
-        break
-    case 'juli':
-        result = "7"
-        break
-    case 'august':
-        result = "8"
-        break
-    case 'september':
-        result = "9"
-        break
-    case 'october':
-        result = "10"
-        break
-    case 'november':
-        result = "11"
-        break
-    case 'december':
-        result = "13"
-        break
-    default:
-        result = "Please enter a valid month name!"
-}
+// switch (number) {
+//     case 'January':
+//         result = "1"
+//         break
+//     case 'february':
+//         result = "2"
+//         break
+//     case 'march':
+//         result = "3"
+//         break
+//     case 'april':
+//         result = "4"
+//     case 'may':
+//         result = "5"
+//         break
+//     case 'juni':
+//         result = "6"
+//         break
+//     case 'juli':
+//         result = "7"
+//         break
+//     case 'august':
+//         result = "8"
+//         break
+//     case 'september':
+//         result = "9"
+//         break
+//     case 'october':
+//         result = "10"
+//         break
+//     case 'november':
+//         result = "11"
+//         break
+//     case 'december':
+//         result = "13"
+//         break
+//     default:
+//         result = "Please enter a valid month name!"
+// }
 
 
-console.log(`Your lucky month is : ${result}`)
+// console.log(`Your lucky month is : ${result}`)
 
 
 /* ---------------------------------- */
@@ -101,5 +101,11 @@ console.log(`Your lucky month is : ${result}`)
 
 
 // const result = number1 % number2 == 0 ? console.log("Cift sayi girdiniz! ") : console.log("Tek sayi girdiniz!");
+
+
+/* ---------------------------------- */
+/*              4.EXAMPLE             */
+/* ---------------------------------- */
+
 
 
