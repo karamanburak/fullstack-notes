@@ -124,4 +124,29 @@ header ul li a {
   align-items: center;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   @EXTEND                                  */
+/* -------------------------------------------------------------------------- */
+.flex, .articles .article1, .articles .article2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: gray;
+  border-radius: 10px;
+  border: 2px solid brown;
+  width: 50%;
+  height: 10rem;
+}
+.articles .article2 {
+  background-color: red;
+}
+
 /*# sourceMappingURL=style.css.map */

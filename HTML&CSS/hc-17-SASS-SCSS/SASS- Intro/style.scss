@@ -123,7 +123,7 @@ padding: 1rem;
         @include myBox(red, yellow)
     }
     .card2{
-   @include myBox(green, yellow)
+        @include myBox(green, yellow)
     }
     .card3{
        @include myBox(magenta, white )
@@ -132,4 +132,34 @@ padding: 1rem;
        @include myBox(blue, indianred )
     }
 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   @EXTEND                                  */
+/* -------------------------------------------------------------------------- */
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+
+    .article1{
+        background-color: gray;
+        border-radius: 10px;
+        border: $myBorder;
+        width: 50%;
+        height: 10rem;
+        @extend .flex;
+    }
+    .article2{
+       @extend .article1;
+       background-color: red;
+    }
 }
