@@ -149,4 +149,48 @@ header ul li a {
   background-color: red;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 //! FOR LOOP                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 //! IF-ELSE                                 */
+/* -------------------------------------------------------------------------- */
+footer p {
+  background-color: olive;
+}
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social-icons .social1 {
+  width: 25%;
+  background-color: #0000e6;
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social-icons .social2 {
+  width: 25%;
+  background-color: #0000cc;
+  font-size: 2rem;
+  color: #55004E;
+}
+footer .social-icons .social3 {
+  width: 25%;
+  background-color: #0000b3;
+  font-size: 3rem;
+  color: #0FA8A1;
+}
+footer .social-icons .social4 {
+  width: 25%;
+  background-color: #000099;
+  font-size: 4rem;
+  color: #DCACF1;
+}
+footer .social-icons .social5 {
+  width: 25%;
+  background-color: navy;
+  font-size: 5rem;
+  color: #64C217;
+}
+
 /*# sourceMappingURL=style.css.map */

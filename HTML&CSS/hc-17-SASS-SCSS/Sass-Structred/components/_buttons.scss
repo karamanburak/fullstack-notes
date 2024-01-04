@@ -1,0 +1,17 @@
+button{
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $bgColor;
+    margin-top: 1rem;
+    margin-left: .5em;
+    &:hover{
+        background-color: rgb(201, 98, 115);
+        cursor: pointer;
+        transform: scale(0.97);
+    }
+}
+
+.button-error{
+    @extend .button;
+}
