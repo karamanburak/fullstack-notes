@@ -23,6 +23,7 @@ footer.horizontal{
 }
 
 footer.vertical{
+    // border: 2px solid red;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -33,7 +34,6 @@ footer.vertical{
         position: fixed;
         bottom: 1rem;
         @extend .link-style;
-        
     }
     .copyright{
         position: fixed;
@@ -42,6 +42,7 @@ footer.vertical{
         // transform: rotate(90deg) translate(-3rem, -1rem);
         writing-mode: vertical-lr;
     }
+
 }
 
 footer.middle{

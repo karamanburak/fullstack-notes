@@ -2,13 +2,13 @@
 @import './abstracts/mixins', './abstracts/variables';
 //base
 @import './base/reset';
-//components
-@import './components/footer','./components/nav','./components/responsive';
 //pages
 @import './pages/about','./pages/contact','./pages/home','./pages/project';
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
+//components
+@import './components/footer','./components/nav','./components/responsive';
 
 body{
     font-family: $font-family;

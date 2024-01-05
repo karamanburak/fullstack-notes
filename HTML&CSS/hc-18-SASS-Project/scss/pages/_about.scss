@@ -24,21 +24,23 @@
 }
 
 .about{
-    &__cotainer{
+    &__container{
+        // border: 2px solid red;
         width: 70%;
         margin: 2rem auto;
     }
     .about__job{
+        // border: 2px solid red;
         margin: 1rem;
         background-color: lighten($primary-color, 10%);
         padding: 1rem;
         border-bottom: 5px solid $secondary-color;
         h2,h3{
             margin: 0.5rem 0;
-
         }
         h6{
             margin: 0.3rem 0;
         }
+
     }
 }
