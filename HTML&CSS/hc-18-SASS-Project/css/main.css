@@ -70,6 +70,25 @@ footer.horizontal {
   line-height: 1.5rem;
 }
 
+.about__cotainer {
+  border: 2px solid red;
+  width: 70%;
+  margin: 2rem auto;
+}
+.about .about__job {
+  border: 2px solid red;
+  margin: 1rem;
+  background-color: #414141;
+  padding: 1rem;
+  border-bottom: 5px solid #ff652f;
+}
+.about .about__job h2, .about .about__job h3 {
+  margin: 0.5rem 0;
+}
+.about .about__job h6 {
+  margin: 0.3rem 0;
+}
+
 .home-bgImg-container {
   height: 100vh;
   width: 100%;
