@@ -1,9 +1,9 @@
-/* ---------------------------------- */
-//^                NAV                */
-/* ---------------------------------- */
+//*****************************************************
+//*   NAV
+//*****************************************************
 
 .nav{
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 10vh;
     padding: 1rem;
     &__list{
@@ -19,6 +19,7 @@
         text-decoration: none;
         font-family: $font-family;
         font-weight: 500;
+        @include transition(1s);
         &:hover{
             color: $hover-color;
         }
