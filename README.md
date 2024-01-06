@@ -2,4 +2,4 @@
 
 ---
 
-- ### This repo was created for sessions during the full-stack developer course
+- ### This repo was created for full-stack developer notes.
