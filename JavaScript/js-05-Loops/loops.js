@@ -46,10 +46,10 @@
 // console.log(rast, rast2);
 
 
-for (let i = 1; i <= 7; i++) {
-    const random = Math.round(Math.random() * 100)
-    console.log(random);
-}
+// for (let i = 1; i <= 7; i++) {
+//     const random = Math.round(Math.random() * 100)
+//     console.log(random);
+// }
 
 
 
@@ -60,6 +60,20 @@ for (let i = 1; i <= 7; i++) {
 //* Math.trunc() => kesirli sayinin tam kismini alir.
 
 
+//****************** */ WHİLE*************
+//*ORNEK1: while için 1-100  arasında bir sayı giriniz. aksi durumlarda error msj ı verip, tekrar sayı isteyiniz
+
+let number = +prompt("Please enter a valid number between 1-100 ")
+
+while (number < 1 || number > 100) {
+
+    console.error("Number is not valid!");
+    number = +prompt("Please enter a valid number between 1-100 ")
+}
+
+console.log(`Congratulations number is :`, number);
+
+//! while daki şart true oldugu sürece altındaki süslü işler, false oldugu anda süslünün dışına çıkılır
 
 
 
