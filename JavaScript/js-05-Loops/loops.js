@@ -115,8 +115,8 @@
 // let devam;
 // do {
 
-    // let vize = +prompt("Vize notunuzu giriniz!")
-    // let final = +prompt("Final notunuzu giriniz!")
+// let vize = +prompt("Vize notunuzu giriniz!")
+// let final = +prompt("Final notunuzu giriniz!")
 
 //     let ortalama = vize * 0.4 + final * 0.6
 //     console.log(ortalama >= 60 ? "Tebrikler gectiniz" : "Kaldiniz");
@@ -138,22 +138,6 @@
 
 // console.log("Done");
 
-//^ EXAMPLE - 7
-
-// let devam;
-// do {
-    
-// let vize = +prompt("vize notunuzu giriniz");
-// let final = +prompt("final notunuzu giriniz");
-
-// let ortalama=vize*0.4+final*0.6
-// console.log(ortalama >=60 ? "tebrikler geçtiniz":"kaldınız");
-
-// devam=prompt("devam etmek istiyorsanız e/E giriniz")
-
-// } while (devam.toUpperCase()=="E");
-
-// console.log("çıktık");
 
 
 
