@@ -54,6 +54,7 @@
 // console.log(null || 1); // 1
 // console.log(NaN || null); // null
 
+
 //? 18 yaşından büyüklerin alkol kullanabileceği 18 yaşından küçüklerin alkol kullanamayacağını if else yapısı ile konsola yazdıran kodu yazınız.
 //^ if-else
 
@@ -87,9 +88,33 @@
 
 //^ do-while
 
-let age2
+// let age2
 
-do {
-    age2 = +prompt("Enter a valid Number!")
-} while (isNaN(age2));
-console.log(age2);
+// do {
+//     age2 = +prompt("Enter a valid Number!")
+// } while (isNaN(age2));
+// console.log(age2);
+
+//? Kullanıcı adı ve parola kontrolü yap. Doğru ise ismiyle karşıla değilse tekrar girmesi için yönlendir. 3 kez yanlış giriş olursa çıkış yapsın
+
+let user = "burak";
+let password = "1234";
+
+let loginCount = 3;
+
+while (loginCount > 0) {
+    let userid = prompt("Kullanıcı adınızı girin:");
+    let userpw = prompt("Parolanızı girin:");
+
+    if (userid === user && userpw === password) {
+        alert(`Merhaba, ${userid}! Sayfamıza hoşgeldiniz.🎉`);
+        break;
+    } else {
+        loginCount--;
+        if (loginCount > 0) {
+            alert(`Kullanıcı adı veya parola yanlış girdiniz. Kalan giriş hakkı: ${loginCount}`);
+        } else {
+            alert("Giriş hakkınız kalmadı.Güle güle..");
+        }
+    }
+}
