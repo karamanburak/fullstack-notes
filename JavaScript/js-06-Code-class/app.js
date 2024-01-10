@@ -226,6 +226,23 @@ while (sayi <= 2000) {
         console.log(sayi);
     }
     sayi++
-    
+
 } */
 
+
+//^ EXAMPLE
+
+//? Kullanıcıdan bir sayı girişi alın. Eğer kullanıcı negatif bir sayı girerse, kullanıcıya "Negatif sayı girdiniz!" mesajını verin. Eğer kullanıcı pozitif bir sayı girerse, bu sayının 1'den başlayarak kendisine kadar olan sayıları konsola yazdırın. 0 girerse de sıfır girdiniz yazdırın.
+
+
+// let num = +prompt("Lütfen bir sayi giriniz!")
+// if (num < 0) {
+//     console.log("Negatif bir sayi girdiniz!");
+// } else if (num > 0) {
+//     for (i = 0; i <= num; i++) {
+//         console.log(i);
+//     }
+// } else {
+//     console.log("Sifir girdiniz!");
+
+// }
