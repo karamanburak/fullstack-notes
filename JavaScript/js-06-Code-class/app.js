@@ -246,3 +246,70 @@ while (sayi <= 2000) {
 //     console.log("Sifir girdiniz!");
 
 // }
+
+
+//^ EXAMPLE
+
+// let year = +prompt("Lütfen bir yil giriniz!")
+
+// if (year % 4 === 0 && year % 100 != 0 || year % 400 === 0) {
+//     console.log("Bu bir artik yildir");
+// } else {
+//     console.log(`Bu bir artik yil degildir!`);
+// }
+
+//^ EXAMPLE
+
+
+// let year = +prompt("Bir yil giriniz")
+// let month = prompt("Bir ay giriniz!")
+// let result
+
+
+
+// switch (month) {
+//     case "ocak":
+//         result = "31 gündür"
+//         break
+//     case "subat":
+//         if (year % 4 === 0 && year % 100 != 0 || year % 400 === 0) {
+//             result = "29 gündür"
+
+//         } else {
+//             result = "28 gündür"
+//         }
+//         break
+//     case "mart":
+//         result = "31 gündür"
+//         break
+//     case "nisan":
+//         result = "30 gündür"
+//         break
+//     case "mayis":
+//         result = "31 gündür"
+//         break
+//     case "haziran":
+//         result = "30 gündür"
+//         break
+//     case "temmuz":
+//         result = "31 gündür"
+//         break
+//     case "agustos":
+//         result = "31 gündür"
+//         break
+//     case "eylül":
+//         result = "30 gündür"
+//         break
+//     case "ekim":
+//         result = "31 gündür"
+//         break
+//     case "kasim":
+//         result = "30 gündür"
+//         break
+//     case "aralik":
+//         result = "31 gündür"
+//         break
+//     default:
+//         result = "Lütfen gecerli bir ay giriniz!"
+// }
+// console.log(`${year} ${month} = ${result} `);
