@@ -355,7 +355,9 @@ while (sayi <= 2000) {
 let yil = +prompt("Yil girin:");
 let ay = +prompt("Ay girin (1-12):");
 let kacGun;
-switch (ay) {
+while (ay < 1 || ay > 12) {
+    ay = +(prompt(`Hatalı ay girdiniz. Lütfen 1-12 arasında bir değer girin`));
+} switch (ay) {
     case 1:
     case 3:
     case 5:
