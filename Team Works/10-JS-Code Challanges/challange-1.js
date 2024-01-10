@@ -118,3 +118,15 @@
 // . 54748
 
 
+const num = prompt("Lütfen bir sayi giriniz!")
+const n = num.length
+let sum = 0;
+for (let i = 0; i < n; i++) {
+    sum += num[i] ** n
+}
+if (sum === +num) {
+    console.log(`Girilen sayi bir Armstrong sayisidir!`);
+} else {
+    console.log(`Girilen sayi bir Armstrong sayisi degildir!`);
+
+}
