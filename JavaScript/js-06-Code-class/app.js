@@ -345,8 +345,44 @@ while (sayi <= 2000) {
 //         console.log("Deger araliginda deger girilmedi.");
 //         break;
 // }
-//     console.log(`${yil} yilinda ${ay}.ay ${kacGun} gun ceker.`);
 
+// if (kacGun) {
+//     console.log(`${yil} yilinda ${ay}.ay ${kacGun} gun ceker.`);
+// }
 
 //^ EXAMPLE
 
+let yil = +prompt("Yil girin:");
+let ay = +prompt("Ay girin (1-12):");
+let kacGun;
+switch (ay) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        kacGun = 31;
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        kacGun = 30;
+        break;
+    case 2:
+        if ((yil % 4 === 0 && yil % 100 !== 0) || yil % 400 === 0) {
+            kacGun = 29;
+        } else {
+            kacGun = 28;
+        }
+        break;
+    default:
+        console.log("Deger araliginda deger girilmedi.");
+        break;
+}
+
+if (kacGun) {
+    console.log(`${yil} yilinda ${ay}.ay ${kacGun} gun ceker.`);
+} 
