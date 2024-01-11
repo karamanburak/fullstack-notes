@@ -60,4 +60,66 @@ const enBul = function () {
     return `En büyük sayi ${biggest} en kücük sayi ${smallest}`
 }
 
-alert(enBul(90, 345, 123, 23, 545, 112, 5454, 76767, 22));
+// alert(enBul(90, 345, 123, 23, 545, 112, 5454, 76767, 22));
+
+//^ EXAMPLE -4 //? Bir fonksiyonun icinden baska bir fonksiyon cagrilabilir.
+
+const usAl = function (s1, s2) {
+
+    return s1 ** s2
+}
+const cevreBul = function (s1, s2) {
+
+    return (s1 + s2) * 2;
+}
+const alanBul = function (s1, s2) {
+
+    return s1 * s2
+}
+
+const hesapla = function (secim, v1, v2) {
+    let sonuc
+    if (secim == "area") {
+        sonuc = alanBul(v1, v2)
+    } else if (secim == "perimeter") {
+        sonuc = cevreBul(v1, v2)
+    } else if (secim == "root") {
+        sonuc = usAl(v1, v2)
+    }
+
+    return sonuc
+}
+
+console.log(hesapla("area", 3, 5));
+console.log(hesapla("perimeter", 3, 5));
+console.log(hesapla("root", 3, 5));
+
+//^ EXAMPLE - 5
+// -------------------------------------------------------------------------- 
+//Bir ülkedeki ortalama yaşam ömrü 95 yıl olduğuna göre, 
+// doğum yılı girilen kişinin yaşını hesaplattıran
+// yaşına göre ortalama ... ömrünüz kaldı yazıp önerilerde bulunan program
+
+// 0-10 : " Sen bu değerleri önemseme hayatın tadını çıkar"
+// 10-20 : " Gezmek görmek istediğin yerler varsa yola çıkma zamanı.. "
+
+/* -----------------------------------------------------------*/
+
+
+const calculate = function (birthYear) {
+    const ortOmur = 95
+    const yas = new Date().getFullYear() - birthYear
+    const kalanOmur = ortOmur - yas
+    if (kalanOmur > 0 && kalanOmur <= 10)
+        return ` ${kalanOmur} yilin var sen bu değerleri önemseme hayatın tadını çıkar`
+    else if (kalanOmur > 10 && kalanOmur <= 20)
+        return `${kalanOmur} yilin var gezmek görmek istediğin yerler varsa yola çıkma zamanı.. `
+    else
+        return `${kalanOmur} yilin var sen daha calis ilerde gezersin.`
+
+
+}
+
+console.log(calculate(+prompt("Please enter your birth year")));
+
+
