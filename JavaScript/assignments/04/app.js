@@ -8,7 +8,7 @@ const ucgenAlan = function (yükseklik, taban) {
 
 }
 
-console.log(ucgenAlan());
+console.log(ucgenAlan(3, 5));
 
 
 
