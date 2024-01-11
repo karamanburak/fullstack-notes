@@ -3,14 +3,12 @@
 
 const ucgenAlan = function (yükseklik, taban) {
 
-    let ucgenAlan = (1 / 2) * (yükseklik * taban)
-
-
+    let ucgenAlan = (yükseklik * taban) / 2
     return ucgenAlan
 
 }
 
-console.log(ucgenAlan(10, 20));
+console.log(ucgenAlan());
 
 
 
@@ -19,9 +17,9 @@ console.log(ucgenAlan(10, 20));
 
 let sayi = +prompt("Lütfen islem yapmak istediginiz sayiyi giriniz!")
 
-const kareAl = () => sayi ** 2
-const küpAl = () => sayi ** 3
-const üsAl = () => sayi ** sayi
+const kareAl = () => (sayi ** 2)
+const küpAl = () => (sayi ** 3)
+const üsAl = () => (sayi ** sayi)
 console.log(kareAl())
 console.log(küpAl())
 console.log(üsAl())
