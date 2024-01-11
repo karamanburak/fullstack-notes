@@ -80,4 +80,20 @@ function isEvenOdd(sayi) {
     return sayi % 2 == 0 ? "cift sayidir" : "tek sayidir"
 }
 
-isEvenOdd()
+//^ EXAMPLE - 5 //? arguments keywordüyle parametre karsilama
+
+
+let toplam = 0
+function sumAll() {
+    // console.log(arguments);
+    // console.log(arguments[0]);
+
+    for (let i = 0; i < arguments.length; i++) {
+        toplam += arguments[i]
+    }
+
+    return toplam
+
+}
+
+console.log(sumAll(25, 34, 56, 78, 666, 1994, 60, 66, 33));
