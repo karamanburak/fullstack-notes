@@ -35,7 +35,7 @@ const artikYil = function (yil) {
     else
         yil = `${yil} bir artik yil degildir.`
 
-    return yil
+    // return yil
 }
 
 console.log(artikYil());
