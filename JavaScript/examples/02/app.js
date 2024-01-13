@@ -63,7 +63,7 @@ console.log(myNum) */
 /* let num3 = 8
 
 let divide = num => {
-    
+
     console.log(num / 2)
 }
 
@@ -72,20 +72,20 @@ divide(num3)
 
 
 //! Üçgenin kenar ölçülerini alacak, Eşkenar, İkizkenar, Çeşitkenar
-function ucgenTipi(a, b, c) {
-    if (a == b && a == c) {
-        console.log("Eşkenar ücgen")
-    } else if ((a == b) || (a == c) || (b == c)) {
-        return "İkizkenar ücgen"
-    }
-    else {
-        console.log("Ceşitkenar ücgen")
-    }
-}
+// function ucgenTipi(a, b, c) {
+//   if (a == b && a == c) {
+//     console.log("Eşkenar ücgen")
+//   } else if ((a == b) || (a == c) || (b == c)) {
+//     return "İkizkenar ücgen"
+//   }
+//   else {
+//     console.log("Ceşitkenar ücgen")
+//   }
+// }
 
-ucgenTipi(3, 3, 3) //eşkenar
-console.log(ucgenTipi(2, 4, 2))  //ikizkenar
-ucgenTipi(6, 8, 10) //çeşitkenar
+// ucgenTipi(3, 3, 3) //eşkenar
+// console.log(ucgenTipi(2, 4, 2))  //ikizkenar
+// ucgenTipi(6, 8, 10) //çeşitkenar
 
 //! saat dakika ve saniye parametreleri alıp toplam saniyeyi döndür
 
@@ -102,11 +102,11 @@ ucgenTipi(6, 8, 10) //çeşitkenar
 console.log(`${convertToSeconds(3,50,41)} saniyedir`); */
 
 /* function convertToSeconds(saat, dakika, saniye) {
-  
+
     let toplamSaniye = (saat * 3600) + (dakika * 60) + saniye;
     return toplamSaniye;
   }
-  
+
   let saniyecinsinden = convertToSeconds(3,50,41)
   console.log(saniyecinsinden); */
 
@@ -122,18 +122,18 @@ const convertToSeconds = (second, minute, hour) => {
 convertToSeconds(41, 50, 3); */
 
 
-const returnNegative = (num) => {
-    if (num <= 0) return num;
-    return -num;
-};
+// const returnNegative = (num) => {
+//   if (num <= 0) return num;
+//   return -num;
+// };
 
 
 
 
 
-console.log(returnNegative(-1)) //-1
-console.log(returnNegative(5)) // -5
-console.log(returnNegative(0)) //0
+// console.log(returnNegative(-1)) //-1
+// console.log(returnNegative(5)) // -5
+// console.log(returnNegative(0)) //0
 
 //! verilen sayının çarpım tablosunu yazdıran fonksiyon
 
@@ -149,3 +149,19 @@ console.log(returnNegative(0)) //0
 4 * 8 = 32
 4 * 9 = 36
 4 * 10 = 40 */
+
+
+let num1 = +prompt("Lütfen bir sayi giriniz")
+let num2 = +prompt("Kacinci sayiya kadar carpim tablosu verilsin")
+const printMultiplicationTable = (num1, n) => {
+
+  for (let i = 1; i <= n; i++) {
+    sum = console.log(`${num1} * ${i} = ${num1 * i}`);
+
+  }
+  return sum
+}
+
+printMultiplicationTable(num1, num2);
+
+
