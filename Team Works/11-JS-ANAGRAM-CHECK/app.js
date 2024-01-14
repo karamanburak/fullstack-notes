@@ -1,4 +1,4 @@
-// Function Declaration
+//^ Function Declaration
 
 
 // function areAnagrams(word1, word2) {
@@ -23,7 +23,7 @@
 
 
 
-// Function Expression
+//^ Function Expression
 
 // const areAnagrams = function (word1, word2) {
 
@@ -44,7 +44,7 @@
 // console.log(areAnagrams("apple", "banana"));
 
 
-//Function Arrow
+//^ Function Arrow
 
 const areAnagrams = (word1, word2) => {
     let a = word1.toLowerCase().split('').sort().join('')
