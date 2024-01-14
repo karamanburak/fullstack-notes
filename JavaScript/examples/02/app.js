@@ -165,3 +165,10 @@ const printMultiplicationTable = (num1, n) => {
 printMultiplicationTable(num1, num2);
 
 
+const myFunc = (num1, num2) => {
+  return num1 % num2 ? false : true
+}
+
+const isDivide = myFunc(252, 9)
+console.log(isDivide);
+
