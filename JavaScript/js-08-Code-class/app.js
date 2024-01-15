@@ -89,11 +89,18 @@
 
 
 //^ EXAMPLE - 6
+//? Çitlikteki hayvan sayılarını parametre olarak alacak ve ayak sayıları toplamını döndürecek bir fonksiyon yazınız.
+//! Tavuk, İnek, Ördek, Keçi
 
+// const ayakSayisi = (tavuk, inek, ördek, keci) => {
+//     return (tavuk + ördek) * 2 + (inek + keci) * 4
+// }
 
-
+// console.log(ayakSayisi(5, 3, 2, 10));
 
 //^ EXAMPLE - 7
+
+
 
 
 //^ EXAMPLE - 
