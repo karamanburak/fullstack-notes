@@ -179,14 +179,36 @@
 //^ EXAMPLE - 9
 //? Girilen yilin artik yil olup olmadigini hesaplayan fonksiyon yaziniz
 
-const artikYil = (year) => {
-    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-        console.log(year + " bir artık yıldır.");
-    } else {
-        console.log(year + " bir artık yıl değildir.");
+// const artikYil = (year) => {
+//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//         console.log(year + " bir artık yıldır.");
+//     } else {
+//         console.log(year + " bir artık yıl değildir.");
+//     }
+//     return artikYil
+// }
+
+// artikYil(prompt('Bir yil girin'))
+
+
+//^ EXAMPLE - 10
+// Palindrome kondtrolü
+
+function terCevir(str) {
+    let ters = ""
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        ters += str[i]
     }
-    return artikYil
+
+    if (str.toLowerCase() === ters.toLocaleLowerCase()) {
+        console.log(`${str} bir palindrome dur`);
+    } else {
+        console.log(`${str} bir palindrome degildir`);
+
+    }
 }
 
-artikYil(prompt('Bir yil girin'))
-
+terCevir('Merhaba')
+terCevir('Kayak')
+terCevir('rotator')
