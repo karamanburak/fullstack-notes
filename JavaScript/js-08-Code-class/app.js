@@ -104,26 +104,89 @@
 // 2- İndirim oranı
 // 3- İndirimli tutar
 
-const toplamTutar = (urunFiyati, indirimOrani) => {
-    return `Ürün fiyati ${urunFiyati} lira indirim orani ${indirimOrani} lira  ve toplam fiyat ${urunFiyati - (urunFiyati * indirimOrani) / 100} liradir.`
-}
+// const toplamTutar = (urunFiyati, indirimOrani) => {
+//     return `Ürün fiyati ${urunFiyati} lira indirim orani ${indirimOrani} lira  ve toplam fiyat ${urunFiyati - (urunFiyati * indirimOrani) / 100} liradir.`
+// }
 
-console.log(toplamTutar(100, 20));
+// console.log(toplamTutar(100, 20));
 
 //^ EXAMPLE - 8
 
-//?  Celcius Fahrenheit derece çevrim fonksiyonu
+//?  Celcius'u Fahrenheit'a ceviren derece fonksiyonu
 
-const convert = (x, y) => {
-    return y = x * (9 / 5) + 32
+// const cToF = (celcius) => {
+//     return +(celcius * 9 / 5 + 32).toFixed(2)
 
+// }
+
+//?   Fahrenheit'i Celcius'a ceviren derece fonksiyonu
+
+// const fToC = (fahrenheit) => {
+//     return +((fahrenheit - 32) * 5 / 9).toFixed(2)
+// }
+
+// while (true) {
+//     let secim = prompt(`Lütfen seciminizi yapin :
+//     1 - Celcius to Fahrenheit
+//     2 - Fahrenheit to Celcius
+//     q - Cikis`)
+
+//     if (secim == 1) {
+//         console.log(cToF(+prompt('Cevirmek istediginiz degeri giriniz')));
+
+//     } else if (secim == 2) {
+//         console.log(fToC(+prompt('Cevirmek istediginiz degeri giriniz')));
+
+//     } else if (secim == 'q') {
+//         break
+//     } else {
+//         console.log(`Hatali giris yaptiniz`);
+
+//     }
+// }
+
+// console.log('Cikis yapildi');
+
+
+//^ VERSION - 2
+
+// const fToC = (fahrenheit) => {
+//     return ((fahrenheit - 32) * 5 / 9).toFixed(2);
+// };
+
+// const cToF = (celsius) => {
+//     return (celsius * 9 / 5 + 32).toFixed(2);
+// };
+
+// while (true) {
+//     let value = prompt("F (fahrenheit) | C (celsius) | Q (exit)").toUpperCase();
+//     if (value == "Q") break;
+//     else {
+//         let input = parseInt(prompt("Deger girin:"));
+//         if (value === "F") {
+//             console.log(`${input} Fahrenheit, ${fToC(input)} Celsius`);
+//         } else if (value === "C") {
+//             console.log(`${input} Celsius, ${cToF(input)} Fahrenheit`);
+//         } else {
+//             console.log("invalid value");
+//         }
+//     }
+// }
+
+// console.log('Cikis yapildi');
+
+
+//^ EXAMPLE - 9
+//? Girilen yilin artik yil olup olmadigini hesaplayan fonksiyon yaziniz
+
+const artikYil = (year) => {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        console.log(year + " bir artık yıldır.");
+    } else {
+        console.log(year + " bir artık yıl değildir.");
+    }
+    return artikYil
 }
-console.log(convert(30))
 
+artikYil(prompt('Bir yil girin'))
 
-//?   Fahrenheit Celcius derece çevrim fonksiyonu
-
-const fahrenheitToCelcius = (fahrenheit) => {
-    return celcius = ((fahrenheit - 32) * 5) / 9
-}
-console.log(fahrenheitToCelcius(86));
