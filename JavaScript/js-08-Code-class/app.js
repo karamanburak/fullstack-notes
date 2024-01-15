@@ -99,10 +99,31 @@
 // console.log(ayakSayisi(5, 3, 2, 10));
 
 //^ EXAMPLE - 7
+//? Ürün fiyatı ve indirim oranı verilecek.
+// 1- orjinal fiyat
+// 2- İndirim oranı
+// 3- İndirimli tutar
+
+const toplamTutar = (urunFiyati, indirimOrani) => {
+    return `Ürün fiyati ${urunFiyati} lira indirim orani ${indirimOrani} lira  ve toplam fiyat ${urunFiyati - (urunFiyati * indirimOrani) / 100} liradir.`
+}
+
+console.log(toplamTutar(100, 20));
+
+//^ EXAMPLE - 8
+
+//?  Celcius Fahrenheit derece çevrim fonksiyonu
+
+const convert = (x, y) => {
+    return y = x * (9 / 5) + 32
+
+}
+console.log(convert(30))
 
 
+//?   Fahrenheit Celcius derece çevrim fonksiyonu
 
-
-//^ EXAMPLE - 
-
-
+const fahrenheitToCelcius = (fahrenheit) => {
+    return celcius = ((fahrenheit - 32) * 5) / 9
+}
+console.log(fahrenheitToCelcius(86));
