@@ -75,12 +75,12 @@
 
 // const getRandomColor = () => {
 
-//     const x = () => {
+//     const rgbGen = () => {
 //         return Math.floor(Math.random() * 256);
 //     }
-//     let r = x()
-//     let g = x()
-//     let b = x()
+//     let r = rgbGen()
+//     let g = rgbGen()
+//     let b = rgbGen()
 //     return `rgb (${r}, ${g}, ${b})`;
 // }
 
@@ -88,8 +88,9 @@
 
 
 
-
 //^ EXAMPLE - 6
+
+
 
 
 //^ EXAMPLE - 7
