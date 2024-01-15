@@ -169,6 +169,6 @@ const myFunc = (num1, num2) => {
   return num1 % num2 ? false : true
 }
 
-const isDivide = myFunc(252)
+const isDivide = myFunc(252, num2)
 console.log(isDivide);
 
