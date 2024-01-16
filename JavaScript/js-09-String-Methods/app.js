@@ -286,9 +286,8 @@ console.log(neuJahr.trim());
 console.log(neuJahr.trim().length);
 
 
-//^ EXAMPLE 
-
+//^ EXAMPLE Chaining
 let abc = "         Clarusway Full Stack"
 
-console.log(abc.trim().slice(0, 9).toUpperCase());
+console.log(abc.trim().slice(0, 9).toUpperCase()); // CLARUSWAY
 
