@@ -198,5 +198,23 @@ let oku2 = "Oku Johny gibi SAF olma saf olma saf olma"
 console.log(oku2.replaceAll("saf olma", "akilli ol"));
 
 
+//* ----------------------------------------------------------
+//!  slice(beginIndex, endIndex)
+//*  substring(beginIndex, endIndex)
+//* ----------------------------------------------------------
+//^ slice() ve substring() metodu ayni islevi görür fakat "substringlerde '-' index calismaz"
+
+const veysel = "UZUN INCE BIR YOLDAYIM YURUYORUM GUNDUZ GECE"
+
+
+console.log(veysel.slice(10)); // BIR YOLDAYIM YURUYORUM GUNDUZ GECE
+console.log(veysel.slice(17, 22)); // DAYIM (22 dahil degil)
+console.log(veysel.substring(17, 22)); // DAYIM
+
+console.log(veysel.slice(-11)); // GUNDUZ GECE (tersten saymaya 1. indexten baslar)
+console.log(veysel.slice(-11, -5)); // GUNDUZ (-11 dahil -5 dahil degildir.)
+
+console.log(veysel.substring(veysel.length - 4, veysel.length - 2));
+
 
 
