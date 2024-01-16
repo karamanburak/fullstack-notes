@@ -110,3 +110,25 @@ const s4 = `primitive
 veri tiplerinin property ya da metodu olmaz.`
 
 console.log(s4.charAt(s4.length - 1));
+
+
+
+// *=========================================================
+// *   includes()- case sensitive (büyük küçük harfe duyarlı)
+// *=========================================================
+
+const word = "to be or not to be, that is The questions"
+console.log(word.includes("the")); // false
+console.log(word.includes("The")); // true
+console.log(word.includes("quest")); // true
+console.log(word.includes(" ")); // true
+console.log(word.includes("to be", 14)); // false
+
+
+
+
+
+
+
+
+
