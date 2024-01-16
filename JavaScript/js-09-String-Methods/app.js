@@ -233,3 +233,44 @@ console.log(tarkan.split("e")); // e harflerinden virgül ile ayiran durum
 console.log(tarkan.split("e", 3)); // dizinin 3 elemanini al
 
 console.log(tarkan);
+
+
+let months =
+    "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec";
+
+console.log(months.split("/"));
+
+
+let date = "16.01.2024"
+console.log(date.split("."));
+
+console.log(`bugün ayin ${date.split(".")[0]} si`);
+
+//? Alttaki stringi diziye cevir ve ilk 3 elemanini al
+let liste = "Harry Trump; Fred Barney; Helen Rigby; Bill Abel; Chris Hand";
+
+console.log(liste.split(";", 3));
+
+let yeniListe = liste.split(";")
+
+console.log(yeniListe);
+
+//! join() ile tekrar dziyi stringe ceviriyoruz
+
+console.log(yeniListe.join()); // defaulta virgül ile stringe cevirir
+console.log(yeniListe.join(" -"));
+
+//! reverse (metodu ile bir diziyi tersten yazdirabiliriz.)
+
+let pol = "ey edip adanada pide ye"
+let ters = pol.split("").reverse().join("")
+console.log(ters);
+
+
+if (pol == ters) {
+    console.log("Bu bir polindrom cümledir");
+} else {
+    console.log("selam cümlesi polindrom degildir");
+}
+
+
