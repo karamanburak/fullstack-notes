@@ -174,4 +174,25 @@ console.log(word3.startsWith("salina", 7)); // true (7. karakter "salina" oldugu
 console.log(word3.endsWith("salina", 13)); // true (13. karaktere kadar gel ama 13 dahil degil)
 
 
+//* ----------------------------------------------------------
+//*  replace(searchFor, replaceWith) --immutable (değiştirmez)
+//* ----------------------------------------------------------
 
+let oku = "Oku Johny gibi saf olma saf olma saf olma"
+
+oku = oku.replace("saf olma", "basarili ol")
+console.log(oku);
+
+console.log(oku.replace(/SAF/i, "fakir"));
+
+//* /SAF/i sekinde yazim incase sensitive (büyük kücük harfe takilma)
+
+console.log(oku.replace(/Saf olma/gi, "zengin ol"));
+
+//^ gi ile yazilirsa hem bütün saf olmalari secer, hem de incase sensitive'dir
+
+//? ReplaceAll()
+
+let oku2 = "Oku Johny gibi SAF olma saf olma saf olma"
+
+console.log(oku2.replaceAll("saf olma", "akilli ol"));
