@@ -114,7 +114,7 @@ console.log(s4.charAt(s4.length - 1));
 
 
 // *=========================================================
-// *   includes()- case sensitive (büyük küçük harfe duyarlı)
+// !   includes()- case sensitive (büyük küçük harfe duyarlı)
 // *=========================================================
 
 const word = "to be or not to be, that is The questions"
@@ -159,7 +159,7 @@ console.log(word2.search(/[^0-9a-zA-Z]/)); // rakam, kücük harf ve büyük har
 console.log(word2.toUpperCase().search(/[aeıioöuü]/i)); // i = incase sensitive, büyük kücük harfi önemseme
 
 //* ----------------------------------------------------------
-//* startsWith(), endsWith() -- case sensitive
+//! startsWith(), endsWith() -- case sensitive
 //* ----------------------------------------------------------
 
 const word3 = "Salina salina  sinsice olurum sana!"
@@ -175,7 +175,7 @@ console.log(word3.endsWith("salina", 13)); // true (13. karaktere kadar gel ama 
 
 
 //* ----------------------------------------------------------
-//*  replace(searchFor, replaceWith) --immutable (değiştirmez)
+//!  replace(searchFor, replaceWith) --immutable (değiştirmez)
 //* ----------------------------------------------------------
 
 let oku = "Oku Johny gibi saf olma saf olma saf olma"
@@ -196,3 +196,7 @@ console.log(oku.replace(/Saf olma/gi, "zengin ol"));
 let oku2 = "Oku Johny gibi SAF olma saf olma saf olma"
 
 console.log(oku2.replaceAll("saf olma", "akilli ol"));
+
+
+
+
