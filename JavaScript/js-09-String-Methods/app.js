@@ -156,10 +156,22 @@ console.log(word2.indexOf("."));  // -1
 console.log(word2.search(/[^a-z]/)); // 2
 console.log(word2.search(/[^0-9a-zA-Z]/)); // rakam, kücük harf ve büyük harf disindaki ilk karakteri döndür
 
-console.log(word2.toUpperCase().search(/[aeioöuü]/i)); // i = incase sensitive, büyük kücük harfi önemseme
+console.log(word2.toUpperCase().search(/[aeıioöuü]/i)); // i = incase sensitive, büyük kücük harfi önemseme
 
+//* ----------------------------------------------------------
+//* startsWith(), endsWith() -- case sensitive
+//* ----------------------------------------------------------
 
+const word3 = "Salina salina  sinsice olurum sana!"
 
+console.log(word3.startsWith("sa")); // false (cümle büyük "Sa" ile basliyor)
+console.log(word3.startsWith("Sa")); // true (cümle büyük "Sa" ile basliyor)
+
+console.log(word3.endsWith("!")); // true (cümle "!" ile bitiyor)
+
+console.log(word3.startsWith("salina", 7)); // true (7. karakter "salina" oldugu icin true döndürür)
+
+console.log(word3.endsWith("salina", 13)); // true (13. karaktere kadar gel ama 13 dahil degil)
 
 
 
