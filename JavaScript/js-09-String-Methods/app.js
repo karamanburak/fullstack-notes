@@ -125,6 +125,21 @@ console.log(word.includes(" ")); // true
 console.log(word.includes("to be", 14)); // false
 
 
+// *=========================================================
+// *   indexOf()- case sensitive (büyük küçük harfe duyarlı)
+// *=========================================================
+
+const word1 = "to be or not to be, that is The questions"
+
+console.log(word1.indexOf("be")); // 3
+console.log(word1.lastIndexOf("be")); // 16
+console.log(word1.indexOf("the")); // olmayan karakter icin her zaman -1 döndürür
+
+console.log(word1.indexOf("be", 5)); // 16
+
+console.log(word1.indexOf("be", word1.indexOf("be") + 1)); // 16
+
+
 
 
 
