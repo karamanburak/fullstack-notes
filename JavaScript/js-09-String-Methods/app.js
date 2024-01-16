@@ -274,3 +274,21 @@ if (pol == ters) {
 }
 
 
+//* ----------------------------------------------------------
+//*  trim();
+//* ----------------------------------------------------------
+
+const neuJahr = "                    Alles Gutes zum Neujahr       "
+
+console.log(neuJahr)
+console.log(neuJahr.length);
+console.log(neuJahr.trim());
+console.log(neuJahr.trim().length);
+
+
+//^ EXAMPLE 
+
+let abc = "         Clarusway Full Stack"
+
+console.log(abc.trim().slice(0, 9).toUpperCase());
+
