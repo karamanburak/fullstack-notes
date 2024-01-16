@@ -5,19 +5,19 @@
 // charAt()             Returns the character at the specified index.
 // charCodeAt()	        Returns the Unicode of the character at the specified index.
 // concat()	            Joins two or more strings, and returns a new string.
-// endsWith()	        Checks whether a string ends with a specified substring.
+//! endsWith()	        Checks whether a string ends with a specified substring.
 // fromCharCode()	    Converts Unicode values to characters.
-// includes()	        Checks whether a string contains the specified substring.
+//! includes()	        Checks whether a string contains the specified substring.
 // indexOf()	        Returns the index of the first occurrence of the specified value in a string.
 // lastIndexOf()	    Returns the index of the last occurrence of the specified value in a string.
 // localeCompare()	    Compares two strings in the current locale.
 // match()	            Matches a string against a regular expression, and returns an array of all matches.
 // repeat()	            Returns a new string which contains the specified number of copies of the original string.
-// replace()	        Replaces the occurrences of a string or pattern inside a string with another string, and return a new string without modifying the original string.
+//! replace()	        Replaces the occurrences of a string or pattern inside a string with another string, and return a new string without modifying the original string.
 // search()	             Searches a string against a regular expression, and returns the index of the first match.
 // slice()	            Extracts a portion of a string and returns it as a new string.
-// split()	            Splits a string into an array of substrings.
-// startsWith()	        Checks whether a string begins with a specified substring.
+//! split()	            Splits a string into an array of substrings.
+//! startsWith()	        Checks whether a string begins with a specified substring.
 // substr()	            Extracts the part of a string between the start index and a number of characters after it.
 // substring()	        Extracts the part of a string between the start and end indexes.
 // toLocaleLowerCase()	Converts a string to lowercase letters, according to host machine's current locale.
@@ -140,7 +140,23 @@ console.log(word1.indexOf("be", 5)); // 16
 console.log(word1.indexOf("be", word1.indexOf("be") + 1)); // 16
 
 
+// *=========================================================
+// *   search()  
+// *=========================================================
 
+const word2 = "to be or not to be, that is The 1 questions"
+
+//! REGEX - REGULAR EXPRESSION
+
+console.log(word2.search(/[A-Z]/)); // 28 ilk büyük harfi buldu ve index'ini döndürdü.
+console.log(word2.search(/[a-z]/)); // 0 ilk kücük harfi buldu ve index'ini döndürdü.
+console.log(word2.search(/[0-9]/)); // 32 ilk rakami buldu ve index'ini döndürdü.
+console.log(word2.search(/[.]/)); // -1
+console.log(word2.indexOf("."));  // -1
+console.log(word2.search(/[^a-z]/)); // 2
+console.log(word2.search(/[^0-9a-zA-Z]/)); // rakam, kücük harf ve büyük harf disindaki ilk karakteri döndür
+
+console.log(word2.toUpperCase().search(/[aeioöuü]/i)); // i = incase sensitive, büyük kücük harfi önemseme
 
 
 
