@@ -218,3 +218,18 @@ console.log(veysel.substring(veysel.length - 4, veysel.length - 2));
 
 
 
+//* ----------------------------------------------------------
+//! split= string i diziye çevirir
+//! split(seperator , limit ) =>ikisi de optional
+// //* split("x")=>x lerden ayırır, virgül+boşluk yapar ve yeni dizi döndürür.orjinal diziyi değiştirmez
+//* ----------------------------------------------------------
+
+const tarkan = "Gel gündüzle gece olalim"
+
+console.log(tarkan.split()); // 1 elemanli diziye cevirir
+console.log(tarkan.split(" ")); // bosluklardan virgül ile ayirilmis dört elemanli dizi
+console.log(tarkan.split(""));
+console.log(tarkan.split("e")); // e harflerinden virgül ile ayiran durum
+console.log(tarkan.split("e", 3)); // dizinin 3 elemanini al
+
+console.log(tarkan);
