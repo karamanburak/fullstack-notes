@@ -291,3 +291,11 @@ let abc = "         Clarusway Full Stack"
 
 console.log(abc.trim().slice(0, 9).toUpperCase()); // CLARUSWAY
 
+
+
+let str = "                 Welcome to Clarusway                 "
+
+console.log(str.trim());
+console.log(str.trimStart());
+console.log(str.trimEnd());
+
