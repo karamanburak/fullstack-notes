@@ -148,16 +148,16 @@
 //^ EXAMPLE - 9 // tolocaleUpperCase()
 //? Pangram
 
-let TR = 'Pijamalı hasta yağız şoföre çabucak güvendi'
-let US = 'The quick brown fox jumps over the lazy dog'
-let DE = 'Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. '
+// let TR = 'Pijamalı hasta yağız şoföre çabucak güvendi'
+// let US = 'The quick brown fox jumps over the lazy dog'
+// let DE = 'Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. '
 
 
-console.log(TR.toUpperCase())
-console.log(TR.toLocaleUpperCase('tr-TR'))
+// console.log(TR.toUpperCase())
+// console.log(TR.toLocaleUpperCase('tr-TR'))
 
-console.log(DE.toUpperCase())
-console.log(DE.toLocaleUpperCase('de-DE'))
+// console.log(DE.toUpperCase())
+// console.log(DE.toLocaleUpperCase('de-DE'))
 
 // localeCompare()	    Compares two strings in the current locale.
 
@@ -166,3 +166,56 @@ console.log(DE.toLocaleUpperCase('de-DE'))
 
 // console.log('ç'.charCodeAt(0))
 // console.log('c'.charCodeAt(0))
+
+//^ EXAMPLE - 10 // trim() & trimStart() & trimEnd ()
+
+// const creditCardNumber = '1234-5678-9012-3456'; //'123456••••••3456'
+
+// const veiledCardNumber = (numberStr) => {
+//     return numberStr.split('-').join('').slice(0, 6) + '******' + numberStr.slice(-4)
+// }
+// console.log(veiledCardNumber(creditCardNumber))
+
+//^ VERSION - 2
+// function cardNumberReplace(creditCardNumber) {
+//     let a = creditCardNumber.replaceAll('-', '');
+//     return a.slice(0, 6) + '******' + a.slice(-4);
+// }
+// const creditCardNumber = '1234-5678-9012-3456';
+// console.log(cardNumberReplace(creditCardNumber));
+
+
+//^ VERSION - 3
+
+const creditCardNumber = (numbers) => {
+    result = numbers.replaceAll("-", "");
+    return result.replace(result.slice(6, 12), "******");
+};
+console.log(creditCardNumber("1234-5678-9012-3456"));
+
+
+// let str = ' 1234-5678-9012-3456  '
+
+// console.log(str);
+// console.log(str.trim());
+// console.log(str.trimStart());
+// console.log(str.trimEnd());
+
+
+
+
+
+
+
+
+
+// let str = "                 Welcome to Clarusway                 "
+
+// console.log (str.trim());
+// console.log(str.trimStart());
+// console.log(str.trimEnd());
+
+// // Expected Outcome :
+// Welcome to Clarusway
+// Welcome to Clarusway                 //
+//  Welcome to Clarusway
