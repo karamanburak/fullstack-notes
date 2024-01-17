@@ -25,22 +25,42 @@
 // console.log(lorem2.charCodeAt(0));
 // console.log(lorem2.charCodeAt(19));
 
+
+//^ EXAMPLE -1 CEASERSHIFT
 // Sezar sifrelemesi. String alacak ve ikinci parametre sayi olacak. O sayi kadar kaydirma yapacak.
 
-function cipher(str, shift) {
+// function cipher(str, shift) {
+//     let result = ''
+
+
+//     for (let i = 0; i < str.length; i++) {
+
+//         let ciphedText = str.charCodeAt(i) + shift
+//         result += String.fromCharCode(ciphedText)
+//     }
+//     console.log(result);
+
+// }
+
+// cipher('abc', 3);
+
+//
+
+//^ VERSION 2
+
+function decipher(str, shift) {
     let result = ''
 
 
     for (let i = 0; i < str.length; i++) {
 
-        let ciphedText = str.charCodeAt(i) + shift
-        result += String.fromCharCode(ciphedText)
+        let deciphedText = str.charCodeAt(i) - shift
+        result += String.fromCharCode(deciphedText)
     }
     console.log(result);
 
 }
 
-console.log(cipher('abc', 1));
-
+decipher('Khoor#zruog', 3);
 
 
