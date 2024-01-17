@@ -83,34 +83,39 @@
 // console.log(lrm.endsWith('sunt')); // true
 // console.log(lrm.endsWith('Ipsum', 11)); // false
 
-//^ EXAMPLE - 5 
+//^ EXAMPLE - 5 // indexOf()
+
+// let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+
+// function indexBul(str, char) {
+//     let index = 0
+
+//     if (str.indexOf(char, index) == -1) {
+//         console.log(`Metin icerisinde ${char} bulunamadi!`);
+//         return
+//     }
+
+//     while (str.indexOf(char, index) !== -1) {
+//         console.log(str.indexOf(char, index));
+//         index = str.indexOf(char, index) + 1
+
+//     }
+
+// }
+// indexBul(lrm, 'e')
+
+
+//^ EXAMPLE - 6 // includes()
+
+// let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+
+// console.log(lrm.includes('Ipsum')); // false
+// console.log(lrm.includes('ipsum')); // true
+
+//^ EXAMPLE - 7 // lastIndexOf()
 
 let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
 
-function indexBul(str, char) {
-    let index = 0
+console.log(lrm.lastIndexOf('e')); // 51
+console.log(lrm.lastIndexOf('e', 50)); // 34
 
-    if (str.indexOf(char, index) == -1) {
-        console.log(`Metin icerisinde ${char} bulunamadi!`);
-        return
-    }
-
-    while (str.indexOf(char, index) !== -1) {
-        console.log(str.indexOf(char, index));
-        index = str.indexOf(char, index) + 1
-
-    }
-
-}
-indexBul(lrm, 'e')
-
-
-
-// let str = 'You do not know what you do not know until you know.';
-// let findString = "know";
-// let result = str.indexOf(findString);
-
-// console.log (`first occurrence of ${findString} is position at ${result} `);
-
-// // Expected Outcome :
-// first occurrence of know is position at 11
