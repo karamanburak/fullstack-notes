@@ -26,7 +26,7 @@
 // console.log(lorem2.charCodeAt(19));
 
 
-//^ EXAMPLE -1 CEASERSHIFT
+//^ EXAMPLE -1 CEASERSHIFT  // charCodeAt()
 // Sezar sifrelemesi. String alacak ve ikinci parametre sayi olacak. O sayi kadar kaydirma yapacak.
 
 // function cipher(str, shift) {
@@ -42,25 +42,47 @@
 
 // }
 
-// cipher('abc', 3);
-
-//
-
-//^ VERSION 2
-
-function decipher(str, shift) {
-    let result = ''
+// cipher('Hello World', 3);
 
 
-    for (let i = 0; i < str.length; i++) {
 
-        let deciphedText = str.charCodeAt(i) - shift
-        result += String.fromCharCode(deciphedText)
-    }
-    console.log(result);
+//^ VERSION 2 // charCodeAt()
 
-}
+// function decipher(str, shift) {
+//     let result = ''
 
-decipher('Khoor#zruog', 3);
+
+//     for (let i = 0; i < str.length; i++) {
+
+//         let deciphedText = str.charCodeAt(i) - shift
+//         result += String.fromCharCode(deciphedText)
+//     }
+//     console.log(result);
+
+// }
+
+// decipher('Nkrru&]uxrj', 6);
+
+
+//^ EXAMPLE - 3 // concat()
+//! Orjinal degeri degistirmez, assigning ile kalici degistirilebilir.
+
+let lorem2 = `Lorem ipsum dolor sit amet elit.`
+let lorem3 = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+
+const lorem4 = lorem2.concat(' merhaba ' + lorem3)
+console.log(lorem4);
+
+//^EXAMPLE - 4 // startsWith() & endsWith() & indexOf()
+
+let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio dolorum sunt`
+
+
+console.log(lrm.startsWith('Lorem', 1));
+console.log(lrm.startsWith('ipsum', 6));
+console.log(lrm.indexOf('xyz'));
+
+
+
 
 
