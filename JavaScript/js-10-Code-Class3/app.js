@@ -112,10 +112,37 @@
 // console.log(lrm.includes('Ipsum')); // false
 // console.log(lrm.includes('ipsum')); // true
 
+// let email1 = 'mark.m@clarusway.com' //'Valid Email
+// let email2 = 'mark.mclarusway.com'  //'Invalid Email
+
+// if (email1.includes('@')) {
+//     console.log('Valid Email');
+// } else {
+//     console.log('Invalid Email');
+// }
+
+
+
 //^ EXAMPLE - 7 // lastIndexOf()
+
+// let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+
+// console.log(lrm.lastIndexOf('e')); // 51
+// console.log(lrm.lastIndexOf('e', 50)); // 34
+
+//^ EXAMPLE - 8 // slice()
 
 let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
 
-console.log(lrm.lastIndexOf('e')); // 51
-console.log(lrm.lastIndexOf('e', 50)); // 34
+console.log(lrm.slice(6, 12)); // ipsum
+
+
+const str = "CLARUSWAY";
+
+console.log(str.slice(0, 4)); // CLAR
+console.log(str.slice(5, 8)); // SWA
+console.log(str.slice(2)); // ARUSWAY
+console.log(str.slice(3, -3)); // RUS
+console.log(str.slice(-8, -4)); // LARU
+
 
