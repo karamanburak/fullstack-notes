@@ -67,22 +67,50 @@
 //^ EXAMPLE - 3 // concat()
 //! Orjinal degeri degistirmez, assigning ile kalici degistirilebilir.
 
-let lorem2 = `Lorem ipsum dolor sit amet elit.`
-let lorem3 = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+// let lorem2 = `Lorem ipsum dolor sit amet elit.`
+// let lorem3 = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
 
-const lorem4 = lorem2.concat(' merhaba ' + lorem3)
-console.log(lorem4);
+// const lorem4 = lorem2.concat(' merhaba ' + lorem3)
+// console.log(lorem4);
 
 //^EXAMPLE - 4 // startsWith() & endsWith() & indexOf()
 
-let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio dolorum sunt`
 
 
-console.log(lrm.startsWith('Lorem', 1));
-console.log(lrm.startsWith('ipsum', 6));
-console.log(lrm.indexOf('xyz'));
+// console.log(lrm.startsWith('Lorem', 1)); // false
+// console.log(lrm.startsWith('ipsum', 6)); // true
+// console.log(lrm.indexOf('xyz')); // -1
+// console.log(lrm.endsWith('sunt')); // true
+// console.log(lrm.endsWith('Ipsum', 11)); // false
+
+//^ EXAMPLE - 5 
+
+let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+
+function indexBul(str, char) {
+    let index = 0
+
+    if (str.indexOf(char, index) == -1) {
+        console.log(`Metin icerisinde ${char} bulunamadi!`);
+        return
+    }
+
+    while (str.indexOf(char, index) !== -1) {
+        console.log(str.indexOf(char, index));
+        index = str.indexOf(char, index) + 1
+
+    }
+
+}
+indexBul(lrm, 'e')
 
 
 
+// let str = 'You do not know what you do not know until you know.';
+// let findString = "know";
+// let result = str.indexOf(findString);
 
+// console.log (`first occurrence of ${findString} is position at ${result} `);
 
+// // Expected Outcome :
+// first occurrence of know is position at 11
