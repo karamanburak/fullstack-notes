@@ -188,8 +188,7 @@
 //^ VERSION - 3
 
 const creditCardNumber = (numbers) => {
-    result = numbers.replaceAll("-", "");
-    return result.replace(result.slice(6, 12), "******");
+    return numbers.replace(numbers.slice(7, 14), "******").replaceAll("-", "");
 };
 console.log(creditCardNumber("1234-5678-9012-3456"));
 
