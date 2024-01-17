@@ -132,17 +132,37 @@
 
 //^ EXAMPLE - 8 // slice()
 
-let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+// let lrm = `Lorem ipsum dolor sit amet consectetur adipisicing elit.`
 
-console.log(lrm.slice(6, 12)); // ipsum
-
-
-const str = "CLARUSWAY";
-
-console.log(str.slice(0, 4)); // CLAR
-console.log(str.slice(5, 8)); // SWA
-console.log(str.slice(2)); // ARUSWAY
-console.log(str.slice(3, -3)); // RUS
-console.log(str.slice(-8, -4)); // LARU
+// console.log(lrm.slice(6, 12)); // ipsum
 
 
+// const str = "CLARUSWAY";
+
+// console.log(str.slice(0, 4)); // CLAR
+// console.log(str.slice(5, 8)); // SWA
+// console.log(str.slice(2)); // ARUSWAY
+// console.log(str.slice(3, -3)); // RUS
+// console.log(str.slice(-8, -4)); // LARU
+
+//^ EXAMPLE - 9 // tolocaleUpperCase()
+//? Pangram
+
+let TR = 'Pijamalı hasta yağız şoföre çabucak güvendi'
+let US = 'The quick brown fox jumps over the lazy dog'
+let DE = 'Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. '
+
+
+console.log(TR.toUpperCase())
+console.log(TR.toLocaleUpperCase('tr-TR'))
+
+console.log(DE.toUpperCase())
+console.log(DE.toLocaleUpperCase('de-DE'))
+
+// localeCompare()	    Compares two strings in the current locale.
+
+// console.log('ß'.localeCompare('B'))
+
+
+// console.log('ç'.charCodeAt(0))
+// console.log('c'.charCodeAt(0))
