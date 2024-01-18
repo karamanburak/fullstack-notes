@@ -96,7 +96,7 @@
 
 // const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
 
-// const colors2 = colors.slice() // parametre vermezsek tümünü kopyalar. 
+// const colors2 = colors.slice() // parametre vermezsek tümünü kopyalar.
 
 // colors[5] = 'White' // colors2 yi etkilemez, degistirmez!
 
@@ -145,10 +145,28 @@
 
 //^ EXAMPLE pop() = dizinin son elamanini siler. Sildigi elamani return eder.
 
-const colors = ['Red', 'Green', 'Blue', 'Yellow']
+// const colors = ['Red', 'Green', 'Blue', 'Yellow']
 
-const removedItem = colors.pop()
+// const removedItem = colors.pop()
 
+// console.log(colors);
+// console.log(removedItem);
+// console.log(colors.pop());
+
+//^ EXAMPLE unshift() = Dizinin basina eleman ekler. Yeni olusan dizinin uzunlugunu return eder.
+
+const colors = ['Blue', 'Yellow']
+
+// const newLength = colors.unshift('Red', 'Green')
+
+// console.log(colors);
+// console.log(newLength);
+// console.log(colors.unshift()); // Bos verirsek eleman sayisini verir.
+
+const colors2 = ['White', 'Brown']
+
+// colors.unshift(colors2) // 0 nci indekse arra olarak ekler.
+
+
+colors.unshift(...colors2) // Spread operatörü ikinci arrayin tüm elemanlarini basa ekler.
 console.log(colors);
-console.log(removedItem);
-console.log(colors.pop());
