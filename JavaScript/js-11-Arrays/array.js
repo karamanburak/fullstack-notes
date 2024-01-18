@@ -94,9 +94,9 @@
 //! Array Metodlari
 //^ EXAMPLE slice()
 
-const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
+// const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
 
-const colors2 = colors.slice() // parametre vermezsek tümünü kopyalar. 
+// const colors2 = colors.slice() // parametre vermezsek tümünü kopyalar. 
 
 // colors[5] = 'White' // colors2 yi etkilemez, degistirmez!
 
@@ -112,11 +112,33 @@ const colors2 = colors.slice() // parametre vermezsek tümünü kopyalar.
 
 // console.log(colors[colors.length - 1]); // sondaki ögeyi döndürür. White
 
-const colors5 = colors.slice(-2)
+// const colors5 = colors.slice(-2)
 
-console.log(colors5);
+// console.log(colors5);
 
-const colors6 = colors.slice(-4, -1) // Green, blue, yellow
+// const colors6 = colors.slice(-4, -1) // Green, blue, yellow
 
-console.log(colors.slice(-2, -4)); // Limit disi bos array
-console.log(colors.slice(-2)); // Son ıkı elemanı getirir. Yellow, Brown
+// console.log(colors.slice(-2, -4)); // Limit disi bos array
+// console.log(colors.slice(-2)); // Son ıkı elemanı getirir. Yellow, Brown
+
+
+//^ EXAMPLE push() = Arrayin sonuna elaman ekler ve yerini array'in eleman sayisini return eder!
+
+const colors = ['Red', 'Green']
+
+// let newLength = colors.push('Blue')
+
+// console.log(newLength); // 3
+// console.log(colors.push('Yellow')); // 4
+
+// console.log(colors.push()); // length ile ayni olur = 4
+// console.log(colors.length); // 4
+
+// colors.push('Blue', 'Pink') // vverdigimiz sira ile sona ekler
+// console.log(colors);
+
+const colors2 = ['Blue', 'Yellow']
+
+// colors.push(colors2) // ['Red', 'Green',['Blue', 'Yellow']]
+colors.push(...colors2) // spread parametresi ile tek tek ekler.
+console.log(colors); // ['Red', 'Green', 'Blue', 'Yellow']
