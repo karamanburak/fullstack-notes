@@ -175,13 +175,23 @@
 
 //^ EXAMPLE shift() = Dizinin 0'nci indeksindeki degeri siler. Sildigi degeri return eder.
 
-const newColors = ['White', 'Brown', 'Red', 'Green', 'Blue', 'Yellow']
+// const newColors = ['White', 'Brown', 'Red', 'Green', 'Blue', 'Yellow']
 
-const silinenDeger = newColors.shift()
+// const silinenDeger = newColors.shift()
 
-console.log(newColors); //& ['Brown', 'Red', 'Green', 'Blue', 'Yellow']
-console.log(silinenDeger); //& White
+// console.log(newColors); //& ['Brown', 'Red', 'Green', 'Blue', 'Yellow']
+// console.log(silinenDeger); //& White
 
-delete newColors[2] //& Index'i empty haline getirir. Sadece 'Green' degerini siler. Yeri empty olarak kalir. Önerilmez!!!
-newColors[2] = undefined //& delete yerine bunu kallnabiliriz.
-console.log(newColors);
+// delete newColors[2] //& Index'i empty haline getirir. Sadece 'Green' degerini siler. Yeri empty olarak kalir. Önerilmez!!!
+// newColors[2] = undefined //& delete yerine bunu kallnabiliriz.
+// console.log(newColors);
+
+//^ CHALLENGE
+const arr1 = ['red', 'blue', 'purple', 'white', 'orange']
+
+const arr2 = arr1.shift()
+const arr3 = arr1.pop()
+const arr4 = arr1.push(arr2)
+const arr5 = arr1.unshift(arr3)
+
+console.log(arr1);
