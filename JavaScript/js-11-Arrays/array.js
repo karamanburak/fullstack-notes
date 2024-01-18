@@ -223,16 +223,83 @@ const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
 
 //^ EXAMPLE concat() = Arrayleri birlestirir. Orjinal array'i (dizi) degismez!
 
-const color1 = ['red', 'green']
-const color2 = ['blue', 'orange']
-const color3 = ['10', 'true']
+// const color1 = ['red', 'green']
+// const color2 = ['blue', 'orange']
+// const color3 = ['10', 'true']
 
 
-console.log(color1.concat(color2, color3)); // ['red', 'green', 'blue', 'orange', '10', 'true']
+// console.log(color1.concat(color2, color3)); // ['red', 'green', 'blue', 'orange', '10', 'true']
 
-console.log(color1 + color2); //  Array'i bozar. red,greenblue,orange
+// console.log(color1 + color2); //  Array'i bozar. red,greenblue,orange
 
-const newArr = color1.concat('yellow', 2, color3, color2, color1) // ['red', 'green', 'yellow', 2, '10', 'true', 'blue', 'orange', 'red', 'green']
+// const newArr = color1.concat('yellow', 2, color3, color2, color1) // ['red', 'green', 'yellow', 2, '10', 'true', 'blue', 'orange', 'red', 'green']
 
-console.log(newArr);
+// console.log(newArr);
 
+//^ EXAMPLE indexOf() = Soldan saga dogru arar ilk eslesen elementin indexini döndürür. Ikinci parametre opsiyoneldir. Ikinci parametre verilirse aramaya o indexten itibaren baslar.
+//! Bulamazsa -1 döndürür!
+
+/* const colors = ['Red','Green', 'Blue','Green','Brown']
+console.log(colors.indexOf('Green')) //1
+console.log(colors.indexOf('Green',2)) //3
+console.log(colors.indexOf('green')) //-1
+
+
+if(colors.indexOf('Green') == -1){
+    colors.push('green')
+    console.log(colors)
+}else{
+    console.log('Bu elaman zaten var')
+    console.log(colors)
+} */
+
+
+//^ lastIndexOf () =  Sagdan sola dogru arar ilk eslesen elementin indexini döndürür. Ikinci parametre opsiyoneldir. Ikinci parametre verilirse aramaya o indexten itibaren baslar ve de bulamazsa -1 döndürür.
+
+/* const colors = ['Red','Green', 'Blue','Green','Brown']
+
+console.log(colors.lastIndexOf('Green')) //3
+console.log(colors.lastIndexOf('Green',2))//1
+console.log(colors.lastIndexOf('green'))//-1 */
+
+
+//^ EXAMPLE reverse() = Array elemanlarinin sirasini sondan basa dogru degistirir.
+//! Orjinal Arrayi degistirir/bozar!
+
+/* const colors = ['Red','Green', 'Blue','Green','Brown']
+colors.reverse()
+console.log(colors) //['Brown', 'Green', 'Blue', 'Green', 'Red'] */
+
+
+//^ EXAMPLE join() = Arrayin tüm elemanlarini verilen seperatore (ayirici) göre stringe cevirir.
+//! Orjinal arrayi degistirmez!
+
+/* const arr = [ 'C', 'l', 'a', 'r', 'u', 's', 'w', 'a', 'y' ]
+
+console.log(arr.join()) //C,l,a,r,u,s,w,a,y
+console.log(arr.join('')) //Clarusway
+console.log(arr.join('*'))//C*l*a*r*u*s*w*a*y
+
+const cw = arr.join('')
+
+console.log(cw) //Clarusway
+
+const arr2 = [ 'C', 'l', 'a', 'r', ,'u', 's', 'w', 'a', 'y',[2019,'CW'] ]
+console.log(arr2.join()) //C,l,a,r,,u,s,w,a,y,2019,CW
+console.log(arr2.join('')) //Clarusway2019,CW
+console.log(arr2.join('_')) //C_l_a_r__u_s_w_a_y_2019,CW
+console.log(arr2[10].join('')) //2019CW*/
+
+//^ EXAMPLE sort() = Arrayin icindeki elemanlari siralar. Default olarak string siralamsi yapar.
+//! Orjinal array i degistirir.
+
+/* const arr = [ 'red', 'blue', 'Purple', "white", "orange" ] //['Purple', 'blue', 'orange', 'red', 'white']
+
+arr.sort()
+
+console.log(arr)
+
+const arr2 = [ 55, 5, 22,23, 2, 11,12, 1, 111 ]
+
+arr2.sort()
+console.log(arr2) //[1, 11, 111, 12, 2, 22, 23, 5, 55] */
