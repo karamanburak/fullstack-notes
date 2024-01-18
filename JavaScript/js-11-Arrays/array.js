@@ -66,25 +66,57 @@
 // console.log(meyve3)
 
 
-let dob = 2000
+// let dob = 2000
 
-let color = 'red'
-color = 'yellow'
-
-
-
-const arr = [color, 2024 - dob, 'Yas']
-
-console.log(arr)
+// let color = 'red'
+// color = 'yellow'
 
 
-const arr2 = [color, 'Bir', [1, 2, 3, true, []], {}, false]
 
-console.log(arr2)
+// const arr = [color, 2024 - dob, 'Yas']
 
-console.log(arr2[2])
-console.log(arr2[2][3])
+// console.log(arr)
 
-arr2[2][4] = arr2
-console.log(arr2[2][4])
-console.log(arr2)
+
+// const arr2 = [color, 'Bir', [1, 2, 3, true, []], {}, false]
+
+// console.log(arr2)
+
+// console.log(arr2[2])
+// console.log(arr2[2][3])
+
+// arr2[2][4] = arr2
+// console.log(arr2[2][4])
+// console.log(arr2)
+
+
+
+//! Array Metodlari
+//^ EXAMPLE slice()
+
+const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
+
+const colors2 = colors.slice() // parametre vermezsek tümünü kopyalar. 
+
+// colors[5] = 'White' // colors2 yi etkilemez, degistirmez!
+
+// console.log(colors);
+// console.log(colors2);
+
+// const colors3 = colors.slice(2) // Ikinci parametre verilmezse ilk parametrenin oldugu yerden böler.
+// console.log(colors3);
+
+// const colors4 = colors.slice(2, 4) // 2 den 4'e kadar olan kismi alir. 4 harictir.
+// console.log(colors4);
+// console.log(colors[-1]); // undefined negatif index ile cagirilmaz!
+
+// console.log(colors[colors.length - 1]); // sondaki ögeyi döndürür. White
+
+const colors5 = colors.slice(-2)
+
+console.log(colors5);
+
+const colors6 = colors.slice(-4, -1) // Green, blue, yellow
+
+console.log(colors.slice(-2, -4)); // Limit disi bos array
+console.log(colors.slice(-2)); // Son ıkı elemanı getirir. Yellow, Brown
