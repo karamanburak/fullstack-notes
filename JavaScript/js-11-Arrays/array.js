@@ -155,7 +155,7 @@
 
 //^ EXAMPLE unshift() = Dizinin basina eleman ekler. Yeni olusan dizinin uzunlugunu return eder.
 
-const colors = ['Blue', 'Yellow']
+// const colors = ['Blue', 'Yellow']
 
 // const newLength = colors.unshift('Red', 'Green')
 
@@ -163,10 +163,25 @@ const colors = ['Blue', 'Yellow']
 // console.log(newLength);
 // console.log(colors.unshift()); // Bos verirsek eleman sayisini verir.
 
-const colors2 = ['White', 'Brown']
+// const colors2 = ['White', 'Brown']
 
 // colors.unshift(colors2) // 0 nci indekse arra olarak ekler.
 
 
-colors.unshift(...colors2) // Spread operatörü ikinci arrayin tüm elemanlarini basa ekler.
-console.log(colors);
+// colors.unshift(...colors2) // Spread operatörü ikinci arrayin tüm elemanlarini basa ekler.
+// console.log(colors);
+
+
+
+//^ EXAMPLE shift() = Dizinin 0'nci indeksindeki degeri siler. Sildigi degeri return eder.
+
+const newColors = ['White', 'Brown', 'Red', 'Green', 'Blue', 'Yellow']
+
+const silinenDeger = newColors.shift()
+
+console.log(newColors); //& ['Brown', 'Red', 'Green', 'Blue', 'Yellow']
+console.log(silinenDeger); //& White
+
+delete newColors[2] //& Index'i empty haline getirir. Sadece 'Green' degerini siler. Yeri empty olarak kalir. Önerilmez!!!
+newColors[2] = undefined //& delete yerine bunu kallnabiliriz.
+console.log(newColors);
