@@ -124,7 +124,7 @@
 
 //^ EXAMPLE push() = Arrayin sonuna elaman ekler ve yerini array'in eleman sayisini return eder!
 
-const colors = ['Red', 'Green']
+// const colors = ['Red', 'Green']
 
 // let newLength = colors.push('Blue')
 
@@ -137,8 +137,18 @@ const colors = ['Red', 'Green']
 // colors.push('Blue', 'Pink') // vverdigimiz sira ile sona ekler
 // console.log(colors);
 
-const colors2 = ['Blue', 'Yellow']
+// const colors2 = ['Blue', 'Yellow']
 
 // colors.push(colors2) // ['Red', 'Green',['Blue', 'Yellow']]
-colors.push(...colors2) // spread parametresi ile tek tek ekler.
-console.log(colors); // ['Red', 'Green', 'Blue', 'Yellow']
+// colors.push(...colors2) // spread parametresi ile tek tek ekler.
+// console.log(colors); // ['Red', 'Green', 'Blue', 'Yellow']
+
+//^ EXAMPLE pop() = dizinin son elamanini siler. Sildigi elamani return eder.
+
+const colors = ['Red', 'Green', 'Blue', 'Yellow']
+
+const removedItem = colors.pop()
+
+console.log(colors);
+console.log(removedItem);
+console.log(colors.pop());
