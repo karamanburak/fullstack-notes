@@ -187,11 +187,33 @@
 // console.log(newColors);
 
 //^ CHALLENGE
-const arr1 = ['red', 'blue', 'purple', 'white', 'orange']
+// const arr1 = ['red', 'blue', 'purple', 'white', 'orange']
 
-const arr2 = arr1.shift()
-const arr3 = arr1.pop()
-const arr4 = arr1.push(arr2)
-const arr5 = arr1.unshift(arr3)
+// const arr2 = arr1.shift()
+// const arr3 = arr1.pop()
+// arr1.push(arr2)
+// arr1.unshift(arr3)
 
-console.log(arr1);
+// console.log(arr1);
+
+//^ EXAMPLE splice() Üc ise yarar. 1-) eleman siler. 2-) eleman ekler. 3-) eleman degistirir.
+//! Islem sonunda varsa silinen elemanlari yoksa bos array döndürür.
+
+const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
+
+// colors.splice(0) // Tüm arrayi bos array haline getirir.
+
+// colors.splice(1,1) // 1. indexe git 1 tane sil
+
+// colors.splice(2, 1, 'white', 'pink') // 2. indexe git 1 eleman sil ve white ve pink'i onun yerine ekle.
+
+// console.log(colors.splice(4, 0, 'white', 'pink')); // Yellow ve Brown arasina bir deger silmeden White ve Pink ekle
+
+// console.log(colors.splice(4, 1, 'white', 'pink')); // Brown
+
+// let result = colors.splice(2, 2) //  ['Blue', 'Yellow'] siler ve return eder.
+
+// console.log(colors, result);
+
+
+
