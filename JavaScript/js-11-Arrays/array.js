@@ -215,11 +215,24 @@ const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
 
 
 //^ CHALLENGE
-const arr1 = ['Red', 'blue', 'purple']
-const removed = arr1.splice(0, 0, 'yellow')
+// const arr1 = ['Red', 'blue', 'purple']
+// const removed = arr1.splice(0, 0, 'yellow')
 
-console.log(arr1);
-console.log(removed);
+// console.log(arr1);
+// console.log(removed);
+
+//^ EXAMPLE concat() = Arrayleri birlestirir. Orjinal array'i (dizi) degismez!
+
+const color1 = ['red', 'green']
+const color2 = ['blue', 'orange']
+const color3 = ['10', 'true']
 
 
+console.log(color1.concat(color2, color3)); // ['red', 'green', 'blue', 'orange', '10', 'true']
+
+console.log(color1 + color2); //  Array'i bozar. red,greenblue,orange
+
+const newArr = color1.concat('yellow', 2, color3, color2, color1) // ['red', 'green', 'yellow', 2, '10', 'true', 'blue', 'orange', 'red', 'green']
+
+console.log(newArr);
 
