@@ -213,7 +213,13 @@ const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
 
 // let result = colors.splice(2, 2) //  ['Blue', 'Yellow'] siler ve return eder.
 
-// console.log(colors, result);
+
+//^ CHALLENGE
+const arr1 = ['Red', 'blue', 'purple']
+const removed = arr1.splice(0, 0, 'yellow')
+
+console.log(arr1);
+console.log(removed);
 
 
 
