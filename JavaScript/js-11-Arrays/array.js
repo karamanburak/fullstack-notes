@@ -299,16 +299,16 @@ arr.sort()
 
 console.log(arr) */
 
-const arr2 = [55, 5, 22, 23, 2, 11, 12, 1, 111]
+// const arr2 = [55, 5, 22, 23, 2, 11, 12, 1, 111]
 
-arr2.sort()
-console.log(arr2) //[1, 11, 111, 12, 2, 22, 23, 5, 55] 
+// arr2.sort()
+// console.log(arr2) //[1, 11, 111, 12, 2, 22, 23, 5, 55]
 
-arr2.sort((a, b) => b - a) // Artan siralama
-console.log(`Artan siralama`, arr2); // [1, 2, 5, 11, 12, 22, 23, 55, 111]
+// arr2.sort((a, b) => b - a) // Artan siralama
+// console.log(`Artan siralama`, arr2); // [1, 2, 5, 11, 12, 22, 23, 55, 111]
 
-arr2.sort((a, b) => a - b) // Azalan siralama
-console.log(`Azalan siralama`, arr2);
+// arr2.sort((a, b) => a - b) // Azalan siralama
+// console.log(`Azalan siralama`, arr2);
 
 
 //^ EXAMPLE includes() = Array icinde aranan eleman varsa true yoksa false deger return eder.
@@ -347,10 +347,54 @@ console.log(`Azalan siralama`, arr2);
 // randomColor(colors)
 
 //^ CHALLENGE
-const colors = ["Red", "Green", "Blue", "Green", "Brown"];
-function randomColour(list) {
-    let color = list[Math.floor(Math.random() * list.length)];
-    console.log(color);
-    document.body.style.backgroundColor = color
-}
-console.log(randomColour(colors));
+// const colors = ["Red", "Green", "Blue", "Green", "Brown"];
+// function randomColour(list) {
+//     let color = list[Math.floor(Math.random() * list.length)];
+//     console.log(color);
+//     document.body.style.backgroundColor = color
+// }
+// console.log(randomColour(colors));
+
+
+/* -------------------------------------------------------------------------- */
+//!                               LOOPS IN ARRAYS                             */
+/* -------------------------------------------------------------------------- */
+
+
+
+//! FOR loop
+
+// const colors = ["Red", "Yellow", "Blue", "Green", "Brown"];
+
+// for (let i = 0; i < colors.length; i++) {
+//     if (colors[i] == 'Yellow') continue
+//     if (colors[i] == 'Green') break
+
+//     console.log(colors[i].toUpperCase());
+// }
+
+
+//! While Loop
+
+// let i = 0
+// while (i < colors.length) {
+//     if (colors[i] == 'Red') {
+//         i++
+//         break
+
+//     }
+//     console.log(colors[i].toLowerCase());
+//     i++
+// }
+
+
+//! for ... in loop // Empty indexleri atlar, calistirmaz.
+
+// const colors = ["Red", "Yellow", "Blue", "Green", "Brown"];
+
+// for (let i in colors) {
+//     // console.log(color, typeof color);
+//     console.log(colors[i]);
+// }
+
+
