@@ -199,7 +199,7 @@
 //^ EXAMPLE splice() Üc ise yarar. 1-) eleman siler. 2-) eleman ekler. 3-) eleman degistirir.
 //! Islem sonunda varsa silinen elemanlari yoksa bos array döndürür.
 
-const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
+// const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Brown']
 
 // colors.splice(0) // Tüm arrayi bos array haline getirir.
 
@@ -297,9 +297,60 @@ console.log(arr2[10].join('')) //2019CW*/
 
 arr.sort()
 
-console.log(arr)
+console.log(arr) */
 
-const arr2 = [ 55, 5, 22,23, 2, 11,12, 1, 111 ]
+const arr2 = [55, 5, 22, 23, 2, 11, 12, 1, 111]
 
 arr2.sort()
-console.log(arr2) //[1, 11, 111, 12, 2, 22, 23, 5, 55] */
+console.log(arr2) //[1, 11, 111, 12, 2, 22, 23, 5, 55] 
+
+arr2.sort((a, b) => b - a) // Artan siralama
+console.log(`Artan siralama`, arr2); // [1, 2, 5, 11, 12, 22, 23, 55, 111]
+
+arr2.sort((a, b) => a - b) // Azalan siralama
+console.log(`Azalan siralama`, arr2);
+
+
+//^ EXAMPLE includes() = Array icinde aranan eleman varsa true yoksa false deger return eder.
+//! Büyük / Kücük harf duyarlidir. (Case sensitive)
+
+// const colors = ['Red', 'Green', 'Blue', 'Green', 'Brown']
+
+
+// let checkElement = (element) => {
+//     if (!colors.includes(element)) {
+//         colors.push(element)
+//         console.log(`${element} diziye eklendi.`);
+//         console.log(colors);
+//     } else {
+//         console.log('Bu eleman zaten var');
+//         console.log(colors);
+//     }
+// }
+
+
+// checkElement('green') // green diziye eklendi.
+// checkElement('Green') // Bu eleman zaten var
+// checkElement('green') // Bu eleman zaten var
+
+// let randomNumber = +prompt('Lütfen 1 ile 10 arasi bir sayi giriniz!')
+// let randomColor = () => {
+//     const colors2 = ['Red', 'Green', 'Blue', 'Green', 'Brown']
+//     if (randomNumber = isNaN) {
+//         console.log('Lütfen gecerli bir sayi giriniz!');
+//     } else {
+//         colors = Math.random(colors2)
+//     }
+//     console.log(`Sansli renginiz ${colors}`);
+
+// }
+// randomColor(colors)
+
+//^ CHALLENGE
+const colors = ["Red", "Green", "Blue", "Green", "Brown"];
+function randomColour(list) {
+    let color = list[Math.floor(Math.random() * list.length)];
+    console.log(color);
+    document.body.style.backgroundColor = color
+}
+console.log(randomColour(colors));
