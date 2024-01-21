@@ -17,9 +17,7 @@
 // prices.forEach((a) => toplam += a)
 // console.log(toplam / prices.length);
 
-
 // const prices2 = [100, 200, 300, 400, 50, 70]
-
 
 // tüm elemanlarin iki katini alarak orjinal array i degistir.
 // prices2.forEach((price, i, arr) => {
@@ -29,7 +27,6 @@
 // console.log(prices2);
 
 // const prices3 = [100, 200, 300, 400, 50, 70]
-
 
 // prices3.forEach((price) => {
 // if (price == 200) break //! break kullanilamaz
@@ -48,7 +45,6 @@
 // console.log(newCars);
 // console.log(cars);
 
-
 // const prices4 = [100, 200, 300, 400, 50, 70]
 //? 300 tl üzerinde olanlara 20% altinda olanlara 50% zam yapilacak!
 
@@ -60,10 +56,8 @@
 //         arr[i] *= 1.5
 //     }
 
-
 // })
 // console.log(prices4);
-
 
 // const prices5 = [100, 200, 300, 400, 50, 70]
 // console.log(prices5);
@@ -75,7 +69,6 @@
 // const euroArr = prices5.map((price) => (price / euro).toFixed(2));
 
 // console.log(dolarArr, euroArr);
-
 
 //& filter method
 //^ Dizi icerisinde belirtilen kosulu saglayan elemanlarla yeni bir dizi olusturur.
@@ -100,7 +93,6 @@
 
 // console.log(lastWord);
 
-
 //? 300 tl üzerinde olanlara 20% altinda olanlara 50% zam yapilacak!
 
 // const prices4 = [100, 200, 300, 400, 50, 70]
@@ -109,39 +101,53 @@
 
 // console.log(prices5);
 
-
 // const names = ['John', 'Jane', 'Robert', 'Susan', 'Steven', 'Katherine', 'Martin', 'Melissa', 'Brian', 'Karen'];
 
 // const nHarf = names.filter(name => name.endsWith('n')).map(kelime => kelime.split('').reverse().join(''));
 // console.log(nHarf);
 
-
-//& Reduce 
+//& Reduce
 //^ Tek bir eleman döndürür
 //^ Array degil deger return eder
 
-const maaslar = [30000, 20000, 10000, 17000, 7500]
+// const maaslar = [30000, 20000, 10000, 17000, 7500]
 
-console.log(maaslar.reduce((toplam, mevcut) => toplam + mevcut, 0));
-const yeniToplam = maaslar.reduce((toplam, mevcut) => toplam + mevcut, 15500);
+// console.log(maaslar.reduce((toplam, mevcut) => toplam + mevcut, 0));
+// const yeniToplam = maaslar.reduce((toplam, mevcut) => toplam + mevcut, 15500);
 
-console.log(yeniToplam);
+// console.log(yeniToplam);
 
 //^ Reduce string kullanimi
-const words = ['Merhaba', ' ', 'Dünya', '!']
+// const words = ['Merhaba', ' ', 'Dünya', '!']
 
-const newStr = words.reduce((yeni, suanki) => yeni + suanki, '')
+// const newStr = words.reduce((yeni, suanki) => yeni + suanki, '')
 
-console.log(newStr);
+// console.log(newStr);
 
 //? Bir dizi icerisindeki cift sayilari *2 yapip sonrasinda bu cift sayilarin toplamini al
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const result = numbers
-    .filter((num) => num % 2 === 0) // cift sayilari filtreledik
-    .map((num) => num * 2) // her bir cift elemani 2 katina cikardik
-    .reduce((toplam, yeni) => toplam + yeni, 0) // toplami hesapla
+// const result = numbers
+//     .filter((num) => num % 2 === 0) // cift sayilari filtreledik
+//     .map((num) => num * 2) // her bir cift elemani 2 katina cikardik
+//     .reduce((toplam, yeni) => toplam + yeni, 0) // toplami hesapla
 
-console.log(result);
+// console.log(result);
 
+//^ CHALLENGE
+
+// ! yukarıdaki string i array e çevirip bütün kelimelerin harflerini büyüt
+
+//!yukarıda array e döndürdüğümüz string cümledeki, T ile başlayan kelimelerin ilk harfini küçült, diğer harflerini normal bırakarak yazdır
+
+const text = "Clarusway Online Career IT TraininG School ThankS for time";
+
+const result1 = text.split(" ").map((word) => word.toUpperCase());
+console.log(result1);
+const result2 = result1.map((firstLetter) => {
+  if (firstLetter.startsWith("T")) {
+    return firstLetter[0].toLowerCase() + firstLetter.slice(1);
+  } else return firstLetter;
+});
+console.log(result2);
