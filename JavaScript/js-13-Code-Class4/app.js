@@ -193,16 +193,61 @@ reduce: Dizideki elemanlari toplayarak tek bir deger döndürür. Verilen isleml
 //! bir dizide verilen  maaşlara %10 zam yapılacak ama hala 20000 altında kalanlara ek ödeme planlanacak
 //? a- Kaç kişi zam olsa bile 20000 altında kalıyor
 
-let salaries = [18000, 13000, 17000, 24000, 18500, 21000, 19300];
-const under20k = salaries.filter((salary) => salary * 1.1 < 20000)
-console.log(under20k.length);
+// let salaries = [18000, 13000, 17000, 24000, 18500, 21000, 19300];
+// const under20k = salaries.filter((salary) => salary * 1.1 < 20000)
+// console.log(under20k.length);
 
-//? b- Maaşı zamlı halde 20000in altında kalanlara patronumuz belki bir güzellik yapar. 20000 altında kalanları 20000'e tamamlayabilir ama ne kadar bütçe ayırmalı
+// //? b- Maaşı zamlı halde 20000in altında kalanlara patronumuz belki bir güzellik yapar. 20000 altında kalanları 20000'e tamamlayabilir ama ne kadar bütçe ayırmalı
 
-let addBudget = salaries.map((salary) => {
-    let increased = salary * 1.1
-    return increased < 20000 ? 20000 - increased : 0
-}).reduce((sum, payment) => sum + payment, 0)
+// let addBudget = salaries.map((salary) => {
+//     let increased = salary * 1.1
+//     return increased < 20000 ? 20000 - increased : 0
+// }).reduce((sum, payment) => sum + payment, 0)
 
-console.log(addBudget);
+// console.log(addBudget);
 
+// EXTRA QUESTIONS
+
+//!1-Bu şekilde giirlen stringi "altı,bir,iki,dört,beş,üç,yedi,sekiz,dokuz"
+//! 612453789   bu hale dönüştüren program
+
+
+const str = "alti,bir,iki,dört,bes,üc,yedi,sekiz,dokuz"
+console.log(str);
+let stringNumber = []
+
+const splitToNumber = (string) => {
+    let newString = string.split(",")
+    console.log(newString);
+
+    for (let i = 0; i <= newString.length - 1; i++) {
+
+        if (newString[i] === "bir") stringNumber.push(1)
+        else if (newString[i] === "iki") stringNumber.push(2)
+        else if (newString[i] === "üc") stringNumber.push(3)
+        else if (newString[i] === "dört") stringNumber.push(4)
+        else if (newString[i] === "bes") stringNumber.push(5)
+        else if (newString[i] === "alti") stringNumber.push(6)
+        else if (newString[i] === "yedi") stringNumber.push(7)
+        else if (newString[i] === "sekiz") stringNumber.push(8)
+        else if (newString[i] === "dokuz") stringNumber.push(9)
+        else newString[i] = 0
+    }
+    return stringNumber.join("")
+
+
+}
+
+console.log(splitToNumber(str));
+
+
+//!2-Bir dizi içindeki sayıları asal olanlarını filtreleyen bir  fonksiyonu oluşturun.(filter ile yapılması önerilen)
+
+
+
+
+
+
+//!3-Bir diziyi tersine çeviren bir map fonksiyonu oluşturun.
+
+//!4 -verilen sayıyı yazıya çeviren program
