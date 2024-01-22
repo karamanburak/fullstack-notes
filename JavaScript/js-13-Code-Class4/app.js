@@ -171,21 +171,38 @@ reduce: Dizideki elemanlari toplayarak tek bir deger döndürür. Verilen isleml
 // }
 
 
-//!Bir dizide ilk harfi A ile başlayan elemanları yeni bir diziye alan fonksiyon 
+//!Bir dizide ilk harfi A ile başlayan elemanları yeni bir diziye alan fonksiyon
 
-const words = ["Apple", "Banana", "Orange", "Avocado", "Grape", "Apricot"];
+// const words = ["Apple", "Banana", "Orange", "Avocado", "Grape", "Apricot"];
 
-const aWords = function (upperWords) {
-    return upperWords.filter((word) => word.startsWith('A'))
-}
-console.log(aWords(words));
+// const aWords = function (upperWords) {
+//     return upperWords.filter((word) => word.startsWith('A'))
+// }
+// console.log(aWords(words));
 
 
-//? Bir diziyi tersine çeviren bir map fonksiyonu oluşturun. 
+// //? Bir diziyi tersine çeviren bir map fonksiyonu oluşturun.
 
-const arr = ["Heute", "ist", "Montag"]
+// const arr = ["Heute", "ist", "Montag"]
 
-let result = arr.map((element, index) => arr[arr.length - index - 1])
+// let result = arr.map((element, index) => arr[arr.length - index - 1])
 
-console.log(result)
+// console.log(result)
+
+
+//! bir dizide verilen  maaşlara %10 zam yapılacak ama hala 20000 altında kalanlara ek ödeme planlanacak
+//? a- Kaç kişi zam olsa bile 20000 altında kalıyor
+
+let salaries = [18000, 13000, 17000, 24000, 18500, 21000, 19300];
+const under20k = salaries.filter((salary) => salary * 1.1 < 20000)
+console.log(under20k.length);
+
+//? b- Maaşı zamlı halde 20000in altında kalanlara patronumuz belki bir güzellik yapar. 20000 altında kalanları 20000'e tamamlayabilir ama ne kadar bütçe ayırmalı
+
+let addBudget = salaries.map((salary) => {
+    let increased = salary * 1.1
+    return increased < 20000 ? 20000 - increased : 0
+}).reduce((sum, payment) => sum + payment, 0)
+
+console.log(addBudget);
 
