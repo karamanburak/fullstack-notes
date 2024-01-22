@@ -281,6 +281,12 @@ function sayiyiYaziyaCevir(sayi) {
 
     let yazi = ""
 
+    //Binler basamagi
+    if (sayi >= 1000) {
+        yazi += birler[Math.floor(sayi / 1000)] + "bin"
+        sayi %= 1000
+    }
+
     // Yüzler basamagi
 
     if (sayi >= 100) {
@@ -303,6 +309,6 @@ function sayiyiYaziyaCevir(sayi) {
 
 //Ornek kullanim
 
-let sayi = 354
+let sayi = 9955
 let yaziKarsilik = sayiyiYaziyaCevir(sayi)
 console.log(yaziKarsilik) //ucyuzellidort
