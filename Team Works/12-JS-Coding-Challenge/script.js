@@ -14,41 +14,53 @@
 function findMissingNumber(arr) {
     // Your code here 
 
+    let n = arr.length;
+    let temp = new Array(n + 1).fill(0);
 
-
-
-    // Example usage:
-    const missingNumber = findMissingNumber([1, 2, 4, 6, 3, 7, 8]);
-    console.log(missingNumber); // Output: 5
-
-
-
-
-    //& CHALLENGE 2
-    //^ Rotate Array of Objects
-    //* Write a function that rotates an array of objects to the right by a given number of steps.
-    //^ Challenge Description:
-    //* Write a function rotateArrayObjects that takes an array of objects arr and an integer steps as input.
-    //* The function should rotate the elements of the array to the right by the given number of steps. The
-    //* order of objects should be maintained during rotation.
-    //^ Constraints:
-    //* The array can contain both objects and other data types.
-    //* The number of steps will be a non-negative integer.
-
-    function rotateArrayObjects(arr, steps) {
-        // Your code here 
+    for (let i = 0; i < n; i++) {
+        temp[arr[i]] = 1;
     }
 
-    // Example usage:
-    const inputArray = [
-        { id: 1, name: 'John' },
-        { id: 2, name: 'Jane' },
-        { id: 3, name: 'Bob' },
-        { id: 4, name: 'Alice' }
-    ];
+    for (let i = 1; i <= n + 1; i++) {
+        if (temp[i] === 0) {
+            return i;
+        }
+    }
+}
 
-    const rotatedArray = rotateArrayObjects(inputArray, 2);
-    console.log(rotatedArray);
+
+// Example usage:
+const missingNumber = findMissingNumber([1, 2, 4, 6, 3, 7, 8]);
+console.log(missingNumber); // Output: 5
+
+
+
+
+//& CHALLENGE 2
+//^ Rotate Array of Objects
+//* Write a function that rotates an array of objects to the right by a given number of steps.
+//^ Challenge Description:
+//* Write a function rotateArrayObjects that takes an array of objects arr and an integer steps as input.
+//* The function should rotate the elements of the array to the right by the given number of steps. The
+//* order of objects should be maintained during rotation.
+//^ Constraints:
+//* The array can contain both objects and other data types.
+//* The number of steps will be a non-negative integer.
+
+function rotateArrayObjects(arr, steps) {
+    // Your code here 
+}
+
+// Example usage:
+const inputArray = [
+    { id: 1, name: 'John' },
+    { id: 2, name: 'Jane' },
+    { id: 3, name: 'Bob' },
+    { id: 4, name: 'Alice' }
+];
+
+const rotatedArray = rotateArrayObjects(inputArray, 2);
+console.log(rotatedArray);
 /* 
 Output: [ 
     { id: 3, name: 'Bob' }, 
