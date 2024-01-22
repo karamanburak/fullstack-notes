@@ -37,7 +37,7 @@ filter: Bir dizide kosulu kontrol edip sadece kosulu saglayanlari döndürür.
 reduce: Dizideki elemanlari toplayarak tek bir deger döndürür. Verilen islemler tüm elemanlar icin yapilip tek bir sonuc döndürür.
 */
 
-
+//? Girilen sayilarin ortalamasi
 //^ Klasik for metod
 const numbers = [34, 56, 56, 87, 90]
 let toplam = 0
@@ -67,9 +67,26 @@ function avarage(array) {
 const array = [34, 56, 56, 87, 90]
 console.log(avarage(array));
 
-//^ Girilen bir cümledeki kelime sayisini bulan fonksiyon
+//?  Girilen bir cümledeki kelime sayisini bulan fonksiyon
 
 const sentence = "Merhaba Cohort 08"
+function countWords(sentence) {
 
-const result = sentence.split(" ").length;
-console.log(result);
+    const result = sentence.split(" ").length
+    return result
+}
+
+console.log(countWords(sentence));
+
+
+
+//? Bu cümleyi alip tersine cevirerek büyük harflerin olusan yeni bir cümle yapan fonksiyon
+
+const sentence2 = "Merhaba Cohort DE-08"
+function countWords2(sentence) {
+
+    const result = sentence.split(/\s+/).reverse().join(" ").toUpperCase()
+    return result
+}
+
+console.log(countWords2(sentence));
