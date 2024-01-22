@@ -179,3 +179,13 @@ const aWords = function (upperWords) {
     return upperWords.filter((word) => word.startsWith('A'))
 }
 console.log(aWords(words));
+
+
+//? Bir diziyi tersine çeviren bir map fonksiyonu oluşturun. 
+
+const arr = ["Heute", "ist", "Montag"]
+
+let result = arr.map((element, index) => arr[arr.length - index - 1])
+
+console.log(result)
+
