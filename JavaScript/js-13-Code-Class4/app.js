@@ -243,11 +243,66 @@ console.log(splitToNumber(str));
 
 //!2-Bir dizi içindeki sayıları asal olanlarını filtreleyen bir  fonksiyonu oluşturun.(filter ile yapılması önerilen)
 
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+//^ Asal sayilari filter fonksiyonu ile bulma
 
 
+let asalNum = nums.filter(num => {
+    if (num < 2) {
+        return false // 2'den kücük sayilar asal degildir.
+    }
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false // Tam bölünebilen sayilar asal degildir.
+        }
+    }
+    return true // geri kalan sayilar asaldir.
+})
+
+
+console.log(asalNum);
 
 
 
 //!3-Bir diziyi tersine çeviren bir map fonksiyonu oluşturun.
 
+const originalArr = [1, 2, 3, 4, 5]
+
+const reversedArr = originalArr.map((value, index, array) => array[array.length - 1 - index])
+console.log(reversedArr);
+
 //!4 -verilen sayıyı yazıya çeviren program
+
+function sayiyiYaziyaCevir(sayi) {
+    const birler = ["", "bir", "iki", "üç", "dört", "beş", "alti", "yedi", "sekiz", "dokuz"]
+    const onlar = ["", "on", "yirmi", "otuz", "kirk", "elli", "altmis", "yetmis", "seksen", "doksan"]
+
+    let yazi = ""
+
+    // Yüzler basamagi
+
+    if (sayi >= 100) {
+        yazi += birler[Math.floor(sayi / 100)] + "yüz"
+        sayi %= 100
+    }
+
+    // onlar basamagi
+    if (sayi >= 10) {
+        yazi += onlar[Math.floor(sayi / 10)]
+        sayi %= 10
+    }
+
+    // Birler basamagi
+    if (sayi > 0) {
+        yazi += birler[sayi]
+    }
+    return yazi
+}
+
+//Ornek kullanim
+
+let sayi = 354
+let yaziKarsilik = sayiyiYaziyaCevir(sayi)
+console.log(yaziKarsilik) //ucyuzellidort
