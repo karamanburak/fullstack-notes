@@ -104,7 +104,7 @@ console.log(personel);
 
 let employeeList = {
     person1: {
-        name: "Abdülkadir",
+        name1: "Abdülkadir",
         lastName: "baki",
         dateOfBirth: 1980,
         salary: 20000,
@@ -112,15 +112,15 @@ let employeeList = {
 
     },
     person2: {
-        name: "Elif",
+        name2: "Elif",
         lastName: "akalin",
-        dateOfBirth: "1990",
+        dateOfBirth: 1990,
         salary: "20000",
         job: "developer"
 
     },
     person3: {
-        name: "Esra",
+        name3: "Esra",
         lastName: "bilgin",
         dateOfBirth: 1985,
         salary: 20000,
@@ -133,3 +133,101 @@ let employeeList = {
 console.log(employeeList.person3.name);
 console.log(employeeList.person2.salary);
 console.log(employeeList["person3"].name);
+
+//* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
+//*                             // FOR - OF YAPISI                             */
+//* -------------------------------------------------------------------------- */
+// for of
+let numbersAndLetters = ["a", 4, 6, 7, "C"]
+for (const i of numbersAndLetters) {
+    console.log(i);
+}
+
+// for-of sıralı olan diizlerde kullanılır ama objectlerde daha komplex bir yapı olduğu için for-of kullanılmaz
+
+// for (const i of employeeList) {
+//     console.log(i); // employeeList is not iterable hatasi verir.
+// }
+
+//? objectin icinde var olan özellikler 
+
+console.log(Object.keys(employeeList));
+console.log(Object.values(employeeList));
+for (const i of Object.keys(employeeList)) {
+    console.log(i);
+}
+for (const i of Object.values(employeeList)) {
+    console.log(i.name);// undefined cünkü keyleri farkli
+    console.log(Object.values(i)[0]);
+}
+
+//! for in 
+for (const i in employeeList) {
+    console.log("for in yoluyla", i);
+    console.log(employeeList[i].job);
+}
+console.clear() // console u temizlemek icin kullanilir.
+
+
+//!!!   employeeList.forEach((m)=> console.log(m.name)) // Objelerde map,forEach,filter,reduce kullanılmaz. JSon bir dizi içinde obje olduğu için dizi metodları map,filter,reduce,forEach kullanılabiliyor.
+
+//* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
+//*                   JSON -Javascript Script Object Notation                  */
+//* -------------------------------------------------------------------------- */
+
+
+const employeeList2 = [
+
+    {
+        name1: "Abdülkadir",
+        lastName: "baki",
+        dateOfBirth: 1980,
+        salary: 20000,
+        job: "developer"
+
+    },
+    {
+        name2: "Elif",
+        lastName: "akalin",
+        dateOfBirth: "1990",
+        salary: "20000",
+        job: "developer"
+
+    },
+    {
+        name3: "Esra",
+        lastName: "bilgin",
+        dateOfBirth: 1985,
+        salary: 20000,
+        job: "devops"
+
+    },
+
+
+
+
+
+]
+
+// JSON ile farklı veri türleri barındırılabilir
+// Dillerden bağımsızdır.
+//nesnelerin (objelerin) temsil edilmesi için anahtar-değer çiftlerini kullanır. Bu, verilerin daha iyi organize edilmesini ve ilişkilendirilmesini sağlar.
+//JSON, veri  işleme açısından hızlıdır. Bu nedenle web uygulamalarında ve servislerde yaygın olarak kullanılır.
+
+//* json a yeni eleman ekleme
+
+employeeList2.push({
+    name4: "nida",
+    lastName: "güler",
+    dateOfBirth: 1995,
+    salary: 21000,
+    job: "devops"
+})
+
+console.log(employeeList2);
+
+
+employeeList2.forEach((t) => console.log(t.lastName))
+
