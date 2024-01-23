@@ -276,19 +276,45 @@ const people = [
 
 console.log(people);
 
-//* Exercise1 people dizisindeki joblari göster
+//* Exercise1: people dizisindeki joblari göster
 
 people.forEach((a) => console.log(a.job))
 
-//* Exercise2 yaslari 1 er arttir sonucu yeni diziye aktar
+//* Exercise2: yaslari 1 er arttir sonucu yeni diziye aktar
 
 const yaslar = people.map((kisi) => kisi.age + 1)
 console.log(yaslar)
 console.log(people)
 
-//* Exercise3 yaslari 1 er atir, sonucu dizide kalici oalrak degistir
+//* Exercise3: yaslari 1 er atir, sonucu dizide kalici oalrak degistir
 
 people.map((kisi, index, arr) => (kisi.age = arr[index].age + 1))
 // people.map((kisi, index, arr) => (arr[index].age = kisi.age + 1))
 
 console.log(people);
+
+//* Exercise4: people (object li ) dizisinden yaşları 5 fazlasıyla değişmiş ve salary eklenmiş olarak (diger elemanlari degismeyecek) yeni bir object li (keyleri degismis) dizi oluşturun.
+
+const newPeople = people.map((kisi) => ({
+    adi: kisi.name,
+    soyadi: kisi.surname,
+    yas: kisi.age + 5,
+    is: kisi.job,
+    salary: 30000,
+}))
+console.log(newPeople);
+console.log(people);
+
+//* Exercise5: bas harfi "M" olan elemanlarin  name ini büyük harfli yaz, hepsinin yaslarını 2 kat yap, job larının önüne senior kelimesi ekleyelim ve sadece bunları yeni bir diziye atin.
+
+const newPeople2 = people.map((kisi) => ({
+    name: kisi.name.startsWith("M") ? kisi.name.toUpperCase() : kisi.name,
+    age: kisi.age * 2,
+    job: "senior " + kisi.job
+
+}))
+console.log(newPeople2);
+
+//* Exercise6: ortalama yasi hesaplayiniz.
+
+console.log(people.reduce((toplam, kisi) => toplam + kisi.age, 0) / people.length)
