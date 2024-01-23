@@ -318,3 +318,20 @@ console.log(newPeople2);
 //* Exercise6: ortalama yasi hesaplayiniz.
 
 console.log(people.reduce((toplam, kisi) => toplam + kisi.age, 0) / people.length)
+
+console.clear()
+
+//* Exercise7: Developer olanların adlarını ve yaşlarını yeni bir object olarak saklayın
+const newPeople3 = people.filter((kisi) => kisi.job === "developer").map((kisi) => ({
+    name: kisi.name,
+    age: kisi.age
+}))
+
+console.log(newPeople3);
+
+
+//* Exercise8: yası 33 ün üstünde olan kişilerin name lerini listele
+
+const newPeople4 = people.filter((kisi) => kisi.age > 33).map((kisi) => ({ name: kisi.name }))
+
+console.log(newPeople4);
