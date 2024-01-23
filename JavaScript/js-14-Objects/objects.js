@@ -96,3 +96,40 @@ personel.phone = "555-34-34"
 console.log(personel);
 
 
+//* ------------------------------------------------------ */
+//*                     OBJECT METHODS
+//* ---------------------------------- */
+//? 1. içiçe (nested) Object kullanımı
+
+
+let employeeList = {
+    person1: {
+        name: "Abdülkadir",
+        lastName: "baki",
+        dateOfBirth: 1980,
+        salary: 20000,
+        job: "developer"
+
+    },
+    person2: {
+        name: "Elif",
+        lastName: "akalin",
+        dateOfBirth: "1990",
+        salary: "20000",
+        job: "developer"
+
+    },
+    person3: {
+        name: "Esra",
+        lastName: "bilgin",
+        dateOfBirth: 1985,
+        salary: 20000,
+        job: "devops"
+
+    },
+
+}
+
+console.log(employeeList.person3.name);
+console.log(employeeList.person2.salary);
+console.log(employeeList["person3"].name);
