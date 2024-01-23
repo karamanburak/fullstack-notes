@@ -167,7 +167,7 @@ for (const i in employeeList) {
     console.log("for in yoluyla", i);
     console.log(employeeList[i].job);
 }
-console.clear() // console u temizlemek icin kullanilir.
+// console.clear() // console u temizlemek icin kullanilir.
 
 
 //!!!   employeeList.forEach((m)=> console.log(m.name)) // Objelerde map,forEach,filter,reduce kullanılmaz. JSon bir dizi içinde obje olduğu için dizi metodları map,filter,reduce,forEach kullanılabiliyor.
@@ -230,4 +230,65 @@ console.log(employeeList2);
 
 
 employeeList2.forEach((t) => console.log(t.lastName))
+employeeList2.map((a) => Object.values(a)).forEach((a) => console.log(a))
+employeeList2.map((a) => Object.values(a)[0].toUpperCase()).forEach((b) => console.log(b))
 
+console.clear()
+
+// * ======================================================
+// *                  OBJECT ITERATION
+// * ======================================================
+// key lerin belirli bir sırası (index) olmadığı için, diziye alırsak object araması daha tutarlı bir arama performansına sahip olacaktır. Ayrıca diziler arasında döngü yapmak, keys arasında döngü yapmaktan daha hızlıdır, bu nedenle tüm öğeler üzerinde işlem yapmayı planlıyorsanız, bunları bir diziye koymak akıllıca olabilir.
+
+const people = [
+    {
+        name: "Mustafa",
+        surname: "Gertrud",
+        job: "developer",
+        age: 30,
+    },
+    {
+        name: "Halo",
+        surname: "Müller",
+        job: "tester",
+        age: 35,
+    },
+    {
+        name: "Mehmet",
+        surname: "Rosenberg",
+        job: "team lead",
+        age: 40,
+    },
+    {
+        name: "Ozkul",
+        surname: "Gutenberg",
+        job: "developer",
+        age: 26,
+    },
+
+    {
+        name: "Baser",
+        surname: "Shaffer",
+        job: "tester",
+        age: 24,
+    },
+];
+
+console.log(people);
+
+//* Exercise1 people dizisindeki joblari göster
+
+people.forEach((a) => console.log(a.job))
+
+//* Exercise2 yaslari 1 er arttir sonucu yeni diziye aktar
+
+const yaslar = people.map((kisi) => kisi.age + 1)
+console.log(yaslar)
+console.log(people)
+
+//* Exercise3 yaslari 1 er atir, sonucu dizide kalici oalrak degistir
+
+people.map((kisi, index, arr) => (kisi.age = arr[index].age + 1))
+// people.map((kisi, index, arr) => (arr[index].age = kisi.age + 1))
+
+console.log(people);
