@@ -91,6 +91,7 @@ console.log(personel.experiences[0]); // tester
 console.log(personel.address.city); // potsdam 
 
 personel.experiences.forEach((work) => console.log(work))
+//! yeni bir özellik eklemek icin.
 personel.phone = "555-34-34"
 console.log(personel);
 
