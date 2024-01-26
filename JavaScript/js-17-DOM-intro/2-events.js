@@ -51,3 +51,32 @@ button.onclick = () => {
     button.textContent = "Angeklickt"
 
 }
+
+
+
+// ? METHOD-2 (sadece JAVASCRIPT te yazılır- addEventListener())  2.yol
+// ? ---------------------------------------------------------------
+
+button.addEventListener("click", () => {
+    const button = document.querySelector("#btn")
+
+    button.onclick = () => {
+        body.style.backgroundImage = "linear-gradient(to right, purple, gray)"
+
+        document.querySelector("#par").style.fontSize = "40px"
+
+        button.textContent = "Angeklickt"
+
+    }
+})
+
+//^  EXAMPLE-4 (Mouse Over, Mouse Out )
+//* -------------------------------------------------------
+
+
+//?METHOD-3 (HTML-INLINE)
+//?---------------------------------------------------------------
+
+// inline js kodlari
+// <h1 onmouseover="style.color='blue'" onmouseout="style.color='Yellow'">DOM in JAVASCRIPT</h1>
+
