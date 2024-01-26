@@ -1592,7 +1592,7 @@ const customerList = [
 //     {name: 'CLEMENTINE BAUCH', adress: 'McKenziehaven city, Douglas Extension street Suite 847 suite', phone: '1-463-123-4447'}
 // ]
 
-customerList.filter(({ name, address, phone }) => console.log(`name: ${name} , address: ${address} , phone: ${ phone }`))
+// customerList.filter(({ name, address, phone }) => console.log(`name: ${name} , address: ${address} , phone: ${ phone }`))
   
 
   
