@@ -130,3 +130,72 @@ textInput.onkeyup = () => {
 
 
 document.querySelector(".bug").innerHTML += `<h1 class="title3 text-primary">Programmierungssprachen</h1>`
+
+
+
+//! languages inputuna girilen değerleri, ul ye eklemek
+
+const inputLanguages = document.querySelector(".languages")
+const list = document.querySelector(".list")
+
+//!uzun yol (ekle butonuna tiklaninca olacaklar.)
+
+document.querySelector(".add").onclick = () => {
+
+
+
+    //* yeni girilen satiri saklamak icin bir li olusturduk.
+
+    // const newLiElement = document.createElement("li")
+
+    //* yeni li icin textnode olusturduk
+
+    // const text = document.createTextNode(inputLanguages.value)
+
+
+    //*olusturdugumuz texnode'u yeni li'ye bagladik.
+
+    // newLiElement.appendChild(text)
+
+    //* yeni eklenen satiri var olan listeye (ul) baglayalim.
+
+    // list.append(newLiElement) // listenin son cocugu olmai icin 
+    // list.prepend(newLiElement) // listenin ilk cocugu olmasi icin
+
+    //! kurze Strecke
+
+    list.innerHTML += `<li>${inputLanguages.value}</li>`
+
+    //* ekle'Ye basilinca icini bosaltmak icin 
+    inputLanguages.value = ""
+
+
+}
+
+
+//! li-Element aus der ul-Liste löschen, wenn die Löschtaste gedrückt wird  - removerChild()
+
+document.querySelector(".delete").onclick = () => {
+
+    list.removeChild(list.lastElementChild) // löscht das letzte Kind
+    // list.removeChild(list.firstElementChild) // löscht das erste Kind
+    // list.removeChild(list.children[2]) // löscht das Kind mit 2. index
+
+
+
+
+}
+
+inputLanguages.onkeydown = (e) => {
+
+    //* Wenn delete =46 oder control=17 oder shift=16 gedrückt wird, wird die Löschtaste ausgelöst
+    // if (e.key == "Enter") {
+    if (e.keyCode == 13) {
+        document.querySelector(".add").click()
+    }
+
+    if (e.keyCode == 46) {
+        document.querySelector(".delete").click()
+    }
+
+}
