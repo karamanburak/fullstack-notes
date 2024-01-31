@@ -49,18 +49,27 @@ const ekranaHazirlik = (num) => {
     //todo kullanıcı 0 girerse, sonrasında 0 ve . dışında bir sayı girerse, ekranda sadece girilen yeni sayı (0 iptal olsun) gözüksün
 
 
-
+    if (altEkranText === "0" && num != "0" && num != ".") {
+        altEkranText = num
+    }
 
 
     //todo kullanıcı herhangi bir yerde . girmişken, tekrar nokta girmeye kalkarsa giremesin
 
+    if (num == "." && altEkranText.includes(".")) return
+
+
+
 
     //todo kullanıcı 10 haneden sonra girmesin
 
-
+    if (altEkranText.length > 9) return
 
 
     //todo kullanıcı ilk başta 0 girer ardından tekrar 0 girerse, girilmesin, tek 0 döndürsün
+
+
+    if (altEkranText == "0" && num == "0") return
 
 
     //todo eşittir yada percent a basıldıktan sonra girilen number tek başına ekranda görünsün,çünkü yeni işlem başlıyor(ekranda 72 yazan işlem sonucu varken 5 e basınca 725 olmasın)
@@ -126,6 +135,43 @@ operationButtons.forEach((op) => {
 })
 
 //?**************eşittir butonuna tıklandığında
+
+equalButton.onclick = () => {
+    // esittire basinca istenilen islem yapilmasi icin fonksiyon
+    hesapla()
+
+
+    // buradaki degiskenlerle yapilan islemlerin sonucu ekrana yansitilsin
+    updateEkran()
+
+}
+
+const hesapla = () => {
+
+    switch (islem) {
+        case "+":
+            result = +ustEkranText + Number(altEkranText)
+            break;
+        case "-":
+            result = ustEkranText - altEkranText
+            break;
+        case "x":
+            result = ustEkranText * altEkranText
+            break;
+        case "÷":
+            result = ustEkranText / altEkranText
+            break;
+
+        default:
+            break;
+    }
+
+
+    altEkranText = result
+    ustEkranText = ""
+    islem = ""
+
+}
 
 
 
