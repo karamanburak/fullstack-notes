@@ -22,7 +22,7 @@ let islem = ""
 
 //todo eşittir yada percent e basıldıktan sonra yeni işleme yeni sayılar girmek için, tıklandı tıklanmadı boolean değişkeni hazırladık, eşittir (ve de percent) butonunda bu true yani tıklandı olacak
 
-
+let esittirAndPercentPressed = false
 
 
 //?*********** herhangi bir number a basılınca
@@ -51,6 +51,7 @@ const ekranaHazirlik = (num) => {
 
     if (altEkranText === "0" && num != "0" && num != ".") {
         altEkranText = num
+        return
     }
 
 
@@ -74,7 +75,14 @@ const ekranaHazirlik = (num) => {
 
     //todo eşittir yada percent a basıldıktan sonra girilen number tek başına ekranda görünsün,çünkü yeni işlem başlıyor(ekranda 72 yazan işlem sonucu varken 5 e basınca 725 olmasın)
 
+    if (esittirAndPercentPressed == true) {
+        esittirAndPercentPressed = false
 
+        altEkranText = num
+
+        //! bu döngüden çık bu işini globaldeki değişkeni değiştirerek bitirdi ama bişey döndürmeyecek, daha önceki 0 ı da yok sayacak
+        return
+    }
 
 
     //?bütün şartları başarı ile geçtiyse basılan numaraları arka arkaya ekle
@@ -112,23 +120,25 @@ operationButtons.forEach((op) => {
 
     op.onclick = () => {
 
-
-
-
         //?currentDisplay boşken, hiçbir şekilde sayı girişi yapılmamışsa, operatöre basılmasın. boş return yapmaya çalıştığınız işlemi yaptırmaz.
-        //? return fonksiyon içerisinde her yerde kullanılabilir. Kod return satırına eriştiğinde fonksiyon durur ve değer fonksiyonun çağırıldığı yere geri gönderilir. Bir fonksiyon içerisinde birden fazla return fonksiyonu da olabilir. return değer döndürmek zorunda değildir. return den sonra else yerine if kullanmalıyız
+        //? return fonksiyon içerisinde her yerde kullanılabilir. Kod return satırına eriştiğinde fonksiyon durur ve değer fonksiyonun çağırıldığı yere geri gönderilir. Bir fonksiyon içerisinde birden fazla return fonksiyonu da olabilir. return değer döndürmek zorunda değildir. Bos return den sonra else if yerine if tercih etmeliyiz. (Best-practice)
 
 
-
+        if (altEkranText === "") return
 
         //todo eşittire basılmadan arka arkaya işleme basılırsa (alt ve üst ekran doluyken işleme basılmaya devam edilirse)
 
+
+        if (altEkranText && ustEkranText) hesapla()
 
         islem = op.textContent
 
         ustEkranText = altEkranText
         altEkranText = ""
         updateEkran()
+
+        currentDisplay.textContent = ""
+        previousDisplayDisplay.textContent = ""
 
     }
 
@@ -144,7 +154,11 @@ equalButton.onclick = () => {
     // buradaki degiskenlerle yapilan islemlerin sonucu ekrana yansitilsin
     updateEkran()
 
+
+    esittirAndPercentPressed = true
 }
+
+//! HESAPLA FONKSİYONU
 
 const hesapla = () => {
 
@@ -177,18 +191,37 @@ const hesapla = () => {
 
 
 
-
-//! HESAPLA FONKSİYONU
-
-
-
-
-
-
-
-
 //?AC butonuna basıldığında
 
+document.querySelector(".ac").onclick = () => {
 
+    islem = ""
+    altEkranText = ""
+    ustEkranText = ""
+
+    updateEkran()
+
+}
 
 //? PM butonuna basıldığında
+
+document.querySelector(".pm").onclick = () => {
+
+
+    if (!altEkranText) return
+
+    altEkranText = altEkranText * -1
+    updateEkran()
+}
+
+//? Percent'a basildiginda 
+
+document.querySelector(".percent").onclick = () => {
+
+    altEkranText = altEkranText / 100
+    updateEkran()
+
+    altEkranText = ""
+    //2. yol alttaki
+    // esittirAndPercentPressed = true
+}
