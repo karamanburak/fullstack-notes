@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="todo-count">
+        <p>Done : <span id="done">0</span> / <span id="total">0</span></p>
+      </nav>
+      <header class="todo-header">
+        <h2>ToDo List</h2>
+        <img
+          src="assets/todo-lista.gif"
+          height="50px"
+          alt="todo-list-gif"
+        /><br />
+      </header>
+      <div>
+        <p class="result">
+          <!---  delete messages will be displayed  --->
+        </p>
+      </div>
+      <main class="todo-main">
+        <input
+          type="text"
+          id="todo-value"
+          class="todo-input"
+          placeholder="Add your task"
+        />
+        <i class="fa-solid fa-plus" id="add-task" alt="+"></i>
+      </main>
+      <section class="todo-lists">
+        <ul id="list-container" class="list-container">
+          <!--- toDo list items (li) will be displayed --->
+        </ul>
+      </section>
+      <section class="clear-section">
+        <button class="clear-btn">Clear</button>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
