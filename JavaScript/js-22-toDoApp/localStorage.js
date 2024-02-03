@@ -75,7 +75,7 @@ createCheckButon()
 const createDeleteButon = () => {
   document.querySelectorAll(".fa-trash").forEach((a) => {
     a.onclick = () => {
-      //!listeden silmek icin yol
+      //! listeden silmek icin yol
 
       liste = liste.filter(
         (todo) => todo != a.closest("li").querySelector("p").textContent
