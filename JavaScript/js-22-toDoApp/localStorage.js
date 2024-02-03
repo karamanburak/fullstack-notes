@@ -26,8 +26,6 @@ addButton.onclick = () => {
   } else {
     liste.push(todoInput.value);
 
-
-
     //!listeye eleman eklenince localStorage deki LİSTE yi güncelle
 
     localStorage.setItem("LİSTE", JSON.stringify(liste))
