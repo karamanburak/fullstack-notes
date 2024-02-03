@@ -68,16 +68,10 @@ listUl.innerHTML =
 
    
 
-
-
 createDeleteButon()
 createCheckButon()
 
-
-
 }
-
-
 
 
 const createDeleteButon = () => {
