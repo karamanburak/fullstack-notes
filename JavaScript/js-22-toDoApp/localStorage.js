@@ -5,8 +5,6 @@ let liste = JSON.parse(localStorage.getItem("LİSTE")) || []
 // let liste = JSON.parse(localStorage.getItem("LİSTE")) ? JSON.parse(localStorage.getItem("LİSTE")):[]
 
 
-
-
 const addButton = document.querySelector("#todo-button");
 const listUl = document.querySelector("#todo-ul");
 const todoInput = document.querySelector("#todo-input");
