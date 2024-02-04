@@ -110,5 +110,5 @@ const createCheckButon = () => {
 
 
 
-//!ekran ilk açıldığında localstorage dekileri getir
+//!ekran ilk açıldığında localstorage dekileri getirmek icin
  showList()
