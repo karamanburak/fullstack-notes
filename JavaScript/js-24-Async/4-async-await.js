@@ -20,18 +20,52 @@
 
 //! JavaScript finally anahtar kelimesi hata oluşması veya oluşmaması durumunda (her durumda) çalışacak kodları yazdırmak için kullanılır.
 
+
 const defaultImage =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/220px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg";
 
-    const getData =async () => {
+const getData = async () => {
 
-     const response = await fetch("https://api.tvmaze.com/search/shows?q=girls");
 
-     console.log(response);
+    try {
+        const response = await fetch("https://api.tvmaze.com/search/shows?q=girls");
 
-     const data =  await response.json();
-     showScreen(data)
+        //? error handling
+        if (!response.ok) {
+            throw new Error(`url de hata var ${response.status}`)
+            console.log("hata");
+        }
+
+        console.log(response);
+
+        const data = await response.json();
+        showScreen(data)
+
+    } catch (error) {
+        console.log(error);
+        console.log("try-catch sayesinde kod calismaya devam eder");
     }
+}
+
+//! window yüklendigi zaman calissin
+// window.onload = () => {}
+window.addEventListener("load", () => {
+
     getData()
+})
+
+
+const showScreen = (data) => {
+
+    data.forEach((item) => {
+
+        document.querySelector("section").innerHTML += `
+            
+            <h1 class="mt-5 text-danger">${item.show.name} </h1>
+            <img src="${item.show.image?.medium || defaultImage}  "/>
+            <h3 class="fst-italic">${item.show.genres} </h3>
+
+    })
+}
 
     
