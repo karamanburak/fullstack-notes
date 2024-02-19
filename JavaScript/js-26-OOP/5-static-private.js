@@ -85,3 +85,28 @@ console.log(book1.getId());
 //! Static degiskenler classname.property seklinde erisilir.
 
 console.log(Book.counter);
+
+
+
+//! ABSTRACT EXAMPLE
+
+function Kitap (a,b,c) {
+    //! sadece developerin gördügü yerde tutulan veriler abstract edilmis olur
+let name = a
+let yazar = b
+let getNoDetails = function () {
+    return `${name} kitabi ${yazar} a aittir`
+} 
+
+// this.getDetails = function () {
+//     return `Book ${name} belongs to author ${yazar}`
+// }
+this.year=c
+
+}
+
+let person = new Kitap("seker portakali", "José Mauro de Vasconcelos",1968);
+
+console.log(person.name);
+console.log(person.getNoDetails);
+// console.log(person.getDetails());
