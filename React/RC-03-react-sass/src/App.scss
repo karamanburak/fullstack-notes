@@ -1,0 +1,12 @@
+@import "./scss/button";
+@import "./scss/reset";
+@import "./scss/variable";
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: $orange;
+}
