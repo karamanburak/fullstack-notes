@@ -1,0 +1,21 @@
+.btn-div {
+    button {
+        width: 100px;
+        height: 50px;
+        font-size: 30px;
+        margin: 5px;
+        color: white;
+        margin-top: 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    &--small {
+        background-color: green;
+       
+    }
+
+    &--large {
+        background-color: blue;
+    }
+}

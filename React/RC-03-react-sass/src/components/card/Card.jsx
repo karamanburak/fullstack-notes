@@ -17,6 +17,13 @@ const Card = ({data}) => {
                 <h2>{job}</h2>
                 <p>{comment}</p>
                 <img src={img} alt="" />
+
+                <div className="btn-div">
+                    <button className="btn-div--small">Small</button>
+                    <button className="btn-div--large">Large</button>
+                </div>
+
+
                 </div>
 
             )
