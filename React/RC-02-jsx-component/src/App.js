@@ -11,7 +11,6 @@ const App = () => {
     
     <Msg/>
     <Footer/>
-    <Msg/>
     
     
     </div>
