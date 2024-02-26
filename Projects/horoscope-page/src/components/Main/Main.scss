@@ -1,0 +1,98 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.card-container {
+    background-color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+
+    .cards {
+        width: 500px;
+        height: 350px;
+        position: relative;
+        overflow: hidden; // tasan elemanlari gizle (2. olarak desc icin)
+
+            &:hover img {
+                    opacity: .5;
+                }
+
+        &:hover .desc {
+            transform: translateY(0%); // en son hover olunca desc ilk verilen stillerle eski halinde acilsin
+        }
+    }
+
+    .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $cardNavBgColor;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1rem;
+        border-radius: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        z-index: 2;
+    }
+
+    .date {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // kendi alaninin yarisi kadar sola ve üste cik.
+        background-color: rgba(0, 0, 0, 0.8);
+        color: $cardNavBgColor;
+        font-size: 0.5rem;
+        padding: 1rem;
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    img {
+        width: 500px;
+        height: 350px;
+        border-radius: 10px;
+        object-fit: cover; // resmi daha güzel yayar
+
+   
+    }
+
+
+    .desc {
+
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: $secondaryColor;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: justify;
+        font-size: 1.5rem;
+        max-height: 75%;
+        overflow: auto;
+        z-index: 3;
+        transform: translateY(100%); // ilk önce 100% ün cards in altina insin(cards in stiline bak)
+        transition: transform 0.7s ease-in-out;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    }
+}
+
+@include media-xsm{
+.card-container{
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@include media-lg{
+    .card-container{
+        flex-direction: row;
+    }
+}

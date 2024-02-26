@@ -1,0 +1,43 @@
+@import "../../scss/variables";
+
+
+.header {
+    text-align: center;
+    margin: 1rem;
+    padding: .5rem;
+    margin-top: 10rem;
+
+    .title {
+        color: $cardNavBgColor;
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-decoration: underline;
+        letter-spacing: .2rem;
+
+
+        animation:flickerA 0.5s ease-in-out alternate infinite; // ease-in-out (olmazsa hızlı geçiş olur)  alternate (olmazsa kalp atışı gibi sert geçiş olur); beraberce yavaşlığı sağlıyor, birden geçiş olmuyor, infinite, sayfa kapanana kadar sonsuz kendi kendine
+
+
+        &:hover {
+
+            color: black;
+            cursor: pointer;
+            
+        }
+        transition: all 0.5s ease-in-out;
+    }
+    
+    @keyframes flickerA {
+    0%{
+        opacity: 0.5;
+        text-shadow: 2px 2px 10px $cardNavBgColor;
+    }
+
+    100%{
+        opacity: 0.8;
+        text-shadow: 2px 2px 10px $cardNavBgColor;
+
+    }
+    }
+
+}
