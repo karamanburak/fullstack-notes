@@ -14,7 +14,8 @@ constructor(props) {
     super(props)
 
     //! state e baslangic degeri atandi
-this.state={sayac:props.count || 0, baslik:"merhaba"}
+this.state={sayac:props.count || 0, 
+    baslik:"merhaba"}
 
 
 }
