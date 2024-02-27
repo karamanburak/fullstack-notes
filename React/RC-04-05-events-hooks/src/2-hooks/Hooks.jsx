@@ -48,7 +48,7 @@ const Hooks = () => {
                 name: "emre",
                 job: "full-stack developer",
                 age: 33,
-                color: "blue"
+                color: "orange"
             })
         } else {
             setPerson({
@@ -121,6 +121,8 @@ const Hooks = () => {
 
             <h2>COUNT: {sayac}</h2>
             <button onClick={arttir} className="btn btn-primary">ARTTIR</button>
+
+            <button onClick={()=> sayac > 0 && setSayac(sayac-1)} className="btn btn-info">Azalt</button>
 
 
             <h1 className="mt-5">*********************</h1>
