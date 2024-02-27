@@ -18,7 +18,8 @@
 //?    https://react.dev/reference/react/hooks#state-hooks
 //* =============================================================
 
-import { useState } from "react"
+import { useState } from "react";
+import Events from "../1-events-hookIntro/Events";
 
 const Hooks = () => {
     //! useState hook u her zaman en üste yazilmali
@@ -36,35 +37,35 @@ const Hooks = () => {
 
     });
 
-    //! Object linin 2.yolu
-    const [toggle,setToggle]=useState(true);
+    //! Object linin 1.yolu
+    const [toggle, setToggle] = useState(true);
 
-    const handleSwap =()=>{
+    const handleSwap = () => {
         setToggle(!toggle)
-        if(toggle){
-            
+        if (toggle) {
+
             setPerson({
-                        name: "emre",
-                        job: "full-stack developer",
-                        age: 33,
-                        color: "blue"
-                    })
-        }else {
-                    setPerson({
+                name: "emre",
+                job: "full-stack developer",
+                age: 33,
+                color: "blue"
+            })
+        } else {
+            setPerson({
 
-                        name: "saban",
-                        job: "front-end developer",
-                        age: 50,
-                        color: "red"
+                name: "saban",
+                job: "front-end developer",
+                age: 50,
+                color: "red"
 
-                    })
+            })
         }
     }
 
 
     //^^^^^^^^^^^^^
 
-    //! Object linin 1.yolu
+    //! Object linin 2.yolu
     // const handleSwap = () => {
 
     //     if (person.name === "saban"){
@@ -87,6 +88,16 @@ const Hooks = () => {
 
     //     }
     // }
+
+    const nameChange = () => {
+        setPerson({
+            ...person,
+            name: "emre",
+            color: "yellow"
+        })
+    }
+
+
 
 
 
@@ -119,10 +130,14 @@ const Hooks = () => {
                 <h3 className="text-primary">{person.job}</h3>
                 <h5 className="text-success">{person.age}</h5>
 
-                <button onClick={handleSwap} style={{ backgroundColor: person.color, fontSize: "1.2rem", color: "white" }} className="btn m-4 p-4">TOOGLE CHANGE</button>
+                <button onClick={handleSwap} style={{ backgroundColor: person.color, fontSize: "1.2rem" }} className="btn m-4 p-4">TOOGLE CHANGE</button>
+
+                <button onClick={nameChange} style={{ backgroundColor: person.color, fontSize: "1.2rem" }} className="btn m-4 p-4">NAME CHANGE</button>
+                <button onClick={() => setPerson({ ...person, age: 33 })} style={{ backgroundColor: "green", fontSize: "1.2rem" }} className="btn m-4 p-4">AGE CHANGE</button>
+
+                {/* Toggle true ise Events componentini goster aksi takdirde gosterme, alttakini yorumdan cikarmak icin App.js deki Events componentini yoruma almaliyiz. */}
+                {/* {toggle && <Events />} */}
             </div>
-
-
         </div>
     )
 }
