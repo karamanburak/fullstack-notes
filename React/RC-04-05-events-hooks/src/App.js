@@ -8,8 +8,8 @@ import Counter from './2-classComponents/Counter';
 const App = () => {
   return (
     <div>
-  {/* <Events/> */}
-  {/* <Hooks/> */}
+  <Events/>
+  <Hooks/>
   <Counter/>
   <Counter count={20}/>
 
