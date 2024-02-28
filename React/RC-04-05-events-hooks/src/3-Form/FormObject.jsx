@@ -1,4 +1,11 @@
 import { useState } from "react";
+// !JSX ile HTML arasında çok fazla fark olmamakla birlikte bazı önemli farklar da mevcut elbette.
+//! HTML'de class olarak tanımlanan nitelik JSX'de className olarak tanımlanmalı.
+//! HTML'de tek kelime olmayan tabindex gibi nitelikler JSX'de camelCase yapısına uygun olarak tabIndex şeklinde dönüştürülür.
+//! HTML'de onclick, onchange gibi nitelikler yukarıdaki camelCase örneğine göre onClick, onChange şeklinde dönüştürülür.
+//! HTML'de label etiketinde belirtilen for attribute ü JSX'de htmlFor olarak tanımlanmalı.
+//! HTML'de value niteliği JSX'de defaultValue olarak tanımlanmalı.
+//! Ayrıca JSX de  javascript ifadeleri {} içinde çalıştırılabilir. Buna map, && gibi yapılarda dahil.
 
 const FormObject = () => {
     const [person, setPerson] = useState({
