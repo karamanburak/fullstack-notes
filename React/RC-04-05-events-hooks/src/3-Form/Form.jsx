@@ -5,15 +5,20 @@ const Form = () => {
     const [pass, setPass] = useState("")
     const [country, setCountry] = useState("")
 
-    const getDatabase = () => {
+    const getDatabase = (e) => {
+        e.preventDefault()
         //? ileride bir submit islemin neticesinde verilerin nasıl post edilebileceğini gostermek adina eklenmistir.
         //? const res = axios.post("url", { isim, pass, country })
 
         alert(`name:${isim}
                password: ${pass}
-               ülkeler: ${country}
-        `)
-    
+               ülkeler: ${country}  `)
+
+
+//!database e yollandiktan sonra degiskenlerin icini temizledik, bunu ekranda da temiz görmek icin inputlarda value degiskenleri tanimladik\\
+        setIsim("")
+        setPass("")
+        setCountry("")
     }
 
 
@@ -29,6 +34,7 @@ const Form = () => {
          id="isim" 
          type="text" 
          onInput={(e)=>setIsim(e.target.value)}
+         value={isim}
          
          />
     </div>
@@ -38,17 +44,19 @@ const Form = () => {
          id="password" 
          type="password" 
          onChange={(e)=>setPass(e.target.value)}
+         value={pass}
          
          />
     </div>
     <div className="mb-3">
         <label className="form-label" htmlFor="country">COUNTRY: <span className="text-danger">{country}</span></label>
-      <select onChange={(e)=>setCountry(e.target.value)} className="form-select">
+      <select value={country} onChange={(e)=>setCountry(e.target.value)} className="form-select">
     
         <option selected>COUNTRIES</option>
         <option value="Türkiye">TURKEY</option>
         <option value="Almanya">GERMANY</option>
         <option value="Amerika">USA</option>
+        
       </select>
     </div>
     
