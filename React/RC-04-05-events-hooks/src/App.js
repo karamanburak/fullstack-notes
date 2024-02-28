@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Hooks from './2-functionalCompHooks/Hooks';
 import Counter from './2-classComponents/Counter';
 import Form from './3-Form/Form';
+import FormObject from './3-Form/FormObject';
+import MouseKeyboard from './4-mouse-keyboard/MouseKeyboard';
 
 
 const App = () => {
@@ -15,7 +17,9 @@ const App = () => {
   {/* <Counter/>
   <Counter count={20}/> */}
 
-  <Form/>
+  {/* <Form/> */}
+  {/* <FormObject/> */}
+  <MouseKeyboard/>
 
     </div>
   )
