@@ -7,10 +7,11 @@ import { useState } from 'react';
 const CardContainer = () => {
     const [search, setSearch] = useState("")
 
-    let dizi= data
-
-    dizi=dizi.filter((a)=> a.name.includes(search))
-    console.log(data);
+    
+    //^ 1. yol
+    // let dizi= data
+    // dizi=dizi.filter((a)=> a.name.includes(search))
+    // console.log(data);
   return (
     <>
           <Form.Control 
@@ -21,7 +22,8 @@ const CardContainer = () => {
           />
     <Container className='card-container p-3 rounded-4 my-4'>
         <Row className='g-3 justify-content-center'>
-        {dizi.map((player,index)=>{
+        {/* {dizi.map((player,index)=>{ */}
+                  {data.filter((item) => item.name.toLowerCase().includes(search.trim().toLowerCase())).map((player,index)=>{
             return(
                 <Col 
                 key={index}
