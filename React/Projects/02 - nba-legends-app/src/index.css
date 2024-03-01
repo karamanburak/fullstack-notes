@@ -23,7 +23,15 @@ height: 400px;
 max-width: 18rem;
 }
 
+.player-card:hover{
+box-shadow: 3px 3px 20px 5px rgb(0,0,0,0.5);}
+
 .player-logo{
 
     height: 350px;
+}
+
+.player-card:hover .player-logo{
+    transform: scale(.94);
+    transition: all ease-in-out .8s;
 }
