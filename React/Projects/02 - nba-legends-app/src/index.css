@@ -1,1 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    background-color: lightgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+/* ---------------------------------- */
+/*    PLAYER CARD COMPENENT STYLING   */
+/* ---------------------------------- */
+
+.card-container{
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/661/973/110/cool-nba-logo-wallpaper-preview.jpg");
+}
+
+.player-card{
+height: 400px;
+max-width: 18rem;
+}
+
+.player-logo{
+
+    height: 350px;
+}

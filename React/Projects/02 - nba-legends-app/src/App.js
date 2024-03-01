@@ -1,9 +1,16 @@
 
-import React from 'react'
+import React from 'react';
+import Header from './components/Header';
+import {Container} from 'react-bootstrap';
+import CardContainer from './components/CardContainer';
 
-const App = () => {
+function App  () {
   return (
-    <div>App</div>
+    <Container className='text-center mt-4'>
+      <Header/>
+      <CardContainer/>
+      
+    </Container>
   )
 }
 
