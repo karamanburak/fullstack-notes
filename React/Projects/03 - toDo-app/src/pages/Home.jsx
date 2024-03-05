@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <div>
-      <AddTask/>
+      <AddTask todos={todos} setTodos={setTodos} />
       <ShowTasks todos={todos} setTodos={setTodos}/>
     </div>
   )
