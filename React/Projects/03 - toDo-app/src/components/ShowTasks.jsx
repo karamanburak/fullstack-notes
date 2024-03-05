@@ -5,18 +5,42 @@ const ShowTasks = ({todos, setTodos}) => {
 // console.log(todos);
 
 const deleteTodo = (rmv) => {
+
+
+  //^ 1.yol 
 // todos=todos.filter((i)=>i.id !== rmv)
 // setTodos(todos)
-  setTodos(todos.filter((i)=>i.id !== rmv))
+//   localStorage.setItem("gorevler", JSON.stringify(todos));
+
+  //^ 2.yol 
+
+  localStorage.setItem("gorevler",
+   JSON.stringify(todos = todos.filter((i) => i.id !== rmv)))
+  setTodos(JSON.parse(localStorage.getItem("gorevler")));
+
+  setTodos(JSON.parse(localStorage.getItem("gorevler")))
 
 }
 
+  const styleStorage = (x) => {
+    localStorage.setItem(
+      "gorevler",
+      JSON.stringify(todos.map((a) => (a.id === x.id ? { ...a, isDone: !a.isDone } : a))
+
+      )
+    );
+    setTodos(JSON.parse(localStorage.getItem("gorevler")))
+
+
+
+  }
+
   return (
     <div>
-    {todos.map((x)=>{
+    {todos.map((x,index)=>{
       return (
-        <div className={x.isDone ? "done" : "gorev"}
-        onDoubleClick={()=>setTodos(todos.map((a)=>a.id===x.id ? {...a,isDone: !a.isDone} :a))}
+        <div key={index} className={x.isDone ? "done" : "gorev"}
+        onDoubleClick={()=>styleStorage(x)}
         >
         <h3>{x.text} 
         <FaTimesCircle 
