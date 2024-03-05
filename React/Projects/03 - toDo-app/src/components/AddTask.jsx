@@ -4,6 +4,7 @@ const AddTask = ({todos, setTodos}) => {
 
 const [text,setText] = useState("")
 const [day,setDay] = useState("")
+const [display, setDisplay]= useState(true)
 
 const handleSubmit = (e) => {
 e.preventDefault()
@@ -19,7 +20,6 @@ setTodos([newTodos, ...todos])
 setText("")
 setDay("")
 
-
 }
 
   return (
@@ -28,22 +28,22 @@ setDay("")
               <h1>TO DO APP</h1>
               <button
                   className="btn"
-                  style={{background:"red"}}
+                  style={{background: display ? "red" : "purple"}}
+                  onClick={()=>setDisplay(!display)}
 
               >
-                  CLOSE ADD TASK BAR
+                 {display ? "CLOSE" : "SHOW"} ADD TASK BAR
               </button>
           </header>
 
-
-          <form onSubmit={handleSubmit}>
+          {display && <form onSubmit={handleSubmit}>
               <div className="form-control">
                   <label htmlFor="text">Task</label>
                   <input
                       id="text"
                       type="text"
                       name="text"
-                      onChange={(e)=>setText(e.target.value)}
+                      onChange={(e) => setText(e.target.value)}
                       value={text}
                   />
 
@@ -65,7 +65,8 @@ setDay("")
                       SUBMİT
                   </button>
               </div>
-          </form>
+          </form>  }
+         
 
       </div>
   )
