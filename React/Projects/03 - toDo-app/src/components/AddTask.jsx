@@ -8,14 +8,27 @@ const [display, setDisplay]= useState(true)
 
 const handleSubmit = (e) => {
 e.preventDefault()
-
-// setTodos([{id:7, text:text, day:day,isDone:false}, ...todos ])
-
 const id = Math.ceil(Math.random()*100)+6
 
-const newTodos = ({ id: id, text: text, day: day, isDone: false })
 
-setTodos([newTodos, ...todos])
+//^ 1. yol (kalici kaydedilmeyen)
+// setTodos([{id:7, text:text, day:day,isDone:false}, ...todos ])
+
+//^ 2.yol (localstroge in ilk yolu)
+const newTodos = ({ id: id, text: text, day: day, isDone: false })
+//*  setTodos([newTodos, ...todos])
+    //*     todos = [newTodos, ...todos];
+    //  setTodos(todos);
+    //  localStorage.setItem("gorevler",JSON.stringify(todos))
+
+
+
+//^ 3.yol (locaLStorage ye yollamanin 2. yolu)
+
+localStorage.setItem("gorevler", JSON.stringify([ newTodos, ...todos]))
+setTodos(JSON.parse(localStorage.getItem("gorevler")))
+
+//input alanlarini bosaltmak icin , altta inputlaara value veriyoruz, burada da temizliyoruz.
 
 setText("")
 setDay("")

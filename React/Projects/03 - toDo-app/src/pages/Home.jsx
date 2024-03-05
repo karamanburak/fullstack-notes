@@ -5,7 +5,7 @@ import Data from '../helper/Data'
 
 const Home = () => {
 
-  const [todos,setTodos] = useState(Data)
+  const [todos,setTodos] = useState(JSON.parse(localStorage.getItem("gorevler")) || Data)
 
 
   return (
