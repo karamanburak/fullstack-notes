@@ -13,11 +13,8 @@ const [show,setShow] = useState(true)
 const doctorClick = (idD) => {
 
   setShow(!show)
-
   setDoctors(show ? 
     doctors.filter((a)=> a.id===idD): doctorData)
-
-  
 
 }
 
@@ -46,14 +43,13 @@ const doctorClick = (idD) => {
 
 
           </div>
-
         </header>
 
-        {!show && ( <AddPatient hastalar={hastalar} setHastalar={setHastalar} />) }
+        {!show && (<AddPatient hastalar={hastalar} setHastalar={setHastalar} doctors={doctors} />) }
       
       </div>
 
-      <PatientList hastalar={hastalar} setHastalar={setHastalar} />
+      <PatientList hastalar={hastalar} setHastalar={setHastalar} doctors={doctors} />
     </div>
   );
 };

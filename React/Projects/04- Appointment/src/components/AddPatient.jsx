@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
-const AddPatient = ({hastalar, setHastalar}) => {
+import uuid from "react-uuid"
+const AddPatient = ({hastalar, setHastalar, doctors}) => {
   const [hastaName, setHstName] = useState("")
   const [date, setDate] = useState("")
 
@@ -9,18 +9,19 @@ const AddPatient = ({hastalar, setHastalar}) => {
 
     setHastalar(
       [...hastalar, {
-        id:7,
+        id:uuid(),
         patientName: hastaName, 
         day:date, 
         isDone:false,
-        myDoctor:"elmas karaman"} ]
+        myDoctor:doctors[0].doctorName
+      } ]
     )
     setHstName("")
     setDate("")
     // submit sonrası inputlardan value temizlemek için, hem alttaki işlemler yapılır, hemde inputlarda value={hastaName} yazarak browser da boşluksa boşluk isimse isim gözükmesi sağlanır
 
   }
-
+console.log(hastalar);
 
   return (
     <div>
@@ -43,7 +44,7 @@ const AddPatient = ({hastalar, setHastalar}) => {
         <button type='submit'
         className='doc'
         >
-        <span>oya basar </span> icin kayit olustur
+        <span>{doctors[0].doctorName} </span> icin kayit olustur
         </button>
         </div>
       </form>
