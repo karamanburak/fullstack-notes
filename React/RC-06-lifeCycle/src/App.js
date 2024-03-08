@@ -16,7 +16,7 @@ const App = () => {
     </button>
     {/* {show && <LifeCycleMethods/>} */}
    {/* {show && <Clock/>} */}
-   <UseEffectAxiosFetch/>
+   {show &&  <UseEffectAxiosFetch/>}
       
 
     </div>

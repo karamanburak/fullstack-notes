@@ -1,30 +1,47 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 export const UseEffectAxiosFetch = () => {
   const [people, setPeople] = useState([])
 
-  //^1.yol fetch then (chain)\\
+  //^ 1.yol fetch then (chain)\\
 
   // useEffect(() => {
   //   fetch("https://jsonplaceholder.typicode.com/users").then((res) => res.json()).then((data) => setPeople(data))
   // }, [])
   
-  //^2.yol fetch async await\\
+  //^ 2.yol fetch async await\\
 
+  //   const getData = async () => {
+
+  //  const res = await fetch("https://jsonplaceholder.typicode.com/users")
+  //    const data = await res.json()
+
+  //    setPeople(data)
+  //   }
+
+  //   useEffect(() => {
+  //     getData()
+  
+  //   }, [])
+
+  //^ 3.yol axios then (chain)\\
+
+  // useEffect(()=>{
+  //   axios.get("https://jsonplaceholder.typicode.com/users").then((veri)=>setPeople(veri.data))
+  // },[])
+
+  //^ 4.yol axios async await\\
+    
     const getData = async () => {
 
-   const res = await fetch("https://jsonplaceholder.typicode.com/users")
-     const data = await res.json()
-
-     setPeople(data)
+   const res = await axios("https://jsonplaceholder.typicode.com/users")
+     setPeople(res.data)
     }
-
     useEffect(() => {
       getData()
   
     }, [])
-    
-
 
   return (
     <div className='container text-center mt-4'>
