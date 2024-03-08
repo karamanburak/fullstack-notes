@@ -3,6 +3,7 @@ import './App.css';
 
 import React, { useState } from 'react'
 import LifeCycleMethods from './components/LifeCycleMethods';
+import Clock from "./components/Clock";
 
 const App = () => {
 
@@ -12,7 +13,8 @@ const App = () => {
     <button className="btn btn-danger" onClick={()=> setShow(!show)}>
     SHOW
     </button>
-    {show && <LifeCycleMethods/>}
+    {/* {show && <LifeCycleMethods/>} */}
+   {show && <Clock/>}
       
 
     </div>
