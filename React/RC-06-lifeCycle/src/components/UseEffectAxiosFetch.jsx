@@ -63,3 +63,47 @@ export const UseEffectAxiosFetch = () => {
     </div>
   )
 }
+
+
+
+
+// const getUser = () => {
+//   fetch("https://randomuser.me/api")
+//     .then((res) => res.json())
+//     .then((data) => setPeople(data.results[0]))
+//     .catch((err) => console.log(err));
+// };
+
+// useEffect(() => {
+  
+//   //! ComponentDidMount
+//   const timer = setInterval(getUser, 3000);
+//   getUser();
+
+//   //! ComponentWillUnMount
+//   return () => {
+//     clearInterval(timer);
+//   };
+// }, []);
+  
+
+// // optional chaning
+//   return (
+    
+//     <div className="container text-center mt-4">
+//       <div className="row">
+//         <h1>
+//           {people?.name?.first} {people?.name?.last}
+//         </h1>
+//         <img src={people?.picture?.large} className="rounded-circle" alt="" />
+//         <h3>{people?.email}</h3>
+
+//         <h4>{new Date(people?.dob?.date).toLocaleDateString()}</h4>
+//         <h5>{people?.phone}</h5>
+//         <h6>{people?.location?.city}</h6>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default UseEffectAxiosFetch;
