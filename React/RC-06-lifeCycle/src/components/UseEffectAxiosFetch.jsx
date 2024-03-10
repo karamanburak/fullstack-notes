@@ -48,8 +48,8 @@ export const UseEffectAxiosFetch = () => {
     <div className='row'>
       {people.map(({id,username,phone,name})=>{
         return(
-          <div key={id} className='col-12 col-sm-6 col-md-4'>
-            {/* https://api.dicebear.com/7.x/avataaars/svg?seed=Felix */}
+          <div key={id} className='col-12 col-sm-6 col-md-4'>             
+            {/* <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=felix`} /> */}
             <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${name}`} />
             <h5> 
             {name}
