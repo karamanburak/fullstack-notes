@@ -25,10 +25,31 @@ useEffect(()=>{
   getTutorials()
 },[])
 
+//^POST (create, database e veri gönderme)\\
+
+const postTutorial=async (yeniVeri)=> {
+
+await axios.post(url,yeniVeri)
+
+
+//tekrar verilerin güncel halini diziye atmis olduk ve ekran güncellendi
+getTutorials()
+
+}
+
+
+//! DELETE (database den silme)
+
+const deleteTutorial = async(id) => {
+  await axios.delete(`${url}${id}/`)
+getTutorials()
+}
+
+
   return  <>
 
-<AddBilgi/>
-<BilgiList tutorials={tutorials}/>
+<AddBilgi postTutorial={postTutorial}/>
+<BilgiList tutorials={tutorials} deleteTutorial={deleteTutorial}/>
     </>
 
 }

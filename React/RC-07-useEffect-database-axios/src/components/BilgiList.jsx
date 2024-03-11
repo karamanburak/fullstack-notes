@@ -2,7 +2,11 @@ import React from 'react'
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
-const BilgiList = ({tutorials}) => {
+const BilgiList = ({tutorials,deleteTutorial}) => {
+  // const deleteTutorial = async (id) => {
+  //   await axios.delete(`${url}/${id}/`)
+  // }
+
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -25,7 +29,12 @@ const BilgiList = ({tutorials}) => {
             <td>{description } </td>
                 <td className="text-center">
                 <FaEdit type='button' className='text-warning' size={20}/>
-              <AiFillDelete type='button' className='text-danger' size={20}/>
+              <AiFillDelete 
+              type='button'
+               className='text-danger' 
+               size={20}
+                onClick={()=>deleteTutorial(id)}
+               />
 
 
                 </td>
