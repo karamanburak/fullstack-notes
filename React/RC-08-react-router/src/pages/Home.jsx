@@ -1,8 +1,14 @@
 import React from 'react'
+import Slider from '../components/Slider'
+import { Button } from 'react-bootstrap'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+<Slider/>
+<Button/>
+
+    </div>
   )
 }
 
