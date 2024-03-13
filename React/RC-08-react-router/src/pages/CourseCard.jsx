@@ -4,9 +4,11 @@
 import React from 'react'
 import { Container, Col, Card, Row, Button } from "react-bootstrap";
 import data from '../data'
+import { useNavigate } from 'react-router-dom';
 const CourseCard = () => {
+  const navigate=useNavigate()
   return (
-    <Container>
+    <Container className='text-center'>
       <Row>
 
         {
@@ -23,7 +25,9 @@ const CourseCard = () => {
                   <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{text}</Card.Text>
-                    <Button className="btn btn-secondary">Info</Button>
+                    <Button
+                    onClick={()=> navigate(`/courses/${name}`)}
+                     variant='info' className="btn btn-secondary">DETAILS</Button>
                   </Card.Body>
                 </Card>
               </Col>

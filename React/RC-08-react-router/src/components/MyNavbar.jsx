@@ -14,7 +14,7 @@ const MyNavbar = () => {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <NavLink style={({isActive})=>  ({color: isActive && "red"})} className="nav-link" to="/">Home</NavLink>
             <NavLink style={({ isActive }) => ({ fontSize: isActive && "50px" })} className="nav-link" to="/teacher">Teacher</NavLink>
             <NavLink style={({ isActive }) => ({ border: isActive && "2px solid skyblue" })} className="nav-link" to="/courses">Courses</NavLink>
