@@ -1,37 +1,53 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import spinner from '../img/loading.gif'
 
 const TeacherDetails = () => {
-  const [teacher,setTeacher] = useState([])
-  console.log(teacher);
 
-  const getData = async () => {
-    const res = await axios(`https://jsonplaceholder.typicode.com/users/${idD}`);
+  //^ 1. yol----------------//
+  // const {id} = useParams()
+  // const [teacher,setTeacher] = useState({})
+  // const [loading,setLoading] = useState(true)
 
-    setTeacher(res.data);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
 
- const {idD} = useParams()
- const navigate = useNavigate()
+  const navigate = useNavigate()
 
+
+// useEffect(()=>{
+
+//   fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then((res)=>res.json()).then((veri)=>setTeacher(veri)).finally(()=>setLoading(false))
+// },[id])
+
+// if(loading){
+//   return(
+//     <div>
+//       <img src={spinner} alt="" />
+//     </div>
+//   )
+// }
+  //^----------------//
+
+  // useEffect te [] içini boş bırakabilirim. çünkü zaten bu sayfaya kisi tıklanınca o kisinin id  si ile geliniyor ve bu sayfa tekrar çalışıyor, ama syntax gereği, id ye bağlı çalıştığı için [] içine id değiştiğinde çalış komutu verirsek herkes mutlu olur, yapmazsakta hata almayız
+  //navigate(-sayı) ile sayı kaçsa o kadar sekme geri döner, yani sayı 2 ise 2 önce ziyaret ettiğimiz sayfaya döner
+
+  //^ 2. yol ----------------- //
+
+  const {state:{person}} = useLocation()
+  // console.log(person);
  
   return (
     <div className=" text-center">
     <div style={{border:"2px solid cornflowerblue"}} className='w-50 m-auto my-4' >
       <img
-        src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${teacher.name}`}
+        src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${person.name}`}
         width="300px"
         alt=""/>
-                <img src={teacher.id} alt=""/>
-              <h5>{teacher.name}</h5>
-              <h6>{teacher.username} </h6>
-              <h6>{teacher.phone}</h6>
-              <h6>{teacher.email}</h6>
-              <h6>{teacher.website}</h6>
+              <h5>{person.name}</h5>
+              <h6>{person.username} </h6>
+              <h6>{person.phone}</h6>
+              <h6>{person.email}</h6>
+              <h6>{person.website}</h6>
     </div>
     <button onClick={()=> navigate(-1)} className='btn btn-danger mx-2'>Go Back</button>
     <button onClick={()=> navigate("/")} className='btn btn-info'>Go Home</button>
