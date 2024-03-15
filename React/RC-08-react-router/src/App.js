@@ -10,19 +10,21 @@ import CardDetails from './pages/CardDetails';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ContactForm from './pages/ContactForm';
 import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 const App = () => {
   return (
     <div>
     <Router>
         <MyNavbar />
       <Routes>
-          <Route path='/' element={<Home />}></Route>
-            <Route path='/teacher' element={<Teacher />}></Route>
-            <Route path='/teacher/:id' element={<TeacherDetails />}></Route>
+          <Route path='/' element={<Home />}/>
+            <Route path='/teacher' element={<Teacher />}/>
+            <Route path='/teacher/:id' element={<TeacherDetails />}/>
             <Route path='/courses' element={<CourseCard />}></Route>
-            <Route path='/courses/:namee' element={<CardDetails />}></Route>
-            <Route path='/contact' element={<ContactForm />}></Route>
-            <Route path='/login' element={<Login />}></Route>
+            <Route path='/courses/:namee' element={<CardDetails />}/>
+            <Route path='/contact' element={<ContactForm />}/>
+            <Route path='/login' element={<Login />}/>
+            <Route path='/*' element={<NotFound />}/>
       </Routes>
         <Footer />
     </Router>
