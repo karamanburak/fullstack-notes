@@ -31,8 +31,8 @@ const navigate = useNavigate()
               <img
                 src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${person.name}`}
                 alt=""
-                // onClick={()=>navigate(`/teacher/${person.name}`)}
-                onClick={()=>navigate(`/teacher/${person.id}`, {state:{person}})}
+                onClick={()=>navigate(`/teacher/${person.name}`)}
+                // onClick={()=>navigate(`/teacher/${person.id}`, {state:{person}})}
               />
               <h5>{person.name}</h5>
               <h6>{person.username} </h6>
