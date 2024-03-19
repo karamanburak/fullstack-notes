@@ -1,19 +1,33 @@
+import axios from "axios";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import ProductForm from "../components/ProductForm";
 
 
 
 const UpdateProduct = () => {
 
+  const {state:{product}} = useLocation()
+  const navigate = useNavigate()
 
+  const [produkt,setprodukt] = useState (product)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await axios.put(`https://63f4e5583f99f5855db9e941.mockapi.io/products/${produkt.id}`,produkt)
+    navigate(-1)
+
+  }
 
   return (
     <div className="container">
       <article
         name="add-product"
-        className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-50 bg-light"
-      >
+        className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-50 bg-light">
         <h1 className="text-center">update Product</h1>
 
-        <form className="p-2" >
+        {/* <form onSubmit={handleSubmit} className="p-2" >
           <div className="mb-3">
             <label htmlFor="add-name" className="form-label">
               Product Name
@@ -22,9 +36,8 @@ const UpdateProduct = () => {
               type="text"
               className="form-control"
               name="name"
-              value={""}
-            
-           
+              value={produkt.name || ""}
+              onChange={(e) => setprodukt({ ...produkt, name: e.target.value })}
               required
             />
           </div>
@@ -36,8 +49,8 @@ const UpdateProduct = () => {
               type="number"
               className="form-control"
               name="price"
-              value={""}
-             
+              value={produkt.price ||""}
+              onChange={(e) => setprodukt({ ...produkt, price: e.target.value })}
               required
             />
           </div>
@@ -49,8 +62,8 @@ const UpdateProduct = () => {
               type="number"
               className="form-control"
               name="amount"
-              value={""}
-             
+              value={produkt.amount ||""}
+              onChange={(e) => setprodukt({ ...produkt, amount: e.target.value })}
               required
             />
           </div>
@@ -65,21 +78,26 @@ const UpdateProduct = () => {
               type="url"
               className="form-control"
               name="image"
-              value={""}
-              aria-describedby="basic-addon3"
-             
+              value={produkt.image || ""}
+              onChange={(e)=> setprodukt({...produkt,image:e.target.value})}
               required
             />
           </div>
           <div className="text-center">
             <button
               type="submit"
-              className="add-to-cart btn btn-success btn-sm"
-            >
+              className="add-to-cart btn btn-success btn-sm">
               <i className="fa-solid fa-cart-plus me-2"></i>Save To Product
             </button>
           </div>
-        </form>
+        </form> */}
+
+        <ProductForm 
+        handleSubmit={handleSubmit}
+          formData={produkt}
+          setFormData={setprodukt}
+     
+        />
       </article>
     </div>
   );
