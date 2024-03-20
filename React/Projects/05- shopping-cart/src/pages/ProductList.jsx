@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import axios from "axios";
+import CardTotal from "../components/CardTotal";
 
 
 const ProductList = () => {
@@ -43,7 +44,9 @@ if(error){
               <ProductCard key={product.id} product={product} getData={getData}/>
             ))}
           </article>
-
+          <article>
+            <CardTotal products={produkte}/>
+          </article>
         </>
         )}
       
