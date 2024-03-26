@@ -1,4 +1,5 @@
-import React, { createContext, useState } from 'react'
+import axios from 'axios'
+import React, { createContext, useEffect, useState } from 'react'
 
 //!context alani create edildi \\
 export const RecipeContext = createContext()
@@ -19,9 +20,27 @@ const RecipeProvider = ({children}) => {
 
     const BASE_URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`
 
+    const getData = async () => {
+     const {data} = await axios.get(BASE_URL)
+     console.log(data.hits);
+     setRecipes(data.hits)
+    }
+
+    useEffect(()=>{
+        getData()
+    }, [])
 
   return (
-    <RecipeContext.Provider value={{name,setName,password,setPassword,setQuery,setMealType,recipes}}>
+    <RecipeContext.Provider value={{
+        name,
+        setName,
+        password,
+        setPassword,
+        setQuery,
+        setMealType,
+        recipes,
+        getData
+        }}>
     {children}
     </RecipeContext.Provider>
   )

@@ -18,7 +18,9 @@ const {recipes} = useContext(RecipeContext)
 
       {recipes.length ? ( <div>
           <RecipeCard />
-        </div>) : ( <ImgDiv>
+        </div>
+        ) : ( 
+          <ImgDiv>
           <HomeImg src={homeSvg} alt="" />
         </ImgDiv>)}
     
