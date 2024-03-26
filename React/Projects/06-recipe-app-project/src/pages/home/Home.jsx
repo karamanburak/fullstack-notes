@@ -1,27 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import Header from "../../components/header/Header";
 import RecipeCard from "./RecipeCard";
 import { HomeImg, ImgDiv } from "./HomeStyles";
 import homeSvg from "../../assets/home.svg";
+import { RecipeContext } from "../../context/RecipeProvider";
 
 
 
 const Home = () => {
 
+const {recipes} = useContext(RecipeContext)
 
   return (
     <div>
       <Header />
 
-    
-        <div>
+      {recipes.length ? ( <div>
           <RecipeCard />
-        </div>
-    
-        <ImgDiv>
+        </div>) : ( <ImgDiv>
           <HomeImg src={homeSvg} alt="" />
-        </ImgDiv>
+        </ImgDiv>)}
+    
+    
+ 
  
     </div>
   );
