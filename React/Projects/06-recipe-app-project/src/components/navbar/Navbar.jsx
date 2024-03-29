@@ -17,7 +17,7 @@ const Navbar = () => {
         <GiHamburgerMenu />
       </Hamburger>
 
-      <Menu >
+      <Menu burak={open}>
         <MenuLink  to="/about"> about</MenuLink>
         <a href="https://github.com/" target='blank'>github</a>
         <MenuLink to="/">logout</MenuLink>
