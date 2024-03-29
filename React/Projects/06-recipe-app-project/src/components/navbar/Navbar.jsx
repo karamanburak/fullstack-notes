@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Logo to="/home">
+      <Logo to="/home" onClick={() => setOpen(false)}>
         <i>{"<Clarusway/>"} </i>
         <span>recipe</span>
       </Logo>
@@ -17,7 +17,7 @@ const Navbar = () => {
         <GiHamburgerMenu />
       </Hamburger>
 
-      <Menu burak={open}>
+      <Menu burak={open} onClick={()=> setOpen(false)}>
         <MenuLink  to="/about"> about</MenuLink>
         <a href="https://github.com/" target='blank'>github</a>
         <MenuLink to="/">logout</MenuLink>
