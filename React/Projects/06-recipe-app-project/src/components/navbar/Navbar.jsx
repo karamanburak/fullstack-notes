@@ -3,6 +3,7 @@ import {  Hamburger, Logo, Menu, MenuLink, Nav } from './NavbarStyles'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from 'react';
 const Navbar = () => {
+  const [open,setOpen] = useState(false)
 
 
   return (
@@ -12,12 +13,12 @@ const Navbar = () => {
         <span>recipe</span>
       </Logo>
 
-      <Hamburger >
+      <Hamburger onClick={()=> setOpen(!open)}>
         <GiHamburgerMenu />
       </Hamburger>
 
       <Menu >
-        <MenuLink to="/about"> about</MenuLink>
+        <MenuLink  to="/about"> about</MenuLink>
         <a href="https://github.com/" target='blank'>github</a>
         <MenuLink to="/">logout</MenuLink>
       </Menu>
