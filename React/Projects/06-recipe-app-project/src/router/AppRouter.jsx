@@ -7,6 +7,7 @@ import PrivateRouter from './PrivateRouter';
 import About from '../pages/about/About'
 import Footer from '../components/footer/Footer';
 import Details from '../pages/details/Details';
+import NotFound from '../pages/error/NotFound';
 
 
 const AppRouter = () => {
@@ -14,7 +15,6 @@ const AppRouter = () => {
 <BrowserRouter>
 <Navbar/>
 <Routes>
-    {/* <Navbar/> */}
     <Route path="/" element={<Login/>}/>
 
     <Route path='/home' element={<PrivateRouter/>}>
@@ -22,6 +22,8 @@ const AppRouter = () => {
     </Route>
     <Route path="/about" element={<About />} />
     <Route path="/details" element={<Details />} />
+
+    <Route path="*" element={<NotFound  />} />
 
 </Routes>
 <Footer/>
