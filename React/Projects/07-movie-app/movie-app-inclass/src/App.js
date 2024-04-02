@@ -1,11 +1,13 @@
 import React from "react";
-import Register from "./pages/Register";
 import AppRouter from "./router/AppRouter";
+import AuthContextProvider from "./context/AutContext";
 
 const App = () => {
   return (
     <div>
-  <AppRouter/>
+    <AuthContextProvider>
+      <AppRouter />
+    </AuthContextProvider>
     </div>
   );
 };
