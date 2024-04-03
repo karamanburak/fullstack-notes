@@ -9,6 +9,7 @@ import {
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../auth/firebase";
 import { useNavigate } from "react-router-dom"
+import { toastSuccessNotify } from "../helpers/toastNotify";
 
 //! create context
 const AuthContext = createContext();
@@ -31,6 +32,7 @@ const AuthContextProvider = ({ children }) => {
             displayName: displayName
         })
         navigate("/")
+        toastSuccessNotify("Registered!")
         console.log(userCredential);
     };
     //* https://console.firebase.google.com/
@@ -39,12 +41,17 @@ const AuthContextProvider = ({ children }) => {
     const login = async (email, password) => {
         await signInWithEmailAndPassword(auth, email, password)
         navigate("/")
+        toastSuccessNotify("Logged in!")
+
     };
     const logout = () => {
         //*https://firebase.google.com/docs/auth/web/password-auth#next_steps
         signOut(auth)//! sadece signOut metodunu çağırmamız yeterli
+        toastSuccessNotify("Logged out!")
+
     }
 
+    //! Projeyi deploy ettikten sonra google sign in calismasi icin domain listesine deploy linkini ekle \\
     const signGoogleProvider =  async () => {
         try {
          const provider = new GoogleAuthProvider();
