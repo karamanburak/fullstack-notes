@@ -1,4 +1,11 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import {
+     GoogleAuthProvider, 
+     createUserWithEmailAndPassword, 
+     onAuthStateChanged, 
+     signInWithEmailAndPassword, 
+     signInWithPopup, 
+     signOut, 
+     updateProfile } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../auth/firebase";
 import { useNavigate } from "react-router-dom"
@@ -38,6 +45,16 @@ const AuthContextProvider = ({ children }) => {
         signOut(auth)//! sadece signOut metodunu çağırmamız yeterli
     }
 
+    const signGoogleProvider =  async () => {
+        try {
+         const provider = new GoogleAuthProvider();
+         await signInWithPopup(auth, provider)
+         navigate("/")
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     const userObserver = () => {
         //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
         onAuthStateChanged(auth, (user) => {
@@ -62,12 +79,19 @@ const AuthContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ currentUser, register, login, logout }}>
+        <AuthContext.Provider value={{ 
+            currentUser,
+             register, 
+             login, 
+             logout, 
+             signGoogleProvider
+             }}>
             {children}
         </AuthContext.Provider>
     );
 };
 
+//! zorunlu degil kullanim kolayligi olmasi nedeniyle yazilabilir. Ilgili yerlerde importlari azaltiyor.
 //* consumer with custom hook
 export const useAuthContext = () => {
     return useContext(AuthContext);

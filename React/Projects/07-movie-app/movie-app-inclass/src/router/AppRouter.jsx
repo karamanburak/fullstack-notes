@@ -14,7 +14,6 @@ const AppRouter = () => {
         <Route path="/" element={<Main />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/details/:id" element={<MovieDetail />} />
       </Routes>
 
