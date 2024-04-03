@@ -9,7 +9,7 @@ import {
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../auth/firebase";
 import { useNavigate } from "react-router-dom"
-import { toastSuccessNotify } from "../helpers/toastNotify";
+import { toastErrorNotify, toastSuccessNotify } from "../helpers/toastNotify";
 
 //! create context
 const AuthContext = createContext();
@@ -21,7 +21,8 @@ const AuthContextProvider = ({ children }) => {
     const navigate = useNavigate()
 
     const register = async (email, password, displayName) => {
-        //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
+        try {
+               //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
         const userCredential = await createUserWithEmailAndPassword(
             auth,
             email,
@@ -34,14 +35,26 @@ const AuthContextProvider = ({ children }) => {
         navigate("/")
         toastSuccessNotify("Registered!")
         console.log(userCredential);
+        } catch (error) {
+            console.log(error);
+            toastErrorNotify(error.message)
+            
+        }
+     
     };
     //* https://console.firebase.google.com/
     //* => Authentication => sign-in-method => enable Email/password
     //! Email/password ile girişi enable yap
     const login = async (email, password) => {
-        await signInWithEmailAndPassword(auth, email, password)
+        try {
+              await signInWithEmailAndPassword(auth, email, password)
         navigate("/")
         toastSuccessNotify("Logged in!")
+        } catch (error) {
+            toastErrorNotify(error.message)
+
+        }
+      
 
     };
     const logout = () => {
@@ -59,6 +72,8 @@ const AuthContextProvider = ({ children }) => {
          navigate("/")
         } catch (error) {
             console.log(error);
+            toastErrorNotify(error.message)
+
         }
     }
 
