@@ -11,7 +11,8 @@ const Counter = () => {
 
   // useSelector(state => state.reducer)
   // const {count} = useSelector(state => state)
-  const count = useSelector(state => state.count) // state in kendisine denk gelir
+  // const count = useSelector(state => state.count) // state in kendisine denk gelir
+  const count = useSelector(state => state.counter.count) // combine reducerstan sonra\\
   const dispatch = useDispatch() // setter a denk gelir.
   return (
     <div className="app">
