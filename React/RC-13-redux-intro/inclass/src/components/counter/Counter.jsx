@@ -5,8 +5,8 @@ const Counter = () => {
 
   // useSelector(state => state.reducer)
   // const {count} = useSelector(state => state)
-  const count = useSelector(state => state.count) // 0
-  const dispatch = useDispatch()
+  const count = useSelector(state => state.count) // state in kendisine denk gelir
+  const dispatch = useDispatch() // setter a denk gelir.
   return (
     <div className="app">
       <h2 className="counter-header">Counter With Redux</h2>
