@@ -3,6 +3,10 @@ import { INC } from "../../redux/types/counterTypes"
 import "./Counter.css"
 import { useDispatch, useSelector } from 'react-redux'
 
+
+// useDispatch() reducer içerisinde tanımlanan actionsların çalıştırılması için kullanılır.
+//? dispatch; Action’ı parametre alarak reducer’ı tetikler. Bunun sonucunda state değiştirilir. Bu fonksiyon her çalıştırıldığında abone olan tüm componen’tler tekrar render edilir.Tabii ki state değiştikten sonra, render işlemi yapılır. Bu işlemden sonra listeners’da abone olan tüm component’lerin içinde gezerek render ediyor. Bu sayede güncel state view’e yansıyor.
+
 const Counter = () => {
 
   // useSelector(state => state.reducer)
