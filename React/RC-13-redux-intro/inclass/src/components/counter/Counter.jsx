@@ -1,14 +1,25 @@
 import "./Counter.css"
+import {useDispatch,useSelector} from 'react-redux'
 
 const Counter = () => {
+
+  // useSelector(state => state.reducer)
+  // const {count} = useSelector(state => state)
+  const count = useSelector(state => state.count) // 0
+  const dispatch = useDispatch()
   return (
     <div className="app">
       <h2 className="counter-header">Counter With Redux</h2>
-      <h1>counter:0</h1>
+      <h1>counter: {count}</h1>
       <div>
         <button className="counter-button negative">decrease</button>
         <button className="counter-button zero">reset</button>
-        <button className="counter-button positive">increase</button>
+        <button className="counter-button positive" 
+          // onClick={() => dispatch("INC")} //! Action obje olmak zorundadir o nedenle argüman gönderirken obje olarak göndermek zorundayiz. Aksi halde hata aliriz.
+        // onClick={() => dispatch({ tip: "INC" })} //? obje icinde gönderdigimiz property type adinda olmali.
+        onClick={()=>dispatch({type:"INC"})} //* dispatch icerisinde verdigimiz argüman reducer icerisindeki action parametresine karsilik gelir. 
+        >
+        increase</button>
       </div>
     </div>
   )

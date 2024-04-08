@@ -9,6 +9,7 @@ const initialState = {
 
 }
 
+//! action parametresi bir obje olmak zorunda bu obje de bizden type ve payload propertylerini bekler.\\
 export const counterReducer = (state = initialState, action) => {
 
     switch (action.type) {
