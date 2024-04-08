@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { DEC, INC, RESET } from "../types/counterTypes"
 
 // const [count,setCount] = useState(0)
 // const [todo,setTodo] = useState()
@@ -13,11 +14,11 @@ const initialState = {
 export const counterReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case "INC":
+        case INC:
             return { count: state.count + 1 }
-        case "DEC":
+        case DEC:
             return { count: state.count - 1 }
-        case "RESET":
+        case RESET:
             // return initialState
             return {...state, count:0}
         default:
