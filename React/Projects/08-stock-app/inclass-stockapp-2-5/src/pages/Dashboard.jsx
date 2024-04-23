@@ -162,7 +162,7 @@ function Dashboard(props) {
             },
           }}
         >
-          <MenuListItems/>
+          <MenuListItems />
         </Drawer>
         <Drawer
           variant="permanent"
@@ -175,7 +175,7 @@ function Dashboard(props) {
           }}
           open
         >
-          <MenuListItems/>
+          <MenuListItems />
         </Drawer>
       </Box>
       <Box
