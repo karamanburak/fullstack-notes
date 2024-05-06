@@ -180,7 +180,7 @@ let aa: number | string = "a";
 
 aa = 5;
 
-aa = false; //hata
+// aa = false; //hata
 
 //! Type Aliases
 
@@ -188,7 +188,7 @@ type Mark = number | string;
 
 let bb: Mark = 1;
 bb = "Hello";
-bb = false;
+// bb = false;
 
 //! String Literals
 
@@ -196,5 +196,5 @@ type Car = "BMW" | "Audi" | 44;
 
 let car1: Car = "BMW";
 let car2: Car = "Audi";
-let car3: Car = "Mercedes";
+// let car3: Car = "Mercedes";
 let car4: Car = 44;
