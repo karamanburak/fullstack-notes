@@ -1,5 +1,10 @@
-console.log("Hello  TS");
-let b = 3;
-let c = 2;
-let d = 0;
-const a = (b, c) => b * c;
+let aa = "a";
+aa = 5;
+aa = false;
+let bb = 1;
+bb = "Hello";
+bb = false;
+let car1 = "BMW";
+let car2 = "Audi";
+let car3 = "Mercedes";
+let car4 = 44;
