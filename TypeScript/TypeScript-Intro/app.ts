@@ -176,25 +176,132 @@ console.log('Hello world')  //return nothing - printing nothing  */
 
 //! Union Type
 // iki veya daha fazla tipi birleştirmek için kullanılır
-let aa: number | string = "a";
+// let aa: number | string = "a";
 
-aa = 5;
+// aa = 5;
 
 // aa = false; //hata
 
-//! Type Aliases
+ //! Type Aliases
 
-type Mark = number | string;
+// type Mark = number | string;
 
-let bb: Mark = 1;
-bb = "Hello";
+// let bb: Mark = 1;
+// bb = "Hello";
 // bb = false;
 
 //! String Literals
 
-type Car = "BMW" | "Audi" | 44;
+// type Car = "BMW" | "Audi" | 44;
 
-let car1: Car = "BMW";
-let car2: Car = "Audi";
+// let car1: Car = "BMW";
+// let car2: Car = "Audi";
 // let car3: Car = "Mercedes";
-let car4: Car = 44;
+// let car4: Car = 44;
+
+
+//! Objects !\\
+
+// const car: {
+//     make: string,
+//     model: string,
+//     readonly year: number,
+//     age(year:number):void,
+//     sunroof: boolean
+// } = {
+//     make: "Toyota",
+//     model: "Yaris",
+//     year: 2010,
+
+//     age(year:number):void{
+//         console.log(`Age is ${year-2010}`)
+//     },
+//     sunroof: true
+// }
+
+// console.log(car.year);
+
+
+// car.color = 'green' // does not exist
+
+
+// car.year = 2010 //readonly
+
+// car.age(2024)
+
+//! Intersection !\\
+
+// type Book = {
+//     book_id :number;
+//     book_name:string;
+// }
+
+// type Author = {
+//     Author_id: number;
+//     Author_name:string
+// }
+
+// type Sales = Book & Author;
+
+// let sales1: Sales = {
+//     book_id: 1234,
+//     book_name: "Martin Eden",
+
+//     Author_id: 1908,
+//     Author_name: "Jack London",
+// }
+
+//! Type Assertions !\\ (Alias (as) and generic)
+
+// let someString: unknown = "Hello World"
+// console.log(someString.length);
+// console.log((someString as String).length) // alias
+// console.log((<string>someString).length) // generic
+
+// let str1:string = someString as string 
+// console.log(str1.length);
+
+
+// let score: unknown = '300'
+// console.log((score as String).split(''));
+
+// let num1:number = <number>score
+
+//! Functions !\\
+
+// function selamla (mesaj:string, isim:string):string{
+//     return `${mesaj} ${isim} !`
+// }
+
+// selamla('Günaydin', 'De08')
+// selamla('Günaydin', 88)
+// selamla('Günaydin')
+// selamla('Günaydin', 'De08', 'nasilsiniz')
+
+// function selamla2 (mesaj:string, isim:string):void{
+//     console.log(`${mesaj} ${isim} !`); 
+// }
+
+// let num2: number = 0
+
+// function increase():void{
+//     num2++
+// }
+
+// increase()
+// increase()
+// increase()
+// console.log(num2);
+
+
+//! Optional Parameters !\\
+
+function selamla2 (mesaj:string, isim?:String):string{ 
+    // opsiyonal parametreler sonda belirtilmek zorunda
+    if(!isim) isim = 'user'
+    return `${mesaj} ${isim}!`
+}
+
+
+console.log(selamla2("Merhaba", "Mark"));
+console.log(selamla2("Merhaba"));
