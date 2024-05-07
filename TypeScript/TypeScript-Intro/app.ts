@@ -296,12 +296,48 @@ console.log('Hello world')  //return nothing - printing nothing  */
 
 //! Optional Parameters !\\
 
-function selamla2 (mesaj:string, isim?:String):string{ 
-    // opsiyonal parametreler sonda belirtilmek zorunda
-    if(!isim) isim = 'user'
-    return `${mesaj} ${isim}!`
+// function selamla2 (mesaj:string, isim?:String):string{ 
+     // opsiyonal parametreler sonda belirtilmek zorunda
+//     if(!isim) isim = 'user'
+//     return `${mesaj} ${isim}!`
+// }
+
+
+// console.log(selamla2("Merhaba", "Mark"));
+// console.log(selamla2("Merhaba"));
+
+//! Function Overloading !\\
+
+// function add (a:string,b:number):string;
+// function add (a:string,b:string):string;
+// function add (a:number,b:number):number;
+// function add (a:any, b:any):any{
+//     return a + b
+// }
+
+// console.log(add(2,3));
+// console.log(add('Hello ', 'World'));
+// console.log(add('Hello ', '2024'));
+
+
+//! Type narrowing !\\
+
+// function sum (a:number | string, b: number | string ):void{
+
+//     if(typeof a === 'number'){
+//         a.toExponential()
+//     }else {
+//         a.length
+//     }
+// }
+
+//! Rest Parameters !\\
+
+function selamla3 (mesaj: string, ...isimler: string[]):string {
+    console.log(isimler);
+    return `${mesaj + ' ' +isimler.join(",")+ '!'}`
 }
 
-
-console.log(selamla2("Merhaba", "Mark"));
-console.log(selamla2("Merhaba"));
+console.log(selamla3('Hello'));
+console.log(selamla3('Hello', 'Mark'));
+console.log(selamla3('Hello', 'Mark', 'Harvey', 'Ashley'));

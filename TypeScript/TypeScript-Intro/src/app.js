@@ -1,7 +1,7 @@
-function selamla2(mesaj, isim) {
-    if (!isim)
-        isim = 'user';
-    return `${mesaj} ${isim}!`;
+function selamla3(mesaj, ...isimler) {
+    console.log(isimler);
+    return `${mesaj + ' ' + isimler.join(",") + '!'}`;
 }
-console.log(selamla2("Merhaba", "Mark"));
-console.log(selamla2("Merhaba"));
+console.log(selamla3('Hello'));
+console.log(selamla3('Hello', 'Mark'));
+console.log(selamla3('Hello', 'Mark', 'Harvey', 'Ashley'));
