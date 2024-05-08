@@ -43,7 +43,8 @@ const Home = () => {
 
 
     //! Function type tanimlama 2.yol !\\
-    type AddFn = (text:string)=> Promise<void>
+    // type AddFn = (text:string)=> Promise<void>
+    
     const addTodo:AddFn = async (text) => {
         try {
             await axios.post(url,{task:text, isDone:false})
@@ -65,7 +66,7 @@ const Home = () => {
             <Typography align='center' color="error" variant='h3' component="h1">
                 Todo App with TypeScript
             </Typography>
-            <AddTodoComp />
+            <AddTodoComp addTodo={addTodo}/>
             <TodoList />
         </Container>
     )
