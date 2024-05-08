@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { FC } from "react";
 import TodoListItem from "./TodoListItem";
+import "./style.css"
 
 //? 3.Kullanım yolu(Props type tanımlası)
 //! React.FC, bir functional component'i ifade eder. Bileşenin işlevsel bir yapıda olduğunu ve React tarafından kullanılabileceğini belirtir.
@@ -37,6 +38,8 @@ const TodoList: FC<ITodoList> = ({ todos, toggleTodo, deleteTodo }) => {
                 xs={12}
                 sm={8}
                 md={5}
+                position={"relative"}
+                className="myscrool scrool-progress"
                 sx={{
                     border: "1px solid purple",
                     borderRadius: "0.5rem",
@@ -45,7 +48,7 @@ const TodoList: FC<ITodoList> = ({ todos, toggleTodo, deleteTodo }) => {
                     overflow: "auto",
                 }}
             >
-                <Typography color="secondary" align="center" variant="h4">
+                <Typography className="title" color="secondary" align="center" variant="h4">
                     InProgress Todos
                 </Typography>
                 {progressTodos.length ? (
@@ -63,6 +66,8 @@ const TodoList: FC<ITodoList> = ({ todos, toggleTodo, deleteTodo }) => {
                 xs={12}
                 sm={8}
                 md={5}
+                position={"relative"}
+                className="myscrool scrool-progress"
                 sx={{
                     border: "1px solid green",
                     borderRadius: "0.5rem",
@@ -71,7 +76,7 @@ const TodoList: FC<ITodoList> = ({ todos, toggleTodo, deleteTodo }) => {
                     overflow: "auto",
                 }}
             >
-                <Typography sx={{ color: "green" }} align="center" variant="h4">
+                <Typography className="title" sx={{ color: "green" }} align="center" variant="h4">
                     Completed Todos
                 </Typography>
                 {completedTodos.length ? (
