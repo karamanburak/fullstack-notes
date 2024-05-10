@@ -9,9 +9,9 @@ const RecipeCardComp = ({recipe}) => {
   }
   return (
       <RecipeCard>
-        <RecipeHeader>{recipe.label}</RecipeHeader>
-        <RecipeImage src={recipe.image} alt=""/>
-        <Button onClick={moreClick}>View More</Button>
+        <RecipeHeader data-test='cardHeader'  >{recipe.label}</RecipeHeader>
+        <RecipeImage data-test='cardImage' src={recipe.image} alt=""/>
+        <Button data-test='cardBtn' onClick={moreClick}>View More</Button>
       </RecipeCard>
   )
 }
