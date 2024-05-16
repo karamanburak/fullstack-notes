@@ -3,7 +3,7 @@ import SearchComp from "../components/SearchComp";
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { addFavorites, fetchFail, fetchStart, getSuccessProduct } from "../features/productsSlice";
-import { EventFunc, Product, Products } from "../models/models";
+import { EventFunc, Product, Products, VoidFunc } from "../models/models";
 import Card from "../components/Card";
 
 
@@ -38,7 +38,7 @@ const Home = () => {
     setSearch(e.target.value)
   }
 
-  const handleAdd = (product:Product) => {
+  const handleAdd:VoidFunc = (product) => {
     if(favorites.filter(item=>item.id === product.id).length === 0){
       dispatch(addFavorites(product))
     }
