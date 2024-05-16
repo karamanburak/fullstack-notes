@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import Card from "../components/Card";
 import { Product, VoidFunc } from "../models/models";
 import { removeFavorites } from "../features/productsSlice";
+import { toastSuccessNotify } from "../helper/ToastNotify";
 
 const FavoritesPage = () => {
   const {favorites} = useAppSelector(state=> state.products)
@@ -16,6 +17,7 @@ const FavoritesPage = () => {
   const handleRemove:VoidFunc = (product) => {
     const newData:Product[] = favorites.filter(item=> item.id !== product.id)
     dispatch(removeFavorites(newData))
+    toastSuccessNotify('Product removed...')
   }
 
   return (

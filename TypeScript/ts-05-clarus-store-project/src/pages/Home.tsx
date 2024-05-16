@@ -3,8 +3,9 @@ import SearchComp from "../components/SearchComp";
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { addFavorites, fetchFail, fetchStart, getSuccessProduct } from "../features/productsSlice";
-import { EventFunc, Product, Products, VoidFunc } from "../models/models";
+import { EventFunc, Products, VoidFunc } from "../models/models";
 import Card from "../components/Card";
+import { toastSuccessNotify, toastWarnNotify } from "../helper/ToastNotify";
 
 
 
@@ -41,6 +42,9 @@ const Home = () => {
   const handleAdd:VoidFunc = (product) => {
     if(favorites.filter(item=>item.id === product.id).length === 0){
       dispatch(addFavorites(product))
+      toastSuccessNotify('Product added to favorites!')
+    } else {
+      toastWarnNotify('Product already added to Favorites')
     }
   }
 
