@@ -4,7 +4,7 @@ import FavoritesPage from "./pages/FavoritesPage";
 import Navbar from "./components/Navbar";
 import { Provider } from "react-redux";
 import { store } from './app/store';
-import { ToastContainer } from "react-toastify";
+import { Flip, ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Provider>
-      <ToastContainer/>
+      <ToastContainer transition={Flip}/>
     </div>
   );
 }
