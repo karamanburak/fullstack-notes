@@ -9,14 +9,14 @@ interface ICard {
 const Card:React.FC<ICard> = ({item,text,handleFunc}) => {
     return (
         <div className="w-10/12 sm:w-6/12 md:w-4/12 lg:w-3/12 flex-col justify-between bg-white rounded-lg">
-            <div>
-                <h1>{item.title}</h1>
-                <p>{item.description}</p>
+            <div className="p-4 ">
+                <h1 className="text-gray-900 uppercase text-xl">{item.title}</h1>
+                <p className="text-sm mt-1 text-gray-500 line-clamp-1">{item.description}</p>
             </div>
-            <img src={item.images[0]} alt={item.title} />
-            <div>
-                <h2>${item.price}</h2>
-                <button onClick={()=>handleFunc(item)}>{text}</button>
+            <img className="p-2 min-h-[150px] max-h-[150px] object-contain m-auto" src={item.images[0]} alt={item.title} />
+            <div className="flex justify-between items-center bg-gray-700 p-3">
+                <h2 className="text-gray-100 font-bold">${item.price}</h2>
+                <button className=" bg-gray-300 p-1 rounded-lg animate-pulse hover:animate-none" onClick={()=>handleFunc(item)}>{text}</button>
             </div>
         </div>
     )
