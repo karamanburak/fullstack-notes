@@ -2,15 +2,16 @@ import axios from "axios";
 import SearchComp from "../components/SearchComp";
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { fetchFail, fetchStart, getSuccessProduct } from "../features/productsSlice";
-import { EventFunc, Products } from "../models/models";
+import { addFavorites, fetchFail, fetchStart, getSuccessProduct } from "../features/productsSlice";
+import { EventFunc, Product, Products } from "../models/models";
+import Card from "../components/Card";
 
 
 
 const Home = () => {
   const [search, setSearch] = useState("")
   const dispatch = useAppDispatch()
-  const { loading, error, productsList} = useAppSelector(state=> state.products)
+  const { loading, error, productsList, favorites} = useAppSelector(state=> state.products)
 
   const getData = async () => {
     dispatch(fetchStart())
@@ -37,6 +38,12 @@ const Home = () => {
     setSearch(e.target.value)
   }
 
+  const handleAdd = (product:Product) => {
+    if(favorites.filter(item=>item.id === product.id).length === 0){
+      dispatch(addFavorites(product))
+    }
+  }
+
   return (
     <div>
       <SearchComp handleChange={handleChange} />
@@ -50,7 +57,7 @@ const Home = () => {
         </div>
       ) : (
         <div className="flex justify-center items-center flex-wrap gap-5 p-5">
-          {productsList.map((item) => <p>{item.title} </p> )}
+          {productsList.map((item) => <Card key={item.id} text="Add to favorites" item={item} handleFunc={handleAdd} /> )}
         </div>
       )}
     </div>
