@@ -61,5 +61,29 @@
 --* *** iliski durumu -- Iliskisel veri tabani ***
 -- SELECT * FROM Album  JOIN Artist  ON Album.ArtistId = Artist.ArtistId; --* orjinal hali
 -- SELECT * FROM Album a JOIN Artist r ON a.ArtistId = r.ArtistId; --* kisa yolu
-SELECT a.ArtistId,a.Title, r.Name FROM Album a JOIN Artist r ON a.ArtistId = r.ArtistId; 
+-- SELECT a.ArtistId,a.Title, r.Name FROM Album a JOIN Artist r ON a.ArtistId = r.ArtistId; 
+-- SELECT * FROM Artist a  JOIN Album l ON a.ArtistId = l.ArtistId;
+-- SELECT * FROM Artist a  LEFT JOIN Album l ON a.ArtistId = l.ArtistId;
+-- SELECT * FROM Artist a  RIGHT JOIN Album l ON a.ArtistId = l.ArtistId;
+-- SELECT * FROM Artist a  CROSS JOIN Album l ON a.ArtistId = l.ArtistId;
+-- SELECT * FROM Artist a  INNER JOIN Album l ON a.ArtistId = l.ArtistId;
 
+--- *** functions *** ---
+-- SELECT i.Total AS 'Toplam Tutar' FROM Invoice i JOIN InvoiceLine l ON i.InvoiceId = l.InvoiceId ;
+-- SELECT count(i.InvoiceId) FROM Invoice i JOIN InvoiceLine l ON i.InvoiceId = l.InvoiceId ;
+-- SELECT count(i.InvoiceId) FROM Invoice i;
+-- SELECT count(InvoiceLineId) FROM InvoiceLine l;
+-- SELECT sum(i.Total) FROM Invoice i;
+-- SELECT i.InvoiceId, i.Total FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT sum(i.Total) FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT avg(i.Total) FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT round(sum(i.Total),0) FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT round(sum(i.Total),1) FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT min(i.Total) FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT max(i.Total) FROM Invoice i WHERE i.InvoiceId IN (1,5,9);
+-- SELECT a.AlbumId, a.Title, a.ArtistId, length(a.Title) as 'Title Uuzunlugu' FROM Album a;
+
+-- **** Group By *** --
+-- SELECT Country, * FROM Customer;
+-- SELECT Country, count(*) FROM Customer GROUP BY Country;
+-- SELECT DISTINCT (Country) FROM Customer;
