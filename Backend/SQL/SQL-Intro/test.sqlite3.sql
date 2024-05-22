@@ -1,5 +1,9 @@
 -- SQLite
--- SELECT * FROM Customer WHERE Country='Canada';
+-- * WHERE - Filtreleme
+-- select * from Album; -- tüm veriler listelenir
+-- select * from Album where AlbumId=1;
+-- select * from Album where Title='For Those About To Rock We Salute You';
+-- select * from Customer where Country='Canada'; -- Ülkesi kanada olanlar
 -- SELECT * FROM Customer WHERE Country="USA";
 -- SELECT * FROM Customer WHERE CustomerId=15;
 -- SELECT * FROM Customer;
@@ -33,4 +37,4 @@
 -- SELECT * FROM Customer WHERE Country IN ('Canada', 'Brazil', 'USA');
 -- SELECT * FROM Customer WHERE Country IN ('USA');
 -- SELECT * FROM Customer WHERE Country NOT IN ('USA');
-SELECT * FROM Customer WHERE CustomerId IN (1,4,8,45) AND Country = "Brazil" or CustomerId = 45
+-- SELECT * FROM Customer WHERE CustomerId IN (1,4,8,45) AND (Country = "Brazil" OR Country = "USA") OR CustomerId = 45
