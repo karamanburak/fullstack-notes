@@ -33,4 +33,4 @@
 -- SELECT * FROM Customer WHERE Country IN ('Canada', 'Brazil', 'USA');
 -- SELECT * FROM Customer WHERE Country IN ('USA');
 -- SELECT * FROM Customer WHERE Country NOT IN ('USA');
-SELECT * FROM Customer WHERE CustomerId IN (1,4,8,45) OR Country = "Brazil" AND CustomerId = 45
+SELECT * FROM Customer WHERE CustomerId IN (1,4,8,45) AND Country = "Brazil" or CustomerId = 45
