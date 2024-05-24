@@ -368,7 +368,7 @@ DELETE FROM Artist WHERE ArtistId=276;
 -- SELECT tracks.AlbumId, albums.Title, MIN(tracks.Milliseconds) AS min_duration FROM tracks JOIN albums ON tracks.AlbumId = albums.AlbumId GROUP By tracks.AlbumId, albums.Title ORDER BY min_duration DESC;
 
 --? 24. WRITE A QUERY THAT RETURNS ALBUMS WHOSE TOTAL DURATION IS HIGHER THAN 60 MIN. DISPLAY ALBUM TITLE AND THEIR DURATIONS. THEN SORT THE RESULT FROM HIGHEST TO LOWEST
--- SELECT albums.Title, SUM(tracks.Milliseconds) AS total_duration FROM tracks JOIN albums ON tracks.AlbumId = albums.AlbumId GROUP BY tracks.AlbumId HAVING total_duration >3600000 ORDER BY total_duration DESC;
+-- SELECT albums.Title, SUM(tracks.Milliseconds) AS total_duration FROM tracks JOIN albums ON tracks.AlbumId = albums.AlbumId GROUP BY tracks.AlbumId HAVING total_duration > 3600000 ORDER BY total_duration DESC;
 
 --? 25. WRITE A QUERY THAT RETURNS TRACKID, TRACK NAME AND ALBUMID INFO OF THE ALBUM WHOSE TITLE ARE ‘Prenda Minha’, 'Heart of the Night' AND 'Out Of Exile'.
 -- SELECT TrackId, Name, AlbumId FROM tracks WHERE AlbumId IN (SELECT AlbumId FROM albums WHERE Title IN ('Prenda Minha', 'Heart of the Night' AND 'Out Of Exile'));
