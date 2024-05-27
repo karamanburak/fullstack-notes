@@ -26,6 +26,7 @@ https://docs.google.com/presentation/d/1ABvXuGOV33jxVCw1Etl8AmLB9yUxD4Dceqq7XI9e
     
     $ npm install express --save # dependencies # package.json/scripts -> "start": "node index.js"
     $ npm i express
+    $ npm uninstall express
     
     $ npm i nodemon --save-dev # devDependencies # package.json/scripts -> "devStart": "nodemon index.js"
     # $ npm run devStart # yarn devStart
@@ -42,7 +43,7 @@ https://docs.google.com/presentation/d/1ABvXuGOV33jxVCw1Etl8AmLB9yUxD4Dceqq7XI9e
     $ nodemon -v
 
     # NPX
-    $ npx create-react-app newfolder # Ctrl+C
+    $ npx create-react-app newfolder # Ctrl+C // use without install \\
 ```
 
 ### NodeShell
