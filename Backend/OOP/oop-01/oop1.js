@@ -159,15 +159,15 @@ const obj = JSON.parse(json)
 
 
 //? Object to Array
-//^ Keys
+//^ Keys 7 // obje icinde map ile dönmek istersek önemli bir konudur!
 const keysInArray = Object.keys(newCarDetails)
 console.log('keysInArray >>',keysInArray);
 
-//^ Values
+//^ Values obje icinde map ile dönmek istersek önemli bir konudur!
 const valuesInArray = Object.values(newCarDetails)
 console.log('valuesInArray >> ', valuesInArray);
 
-//^ Keys-Value Array
+//^ Keys-Value Array obje icinde map ile dönmek istersek önemli bir konudur!
 const objInArray = Object.entries(newCarDetails)
 console.log('obj >>', newCarDetails);
 console.log('objInArray >>', objInArray);
@@ -210,11 +210,25 @@ const CarConstructor = function (brand,model,year = 1973) {
 } 
 
 const newCar = new CarConstructor('toyata', 'yaris')
-console.log('newCar >>', newCar);
-console.log('full text >>', newCar.fullText()); // full text >> toyata yaris 1973
+// console.log('newCar >>', newCar);
+// console.log('full text >>', newCar.fullText()); // full text >> toyata yaris 1973
 
 const newNewCar = new CarConstructor('toyata', 'yaris', 2011)
-console.log('full text >>', newNewCar.fullText()); // full text >> toyata yaris 2011
+// console.log('full text >>', newNewCar.fullText()); // full text >> toyata yaris 2011
+
+let year
+year = 101
+if(year && year > 100){ // birinci kosul uygunsa ikinci kosula bakar.
+    console.log('year >>', year);
+}
+
+
+let day
+day = 9
+if(day || day > 10){ // kosullardan herhangi birinin uygunluguna  bakar.
+    console.log('day >>', day);
+}
+
 
 
 
