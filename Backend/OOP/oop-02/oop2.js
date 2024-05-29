@@ -314,3 +314,45 @@ console.log(KdvHesaplama.staticProp);
 /* ------------------------------------------------------- */
 
 
+//* ------ Team Work Example ---------- *//
+class Person {
+    constructor(name){
+        this.name = name
+    }
+    sayName(){
+        console.log(`My name is ${this.name}`);
+        
+    }
+}
+
+class BankAccount extends Person{
+    #balance
+    constructor(name,balance){
+        super(name);
+        this.#balance = balance;
+    }
+    deposit(amount){
+        this.#balance += amount
+    }
+    withdraw(amount){
+        if(amount <= this.#balance){
+
+            this.#balance -= amount
+        } else {
+            console.log('Insufficient balance');
+            
+        }
+    }
+    getBalance(){
+        console.log(`Current amount is your balance ${this.#balance}`);
+    }
+}
+
+const account1 = new BankAccount ("Burak", 1000)
+console.log(account1);
+account1.sayName()
+account1.deposit(500)
+account1.getBalance()
+account1.withdraw(200)
+account1.getBalance()
+account1.withdraw(2000)
