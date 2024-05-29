@@ -199,12 +199,12 @@
 //         this.vehicleType = vehicleType
 //         console.log('vehicle >>',this.#privateProperty);
 //         console.log('vehicle >>',this._privateProperty);
-        
+
 //     }
 // }
 
 // class Car extends Vehicle {
-//     isRunning = false 
+//     isRunning = false
 
 //     constructor(brand,model,year, vehicleType = 'Car'){
 //         super(vehicleType)
@@ -218,7 +218,7 @@
 //         console.log('Start engine');
 //         // console.log('privateProperty >>', this.#privateProperty ); // önünde diez (#) olunca Private oldugu icin calismaz!
 //         console.log('privateProperty >>', this._protectedProperty );
-        
+
 //     }
 // }
 
@@ -226,7 +226,53 @@
 // const Mercedes = new Car('Mercedes', 'AMG', 2024, 'Sport')
  // Mercedes.runEngine()
 
- 
+
 /* --------------------------------------------- */
 //? GETTER & SETTER METHODS: Görevi veri getirme (getter) ve veri güncelleme (setter) olan metodlardır.
 //? "STATIC" KEYWORD: Class'dan direkt erişim. (Instance erişemez.)
+
+class Car {
+    isRunning = false
+    #price
+    #color
+
+    constructor(brand, model, year) {
+        this.brand = brand
+        this.model = model
+        this.year = year
+    }
+
+    runEngine() {
+        this.isRunning = true
+        console.log('runEngine >> ','Start Engine')
+        //return this.isRunning
+    }
+
+    set setPrice(price) {
+        this.#price = price
+        console.log('price update');
+    }
+
+    get getPrice() {
+        return `price is ${this.#price}`
+    }
+
+    setColor(color) {
+        this.#color = color
+        console.log('color update');
+    }
+
+    getColor(){
+        return `color is ${this.#color}`
+    }
+}
+
+const Toyota = new Car('Toyota', 'Yaris', 2000)
+
+console.log(Toyota);
+
+Toyota.setPrice = 500
+Toyota.setColor('mavi')
+
+console.log(Toyota.getPrice);
+console.log(Toyota.getColor());
