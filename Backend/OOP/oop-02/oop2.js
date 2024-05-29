@@ -166,7 +166,7 @@
 
 //     }
 //     getType(vehicleType,brand){
-//         console.log(`Vehicle/Brand  type ${vehicleType} ${brand}`);
+//         console.log(`Car/Brand  type ${vehicleType} ${brand}`);
 
 //     }
 // }
@@ -224,55 +224,93 @@
 
 
 // const Mercedes = new Car('Mercedes', 'AMG', 2024, 'Sport')
- // Mercedes.runEngine()
+// Mercedes.runEngine()
 
 
 /* --------------------------------------------- */
 //? GETTER & SETTER METHODS: Görevi veri getirme (getter) ve veri güncelleme (setter) olan metodlardır.
 //? "STATIC" KEYWORD: Class'dan direkt erişim. (Instance erişemez.)
 
-class Car {
-    isRunning = false
-    #price
-    #color
+// class Car {
+//     isRunning = false
+//     #price
+//     #color
 
-    constructor(brand, model, year) {
-        this.brand = brand
-        this.model = model
-        this.year = year
+//     constructor(brand, model, year) {
+//         this.brand = brand
+//         this.model = model
+//         this.year = year
+//     }
+
+//     runEngine() {
+//         this.isRunning = true
+//         console.log('runEngine >> ','Start Engine')
+//         //return this.isRunning
+//     }
+
+//     set setPrice(price) {
+//         this.#price = price
+//         console.log('price update');
+//     }
+
+//     get getPrice() {
+//         return `price is ${this.#price}`
+//     }
+
+//     setColor(color) {
+//         this.#color = color
+//         console.log('color update');
+//     }
+
+//     getColor(){
+//         return `color is ${this.#color}`
+//     }
+// }
+
+// const Toyota = new Car('Toyota', 'Yaris', 2000)
+
+// console.log(Toyota);
+
+// Toyota.setPrice = 500
+// Toyota.setColor('mavi')
+
+// console.log(Toyota.getPrice);
+// console.log(Toyota.getColor());
+
+class KdvHesaplama {
+    static staticProp = 'static value'
+    #kdv
+
+    constructor(fiyat) {
+        this.fiyat = fiyat
     }
 
-    runEngine() {
-        this.isRunning = true
-        console.log('runEngine >> ','Start Engine')
-        //return this.isRunning
+    set setKdv(kdvOrani) {
+        this.#kdv = kdvOrani
     }
 
-    set setPrice(price) {
-        this.#price = price
-        console.log('price update');
+    get getKdvMiktari() {
+        return (this.fiyat / 100) * this.#kdv
     }
 
-    get getPrice() {
-        return `price is ${this.#price}`
-    }
-
-    setColor(color) {
-        this.#color = color
-        console.log('color update');
-    }
-
-    getColor(){
-        return `color is ${this.#color}`
+    get getKdvliFiyat() {
+        return ((this.fiyat / 100) * this.#kdv) + this.fiyat
     }
 }
 
-const Toyota = new Car('Toyota', 'Yaris', 2000)
+const hesap = new KdvHesaplama(100)
 
-console.log(Toyota);
+hesap.setKdv = 20
 
-Toyota.setPrice = 500
-Toyota.setColor('mavi')
+//console.log(hesap.getKdvMiktari);
+//console.log(hesap.getKdvliFiyat);
 
-console.log(Toyota.getPrice);
-console.log(Toyota.getColor());
+console.log(hesap.staticProp);
+console.log(KdvHesaplama.staticProp);
+
+/* ------------------------------------------------------- */
+//? ABSTRACTION: Soyutlama/Modelleme (Class ile obje üretebilme. Aynı amaç için kullanılan değişken ve methodların bir class içinde yazıyor olması)
+//? ENCAPCULLATION: Kapsülleme/Ayrıştırma (Kodların gizliliği, private değişkenlere erişilemiyor olması ve birbirinden bağımsız çalışmaları.)
+/* ------------------------------------------------------- */
+
+
