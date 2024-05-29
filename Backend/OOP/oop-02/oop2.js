@@ -130,7 +130,7 @@
 
 
 // class Vehicle {
-//     vehicleActive = false 
+//     vehicleActive = false
 
 //     constructor(vehicleType) {
 //         this.vehicleActive = vehicleType
@@ -143,7 +143,7 @@
 //     getType(vehicleType){
 //         // console.log('Vehicle Type: ' + this.vehicleType);
 //         console.log(`Vehicle type: ${this.vehicleType}`);
-        
+
 //     }
 // }
 
@@ -163,11 +163,11 @@
 //     }
 //     getDetails() {
 //         console.log('Car/getDetails started');
-        
+
 //     }
 //     getType(vehicleType,brand){
 //         console.log(`Vehicle/Brand  type ${vehicleType} ${brand}`);
-        
+
 //     }
 // }
 
@@ -183,6 +183,50 @@
 // Mercedes.getType('Car', 'Ford') // Vehicle/Brand  type Car Ford
 
 
+/* --------------------------------------------- */
+//? PUBLIC/PRIVATE
+//? JS PUBLIC: Genel erişime açık.
+//? JS PRIVATE: Sadece tanımlı olduğu class içinde erişim var.
+//? JS PROTECTED: Sadece Tanımlı olduğu class ve Inherit edilen child-class erişebilir. (Genel erişime açık ama lütfen dokunmayın.)
 
 
+// class Vehicle {
+//     vehicleActive = false // PUBLIC
+//     #privateProperty = 'no-access' // PRIVATE
+//     _protectedProperty = 'Limited-access' // PROTECTED
 
+//     constructor(vehicleType) {
+//         this.vehicleType = vehicleType
+//         console.log('vehicle >>',this.#privateProperty);
+//         console.log('vehicle >>',this._privateProperty);
+        
+//     }
+// }
+
+// class Car extends Vehicle {
+//     isRunning = false 
+
+//     constructor(brand,model,year, vehicleType = 'Car'){
+//         super(vehicleType)
+//         this.brand = brand
+//         this.model = model
+//         this.year = year
+//     }
+
+//     runEngine() {
+//         this.isRunning = true
+//         console.log('Start engine');
+//         // console.log('privateProperty >>', this.#privateProperty ); // önünde diez (#) olunca Private oldugu icin calismaz!
+//         console.log('privateProperty >>', this._protectedProperty );
+        
+//     }
+// }
+
+
+// const Mercedes = new Car('Mercedes', 'AMG', 2024, 'Sport')
+ // Mercedes.runEngine()
+
+ 
+/* --------------------------------------------- */
+//? GETTER & SETTER METHODS: Görevi veri getirme (getter) ve veri güncelleme (setter) olan metodlardır.
+//? "STATIC" KEYWORD: Class'dan direkt erişim. (Instance erişemez.)
