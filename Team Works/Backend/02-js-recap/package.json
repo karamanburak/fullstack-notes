@@ -1,0 +1,15 @@
+{
+  "name": "teamwork",
+  "version": "1.0.0",
+  "main": "workshop.js",
+  "scripts": {
+    "start": "nodemon workshop.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
