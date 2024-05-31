@@ -28,9 +28,19 @@ console.log("module lesson on nodeJs in index.js");
 // test3()
 
 //! multi function import 3. yol object (gelen verilerin keylerini destructring ederken degistirme)
-const {test1: t1, test2:t2, test3:t3} = require('./modules/module')
+// const {test1: t1, test2:t2, test3:t3,pi} = require('./modules/module')
 
-t2()
+// t2()
+// t1()
+// t3()
+// console.log(pi);
+
+
+const { testfunction1: t1, testfunction2, testfunction3:t3,message} = require('./modules/module')
+
+testfunction2()
 t1()
 t3()
+console.log(message);
+
 

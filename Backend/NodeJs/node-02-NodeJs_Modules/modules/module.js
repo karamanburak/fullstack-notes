@@ -14,7 +14,7 @@ module.exports = testfunction
 */
 
 
-//! single function export 2.yol 
+//! single function export 2.yol
 
 /*
 module.exports=function(){
@@ -22,24 +22,24 @@ module.exports=function(){
     
 }
 */
- 
 
-//! multi function
 
-const testfunction1 = function () {
-    console.log('this is test function 1');
+// //! multi function
 
-}
+// const testfunction1 = function () {
+//     console.log('this is test function 1');
 
-const testfunction2 = function () {
-    console.log('this is test function 2');
+// }
 
-}
+// const testfunction2 = function () {
+//     console.log('this is test function 2');
 
-const testfunction3 = function () {
-    console.log('this is test function 3');
+// }
 
-}
+// const testfunction3 = function () {
+//     console.log('this is test function 3');
+
+// }
 
 // //! multi function export 1. yol Array
 
@@ -53,8 +53,49 @@ const testfunction3 = function () {
 
 //! multi function export 2. yol Object
 
+// module.exports = {
+//     test1: testfunction1,
+//     test2: testfunction2,
+//     test3: testfunction3,
+//     pi: 3.14
+// }
+
+
+// //! shorthand - shortcut 1
+
+// module.exports.testfunction1 = function () {
+//     console.log('this is test function 1');
+
+// }
+
+// module.exports.testfunction2 = function () {
+//     console.log('this is test function 2');
+
+// }
+
+// module.exports.testfunction3 = function () {
+//     console.log('this is test function 3');
+
+// }
+
+// module.exports.message = "hello"
+
+
+//! shorthand - shortcut 2
 module.exports = {
-    test1: testfunction1,
-    test2: testfunction2,
-    test3: testfunction3
+    testfunction1: function () {
+        console.log('this is test function 1');
+    },
+
+    testfunction2: function () {
+        console.log('this is test function 2');
+    },
+
+    testfunction3: function () {
+        console.log('this is test function 3');
+    },
+    message: "hello"
 }
+
+
+
