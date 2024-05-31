@@ -1,6 +1,6 @@
 'use strict'
 
-console.log("module lesson on nodeJs in index.js");
+console.log("module lesson index.js");
 
 
 // require('./modules/module')
@@ -42,5 +42,17 @@ testfunction2()
 t1()
 t3()
 console.log(message);
+
+//! buildin 
+require('http') // ilk önce node module bakar orada yok ise globalde arar.
+require('node:http') // direk globalde node a bakar.
+
+require('dotenv').config() // dotenv modulunde config fonksiyonunu calistir.
+// console.log(process.env);
+console.log(process.env.ENV_HOST);
+console.log(process.env.ENV_PORT);
+console.log(process.env.ENV_Message);
+
+
 
 
