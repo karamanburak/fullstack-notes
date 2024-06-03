@@ -43,9 +43,10 @@ const app = http.createServer((req, res) => {
     "/" home page
     "/FS" fullstack page
     "/DS" data science page
-    "CW/api" api page
+    "/CW/api" api page
     */
-    //! 1. yol if ile 
+
+    //! 1. yol if method 
     // if (req.url == '/') {
     //     res.end('<h1>Home Page</h1>')
     // } else if (req.url == '/DS') {
@@ -58,32 +59,63 @@ const app = http.createServer((req, res) => {
     //     res.end("404 - page not found");
     // }
 
-    //! 2. yol switch ile
-    if (!res) {
-        throw new error("error")
+
+    //! 2. yol switch case method 
+//     if (!res) {
+//         throw new error("error")
+//     } else {
+//         switch (req.url) {
+//             case "/":
+//                 res.end('<h1>Home Page</h1>');
+//                 break;
+//             case "/DS":
+//                 res.end('<h1>Data Science Page</h1>');
+//                 break;
+//             case "/FS":
+//                 res.end('<h1>Full Stack Page</h1>');
+//                 break;
+//             case "/CW/api":
+//                 res.end('<h1>Welcome CW Api</h1>');
+//                 break;
+//             default:
+//                 res.end("404 - page not found");
+//         }
+//     }
+
+//     // res.end('<h1>Server runned</h1>')
+
+
+//! with statuscode
+// if(req.url=='/' && req.method=='GET'){
+if (req.url == '/') {
+    if (req.method == 'GET') { // default method get
+        res.statusCode = 200
+        res.end('welcome CW')
     } else {
-        switch (req.url) {
-            case "/":
-                res.end('<h1>Home Page</h1>');
-                break;
-            case "/DS":
-                res.end('<h1>Data Science Page</h1>');
-                break;
-            case "/FS":
-                res.end('<h1>Full Stack Page</h1>');
-                break;
-            case "CW/api":
-                res.end('<h1>Welcome cw Api</h1>');
-                break;
-            default:
-                res.end("404 - page not found");
-        }
+        res.statusCode = 403  // default 200 OK
+        res.end('you can not use this method ')
     }
 
+} else if (req.url == '/DS') {
 
+    res.end('welcome DS')
 
-    // res.end('<h1>Server runned</h1>')
+} else if (req.url == '/FS') {
 
+    res.end('welcome FS')
+
+} else if (req.url == '/CW/api') {
+
+    res.end('welcome api page')
+
+} else {
+    res.statusCode = 404
+    res.statusMessage = "aradiginiz sayfa yok!"
+    // res.mymessage
+    res.end('<h1> no page </h1> ')
+}
 
 })
+
+
 app.listen(PORT, () => console.log(`server runned http://${HOST}:${PORT}`))
