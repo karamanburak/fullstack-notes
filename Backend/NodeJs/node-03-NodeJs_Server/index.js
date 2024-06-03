@@ -61,59 +61,69 @@ const app = http.createServer((req, res) => {
 
 
     //! 2. yol switch case method 
-//     if (!res) {
-//         throw new error("error")
-//     } else {
-//         switch (req.url) {
-//             case "/":
-//                 res.end('<h1>Home Page</h1>');
-//                 break;
-//             case "/DS":
-//                 res.end('<h1>Data Science Page</h1>');
-//                 break;
-//             case "/FS":
-//                 res.end('<h1>Full Stack Page</h1>');
-//                 break;
-//             case "/CW/api":
-//                 res.end('<h1>Welcome CW Api</h1>');
-//                 break;
-//             default:
-//                 res.end("404 - page not found");
-//         }
-//     }
+    //     if (!res) {
+    //         throw new error("error")
+    //     } else {
+    //         switch (req.url) {
+    //             case "/":
+    //                 res.end('<h1>Home Page</h1>');
+    //                 break;
+    //             case "/DS":
+    //                 res.end('<h1>Data Science Page</h1>');
+    //                 break;
+    //             case "/FS":
+    //                 res.end('<h1>Full Stack Page</h1>');
+    //                 break;
+    //             case "/CW/api":
+    //                 res.end('<h1>Welcome CW Api</h1>');
+    //                 break;
+    //             default:
+    //                 res.end("404 - page not found");
+    //         }
+    //     }
 
-//     // res.end('<h1>Server runned</h1>')
+    //     // res.end('<h1>Server runned</h1>')
 
 
-//! with statuscode
-// if(req.url=='/' && req.method=='GET'){
-if (req.url == '/') {
-    if (req.method == 'GET') { // default method get
-        res.statusCode = 200
-        res.end('welcome CW')
+    //! with statuscode
+    // if(req.url=='/' && req.method=='GET'){
+    if (req.url == '/') {
+        if (req.method == 'GET') { // default method get
+            res.statusCode = 200
+            res.end('welcome CW')
+        } else {
+            res.statusCode = 403  // default 200 OK
+            res.end('you can not use this method ')
+        }
+
+    } else if (req.url == '/DS') {
+        const myObj = {
+            username: "myUsername",
+            email: "john@doe.com"
+        }
+
+        // res.end('welcome DS')
+        res.end(JSON.stringify(myObj))
+
+    } else if (req.url == '/FS') {
+        res.writeHead(200, 'Basarili', { 'myHeader1': 'comment1', "myHeader2": "comment2" })
+
+        res.write('Welcome ')
+        res.write('Full Stack ')
+        res.write('Path ')
+
+        res.end()
+
+    } else if (req.url == '/CW/api') {
+
+        res.end('welcome api page')
+
     } else {
-        res.statusCode = 403  // default 200 OK
-        res.end('you can not use this method ')
+        res.statusCode = 404
+        res.statusMessage = "aradiginiz sayfa yok!"
+        // res.mymessage
+        res.end('<h1> no page </h1> ')
     }
-
-} else if (req.url == '/DS') {
-
-    res.end('welcome DS')
-
-} else if (req.url == '/FS') {
-
-    res.end('welcome FS')
-
-} else if (req.url == '/CW/api') {
-
-    res.end('welcome api page')
-
-} else {
-    res.statusCode = 404
-    res.statusMessage = "aradiginiz sayfa yok!"
-    // res.mymessage
-    res.end('<h1> no page </h1> ')
-}
 
 })
 
