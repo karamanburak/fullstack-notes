@@ -42,4 +42,4 @@ const app = http.createServer((req, res) => {
 
 
 })
-app.listen(PORT, () => console.log(`server runned http://${HOST}`))
+app.listen(PORT, () => console.log(`server runned http://${HOST}:${PORT}`))
