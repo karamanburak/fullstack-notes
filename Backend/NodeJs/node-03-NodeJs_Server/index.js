@@ -7,8 +7,10 @@ console.log("hallo from index.js");
 const { error } = require('node:console');
 const http = require('node:http');
 
+//const dotenv = require('dotenv').config()
 // dotenv.config()
-const dotenv = require('dotenv').config()
+
+require('dotenv').config()
 const PORT = process.env.PORT || 8000
 const HOST = process.env.HOST || '127.0.0.1'
 
@@ -35,7 +37,7 @@ const app = http.createServer((req, res) => {
 app.listen(PORT,()=>console.log(`server runned http://${HOST}`))
 */
 
-//* SERVER  *\\
+            //* SERVER  *\\
 
 const app = http.createServer((req, res) => {
 
@@ -127,5 +129,5 @@ const app = http.createServer((req, res) => {
 
 })
 
-
+//! zorunlu olan sadece port parametresi
 app.listen(PORT, () => console.log(`server runned http://${HOST}:${PORT}`))
