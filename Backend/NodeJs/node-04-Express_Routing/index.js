@@ -121,13 +121,25 @@ app.get('/elbise(ler)?aa', (req, res) => {
 
 
 //? Extra information
-app.get('/', (req,res) => {
-    // res.redirect('https://www.google.com')
-    res.redirect(302,'/about')
+
+// app.get('/', (req,res) => {
+//     // res.redirect('https://www.google.com')
+//     res.redirect(302,'/about')
+// })
+
+// app.get('/about', (req,res) => {
+//     res.send('about')
+// })
+
+//^ file \\
+app.get('/file',(req,res) => {
+    res.sendFile(`${__dirname}/readme.md`)
 })
 
-app.get('/about', (req,res) => {
-    res.send('about')
+
+//^ download islemi icin \\
+app.get('/download',(req,res) => {
+    res.download('./readme.md', 'express-routing.txt')
 })
 
 
@@ -136,4 +148,3 @@ app.get('/about', (req,res) => {
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://${HOST}:${PORT}`)
 })
-
