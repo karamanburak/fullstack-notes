@@ -37,15 +37,15 @@ const HOST = process.env?.HOST || '127.0.0.1'
 // app.patch("/", (req, res) => { res.send('PATCH method called')}) // bilgi güncellemesi yapmak icin
 
 // app.delete("/", (req, res) => { res.send('DELETE method called')}) // silme islemi icin kullanilir
-app.get('/elbise/kadin', (req,res) => {res.send({message: 'GET method called'})})
+app.get('/elbise/kadin', (req, res) => { res.send({ message: 'GET method called' }) })
 // http://127.0.0.1:8000/elbise/kadin
 
 // app.get('/elbise', (req, res) => { res.send({ message: 'GET method called (elbiseler)'})})
 // app.get('/elbiseler', (req, res) => { res.send({ message: 'GET method called (elbiseler)'})})
 
-app.get('/elbise(ler)?aa', (req, res) => { 
+app.get('/elbise(ler)?aa', (req, res) => {
     console.log(req.url);
-    res.send({ message: 'GET method called (elbise(ler))'})
+    res.send({ message: 'GET method called (elbise(ler))' })
 })
 // http://127.0.0.1:8000/elbiseleraa
 // http://127.0.0.1:8000/elbiseaa
@@ -63,10 +63,46 @@ app.get('/elbise(ler)?aa', (req, res) => {
 // http://127.0.0.1:8000/asdasdasdtest
 
 
-//^ Example 3 ()
-app.get(/^\/test/, (req, res) => { res.send('GET method called') }) 
+//! url params
+//^ Example 1
+// app.get("/:userId", (req, res) => { res.send(req.params) }) // : dan sonra gelen her seyi calistirir. res.send() icinde ne yazilirsa sonuc onu verir.
+//http://127.0.0.1:8000/userIdasdasd2323  res => {"userId": "userIdasdasd2323"}
+
+//^ Example 2
+// app.get("/:userId/:productId", (req, res) => {
+//     const { userId, productId } = req.params
+//     console.log(userId, productId);
+
+//     // res.send({ userId: userId, productId: productId })
+//     res.send({ userId, productId }) // key ve value ayni ise ikinci bir deger kullanmaya gerek yoktur (best-practice)
+// })
+
+//^ Example 3
+// app.get("/:userId/:productId", (req, res) => {
+//     res.send({
+//         protocol: req.protocol,
+//         hostname: req.hostname,
+//         method: req.method,
+//         url: req.url,
+//         params: req.params,
+//         body: req.body,
+//         query:req.query,
+//         header:req.headers
+//     })
+// })
 
 
+//! Query
+// app.get("/", (req, res) => {
+//     res.send({query: req.query})
+// })
+// http://127.0.0.1:8000/?name=test&surname/=user res => {"query": {"name": "test", "surname": "user"}}
+
+
+//! IMPORTANTE
+app.get("/", (req, res) => {
+    res.send({ query: req.query })
+})
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://${HOST}:${PORT}`)
