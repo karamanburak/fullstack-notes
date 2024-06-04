@@ -40,8 +40,31 @@ const HOST = process.env?.HOST || '127.0.0.1'
 app.get('/elbise/kadin', (req,res) => {res.send({message: 'GET method called'})})
 // http://127.0.0.1:8000/elbise/kadin
 
-app.get('/elbise(ler)?', (req, res) => { res.send({ message: 'GET method called (elbise(ler))'})})
+// app.get('/elbise', (req, res) => { res.send({ message: 'GET method called (elbiseler)'})})
 // app.get('/elbiseler', (req, res) => { res.send({ message: 'GET method called (elbiseler)'})})
+
+app.get('/elbise(ler)?aa', (req, res) => { 
+    console.log(req.url);
+    res.send({ message: 'GET method called (elbise(ler))'})
+})
+// http://127.0.0.1:8000/elbiseleraa
+// http://127.0.0.1:8000/elbiseaa
+
+//! regex !\\
+//^ Example 1 (.../test/ => icerisinde test olmali)
+// app.get(/test/, (req, res) => { res.send('GET method called') }) // request icinde test yazisi olmali
+// http://127.0.0.1:8000/test
+// http://127.0.0.1:8000/test000
+// http://127.0.0.1:8000/asdasdasdtestasdasd
+
+//^ Example 2 (.../test$/ => test ile bitmeli)
+// app.get(/test$/, (req, res) => { res.send('GET method called') }) // sonda dolar isareti olunca test ile bitmeli
+// http://127.0.0.1:8000/test
+// http://127.0.0.1:8000/asdasdasdtest
+
+
+//^ Example 3 ()
+app.get(/^\/test/, (req, res) => { res.send('GET method called') }) 
 
 
 
