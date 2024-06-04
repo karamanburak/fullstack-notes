@@ -3,6 +3,18 @@
 // kill $(lsof -t -i:8000) // portu kapatmak (öldürmek) icin
 
 
+/*
+! https://restfulapi.net/http-status-codes/
+? HTTP defines these standard status codes that can be used to convey the results of a client’s request. The status codes are divided into five categories.
+
+1xx: Informational – Communicates transfer protocol-level information.
+2xx: Success – Indicates that the client’s request was accepted successfully.
+3xx: Redirection – Indicates that the client must take some additional action in order to complete their request.
+4xx: Client Error – This category of error status codes points the finger at clients.
+5xx: Server Error – The server takes responsibility for these error status codes.
+ */ 
+
+
 'use strict'
 
 const express = require('express')
@@ -51,6 +63,7 @@ app.get('/elbise(ler)?aa', (req, res) => {
 // http://127.0.0.1:8000/elbiseaa
 
 //! regex !\\
+// https://www.geeksforgeeks.org/how-to-setup-regex-for-expressjs-router-url-in-node-js/
 //^ Example 1 (.../test/ => icerisinde test olmali)
 // app.get(/test/, (req, res) => { res.send('GET method called') }) // request icinde test yazisi olmali
 // http://127.0.0.1:8000/test
@@ -100,10 +113,27 @@ app.get('/elbise(ler)?aa', (req, res) => {
 
 
 //! IMPORTANTE
-app.get("/", (req, res) => {
-    res.send({ query: req.query })
+// app.get("/:name-:surname/:topCategory/:subCategory/:gender-:genderCategory", (req, res) => {
+//     res.status(202).send(req.params)
+// })
+// http://127.0.0.1:8000/test-user/elbise/pantolon/kadin-pantolon 
+// res => {"name": "test", "surname": "user", "topCategory": "elbise",  "subCategory": "pantolon",  "gender": "kadin", "genderCategory": "pantolon"}
+
+
+//? Extra information
+app.get('/', (req,res) => {
+    // res.redirect('https://www.google.com')
+    res.redirect(302,'/about')
 })
+
+app.get('/about', (req,res) => {
+    res.send('about')
+})
+
+
+
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://${HOST}:${PORT}`)
 })
+
