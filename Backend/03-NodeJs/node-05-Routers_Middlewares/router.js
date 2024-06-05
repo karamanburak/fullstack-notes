@@ -28,17 +28,21 @@ const HOST = process.env?.HOST || '127.0.0.1'
 //     .put((req, res) => res.send({ message: "User Hello World! PUT"}))
 //     .delete((req, res) => res.send({ message: "User Hello World! DELETE"}))
 
-//? After finished router-design, it will call like middleware:
-// app.use(router);
+/* ------------------------------------------------------- */
+//? Move to /routes/index.js:
+// const router = require('./routers/index.js')
+// const router = require('./routers/index')
+// const router = require('./routers/')
+//const router = require('./routers')
+//app.use(router)
 
+/* ------------------------------------------------------- */
 
-/*----------------------------------------------- */
-//? Move to /routes/index.js
-// const router = require('./routes/index.js') //! 1.yol
-// const router = require('./routes/index')    //! 2. yol
-const router = require('./routes/')            //! 3.yol
+const { middlewareOne, middlewareTwo } = require('./middlewares/')
+const router = require('./routers')
+
+app.use(middlewareOne, middlewareTwo)
 app.use(router)
-/* --------------------------------------------- */
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://${HOST}:${PORT}`)
