@@ -153,8 +153,21 @@ app.get('/user', middlewareFunctionThree, (req, res) => {
         messageEnd: 'welcome clarusway'
     })
 })
-/* --------------------------------------------------- */
+/* ------------------------------------------------------- */
 
+//? Move to file:
+
+const { middlewareOne, middlewareTwo } = require('./middlewares/')
+app.use(middlewareOne)
+
+app.get('/user', middlewareTwo, (req, res) => {
+    res.send({
+        messageOne: req.messageOne,
+        messageTwo: req.messageTwo,
+        messageEnd: 'welcome clarusway'
+    })
+})
+/* ------------------------------------------------------- */
 
 
 app.listen(PORT, () => {
