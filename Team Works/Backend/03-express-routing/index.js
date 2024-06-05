@@ -10,17 +10,11 @@ app.use(router);
 app.use(express.json());
 
 
-//^ Example 1 
-//? Route for /abc path
-// app.get('/abc', (req, res) => { // http://127.0.0.1:8000/abc res => You matched the /abc path!
-//     res.send('You matched the /abc path!');
-// });
-
-//^ Example 1 
-//? Route for /acd path
-// app.get('/acd', (req, res) => { // http://127.0.0.1:8000/acd res => You matched the /acd path!
-//     res.send('You matched the /acd path!');
-// });
+//^ Example 1
+//? Route for /abc or /adc path
+// app.get(/\/a[b|d]c/, (req, res) => {
+//     res.send("Route First");
+// }) 
 
 //^ Example 2 
 //? Write a router that matches /a(any single digit)/ followed by 2 times c or 3 times c or
@@ -36,9 +30,9 @@ app.use(express.json());
 
 //? Example 4 
 //? Matching routes must end with the string "Hello" and must not have any characters before that.
-app.get(/Hello$/, (req, res) => {  // http://127.0.0.1:8000/Hello  || res => Matched Route ?
-    res.send('Matched Route');
-});
+// app.get(/Hello$/, (req, res) => {  // http://127.0.0.1:8000/Hello  || res => Matched Route ?
+//     res.send('Matched Route');
+// });
 
 
 //^ Example 5
@@ -48,16 +42,16 @@ app.get(/Hello$/, (req, res) => {  // http://127.0.0.1:8000/Hello  || res => Mat
 //! 3-) If there is any missing / error in the code, please correct it.
 
 
-const students = [
-    {
-        id: 1,
-        name: "Alex",
-    },
-    {
-        id: 2,
-        name: "Steve",
-    },
-];
+// const students = [
+//     {
+//         id: 1,
+//         name: "Alex",
+//     },
+//     {
+//         id: 2,
+//         name: "Steve",
+//     },
+// ];
 //! 1-) Returns all students in json format with the get method
 // router.get("/", (req,res) => {
 //     // Route to return all students in JSON format
