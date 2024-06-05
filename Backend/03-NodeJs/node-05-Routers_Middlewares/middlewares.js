@@ -16,7 +16,7 @@ const HOST = process.env.HOST || '127.0.0.1'
 
 //^ Example 1
 // http://127.0.0.1:8000?username=clarusway
-// app.get('/', (req,res, next) => {  
+// app.get('/', (req,res, next) => {
 //     console.log(req.query?.username)
 //     if (req.query?.username === "clarusway"){
 //         next()
@@ -67,31 +67,95 @@ const HOST = process.env.HOST || '127.0.0.1'
 
 /* --------------------------------------------------- */
 //? Function
-
+//& https://expressjs.com/en/guide/writing-middleware.html
 // const middlewareFunction = (req,res,next) => {
 //     console.log('middleware function called');
 //     next()
-    
+
+// }
+
+//^ Example middleware 1.yol
+// const middlewareFunctionOne = (req,res,next) => {
+//     console.log('middleware one function called');
+//     next()
 // }
 
 
-const middlewareFunctionOne = (req,res,next) => {
-    console.log('middleware one function called');
-    next() 
-}
+// const middlewareFunctionTwo = (req,res,next) => {
+//     console.log('middleware two function called');
+//     next()
+// }
 
 
-const middlewareFunctionTwo = (req,res,next) => {
-    console.log('middleware two function called');
+// app.get('/', middlewareFunctionOne, middlewareFunctionTwo, (req, res) => {
+//     res.send('Welcome to the Clarusway')
+// })
+
+
+//^ Example middleware 2.yol
+// const middlewareFunctionOne = (req,res,next) => {
+//     req.messageOne = 'middleware one function called'
+//     next()
+// }
+
+
+// const middlewareFunctionTwo = (req,res,next) => {
+//     res.messageTwo = 'middleware two function called'
+//     next()
+// }
+
+// const middlewares = [middlewareFunctionOne, middlewareFunctionTwo]
+// app.get('/', middlewares , (req, res) => {
+//     res.send({
+//         messageOne: req.messageOne,
+//         messageTwo: res.messageTwo,
+//         messaEnd: "welcome clarusway"
+//     })
+// })
+
+
+//^ Example middleware 3.yol
+const middlewareFunctionOne = (req, res, next) => {
+    req.messageOne = 'middleware one function called'
     next()
 }
 
+const middlewareFunctionTwo = (req, res, next) => {
+    res.messageTwo = 'middleware two function called'
+    next()
+}
 
-app.get('/', middlewareFunctionOne, middlewareFunctionTwo, (req, res) => {
-    res.send('Welcome to the Clarusway')
+const middlewareFunctionThree = (req, res, next) => {
+    res.messageThree = 'middleware three function called'
+    next()
+}
+
+const middlewares = [middlewareFunctionOne, middlewareFunctionTwo]
+
+app.use(middlewares)
+//app.use(middlewareFunctionOne)
+//app.use(middlewareFunctionTwo)
+
+app.get('/', (req, res) => {
+    res.send({
+        messageOne: req.messageOne,
+        messageTwo: res.messageTwo,
+        messageThree: res.messageThree,
+        messageEnd: 'welcome clarusway'
+    })
 })
 
+app.get('/user', middlewareFunctionThree, (req, res) => {
+    res.send({
+        messageOne: req.messageOne,
+        messageTwo: res.messageTwo,
+        messageThree: res.messageThree,
+        messageEnd: 'welcome clarusway'
+    })
+})
 /* --------------------------------------------------- */
+
+
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port http://${HOST}:${PORT}`)
