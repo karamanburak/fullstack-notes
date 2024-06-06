@@ -1,5 +1,4 @@
-//* http seerver
-
+//^ http server with NodeJS
 // const http = require('http')
 // const url = require('url')
 
@@ -59,44 +58,79 @@ app.listen(3000, function () {
 //     }
 // })
 
-app.use(express.json()) // gelen body bilgisini parse edip anlasilabilir yapiya dönüstürür
+
+
+//^ http server with ExpressJS
+app.use(express.json()); // gelen body bilgisini parse edip anlaşılabilir yapıyı dönüştürür.
+app.use((req, res, next) => {
+    req.user = "Anthony";
+    next();
+});
 app.get("/", (req, res) => {
     res.send({
-        message: "Hello World"
-    })
-})
+        message: `Hello ${req.user}`,
+    });
+});
+app.use((req, res, next) => {
+    if (req.query.user) {
+        next();
+    } else {
+        // res.status(401).send("Not authorized");
+        req.query.user = {
+            login: false,
+        };
+        next();
+    }
+});
+app.use((req, res, next) => {
+    if (req.query.admin) {
+        next();
+    } else {
+        // res.status(401).send("Not authorized");
+        req.query = {
+            ...req.query,
+            admin: false,
+        };
+        next();
+    }
+});
 app.get("/products", (req, res) => {
     console.log(req.query);
-    // const page = req.query.page || 1
-    // const limit = req.query.limit || 10
-    const { page = 1, limit = 10, category = "" } = req.query
-
+    //   if(!req.user){
+    //     res.send("Not Login")
+    //   }
+    console.log(req.user);
+    //   const page = req.query.page || 1
+    //   const limit = req.query.limit || 10
+    const { page = 1, limit = 10, category = "" } = req.query;
+    // Album.findAll().limit(3) => Select * from album Limit 3
     res.send({
         message: "Hello Products",
-        products: products.filter(item=>item.category.includes(category)).slice((page - 1) * limit, page * limit)
-    })
-})
+        products: products
+            .filter((item) => item.category.includes(category))
+            .slice((page - 1) * limit, page * limit),
+        page,
+        limit,
+        category,
+    });
+});
 
-app.post("/products", (req,res)=>{
+app.post("/products", (req, res) => {
     console.log(req);
-    products.push(req.body)
+    products.push(req.body);
     res.send({
-        data:req.body,
-        products
-    })
-    
-})
+        data: req.body,
+        products,
+    });
+});
 
-
-app.get("/products/:id",(req,res)=>{
-    if(products.filter(item=>item.id == req.params.id).length){
-       res.send(products.find(item=>item.id==req.params.id))
-    }else {
+app.get("/products/:id", (req, res) => {
+    if (products.filter((item) => item.id == req.params.id).length) {
+        res.send(products.find((item) => item.id == req.params.id));
+    } else {
         res.status(404).send({
-            error:true,
+            error: true,
             message: "Not Found",
-        })
-
+        });
     }
-})
-
+});
