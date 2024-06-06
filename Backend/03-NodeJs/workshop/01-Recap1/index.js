@@ -59,6 +59,7 @@ app.listen(3000, function () {
 //     }
 // })
 
+app.use(express.json()) // gelen body bilgisini parse edip anlasilabilir yapiya dönüstürür
 app.get("/", (req, res) => {
     res.send({
         message: "Hello World"
@@ -72,6 +73,30 @@ app.get("/products", (req, res) => {
 
     res.send({
         message: "Hello Products",
-        products: products.filter(item=>item.category == category).slice((page - 1) * limit, page * limit)
+        products: products.filter(item=>item.category.includes(category)).slice((page - 1) * limit, page * limit)
     })
 })
+
+app.post("/products", (req,res)=>{
+    console.log(req);
+    products.push(req.body)
+    res.send({
+        data:req.body,
+        products
+    })
+    
+})
+
+
+app.get("/products/:id",(req,res)=>{
+    if(products.filter(item=>item.id == req.params.id).length){
+       res.send(products.find(item=>item.id==req.params.id))
+    }else {
+        res.status(404).send({
+            error:true,
+            message: "Not Found",
+        })
+
+    }
+})
+
