@@ -1,10 +1,9 @@
 //* Contact Model
-
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../configs/db");
 
 const Contact = sequelize.define("contacts", {
-  fistName: {
+  firstName: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -24,11 +23,13 @@ const Contact = sequelize.define("contacts", {
   },
   address: {
     type: DataTypes.TEXT,
-    allowNull: false,
-    unique: true,
   },
   isActive: {
     type: DataTypes.BOOLEAN,
     defaultValue: true,
   },
 });
+
+// sequelize.sync();
+
+module.exports = Contact;
