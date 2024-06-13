@@ -26,7 +26,6 @@ If you're new to full-stack development, here's how you can make the most out of
 Your feedback is valuable! If you have any questions, suggestions, or issues, please open an issue or reach out via [email](mailto:karaman.buraak@gmail.com).
 
 
-
 - [HTML&CSS Notes](https://github.com/karamanburak/self-study/tree/main/HTML%26CSS)
 - [HTML&CSS Examples](https://github.com/karamanburak/self-study/tree/main/HTML%26CSS/Examples)
   
