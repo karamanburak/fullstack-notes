@@ -1,6 +1,6 @@
   # Full Stack Developer Roadmap and Resources
-  Welcome to the Full Stack Developer repository! This repository is designed to guide beginners through the journey of becoming a full-stack developer, providing a structured path with projects, challenges, and essential learning materials.
-
+Welcome to the FullStack Developer repository! This repository is designed with notes from my journey to become a fullstack developer and provides a structured path with projects, challenges and essential learning material.
+  
   ## Overview
   This repository includes a curated collection of resources covering various aspects of full-stack development, divided into specific sections:
 
