@@ -10,4 +10,6 @@ app.all("/", (req, res) => {
   res.send("Hello TutorialApp");
 });
 
+app.use(require("./middlewares/errorHandler"));
+
 app.listen(PORT, () => console.log("Listening http://127.0.0.1:" + PORT));
