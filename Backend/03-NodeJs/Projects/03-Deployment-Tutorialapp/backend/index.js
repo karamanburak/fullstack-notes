@@ -1,12 +1,24 @@
 "use strict";
 require("express-async-errors");
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 const { mongooseConnection } = require("./startup/mongooseConnection");
 const PORT = process.env?.PORT || 8000;
 
 const app = express();
 app.use(express.json());
+
+//! cors
+// app.use(cors()); //* tüm istemci urllerine ve tüm http methodlara izin verir.
+
+//* specific
+app.use(
+  cors({
+    origin: "http://localhost:3000", //* sondaki slash olmayacak. sadece localhost:3000 e izin ver. Host adresi
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE", //* methodlara verilecek izinleri ayarlanabilir.
+  })
+);
 
 app.all("/", (req, res) => {
   res.send("Hello TutorialApp");
