@@ -1,7 +1,7 @@
 "use strict";
 
 const mongoose = require("mongoose");
-const { CustomError } = require("../error/customError");
+const { CustomError } = require("../errors/customError");
 
 const mongooseConnection = async () => {
   try {

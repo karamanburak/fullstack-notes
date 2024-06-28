@@ -2,7 +2,7 @@
 
 const mongoose = require("mongoose");
 
-const turorialSchema = new mongoose.Schema(
+const tutorialSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -21,6 +21,7 @@ const turorialSchema = new mongoose.Schema(
   }
 );
 
+//! _id transform id and versionkey
 tutorialSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
@@ -28,6 +29,7 @@ tutorialSchema.set("toJSON", {
     delete ret._id;
   },
 });
+//!alternative
 // tutorialSchema.set("toJSON", {
 //   transform: function (doc, ret, options) {
 //     ret.id = ret._id;
