@@ -19,7 +19,7 @@ module.exports = {
   create: async (req, res) => {
     req.body.createdId = req.user._id;
     const data = await Flight.create(req.body);
-    re.status(201).sen({
+    res.status(201).send({
       error: false,
       data,
     });
