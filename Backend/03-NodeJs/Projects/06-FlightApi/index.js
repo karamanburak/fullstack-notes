@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
@@ -30,54 +30,56 @@ const app = express();
 // Required Modules:
 
 // envVariables to process.env:
-require('dotenv').config()
-const PORT = process.env?.PORT || 8000
+require("dotenv").config();
+const PORT = process.env?.PORT || 8000;
 
 // asyncErrors to errorHandler:
-require('express-async-errors')
+require("express-async-errors");
 
 /* ------------------------------------------------------- */
 // Configrations:
 
 // Connect to DB:
-const { dbConnection } = require('./src/configs/dbConnection')
-dbConnection()
+const { dbConnection } = require("./src/configs/dbConnection");
+dbConnection();
 
 /* ------------------------------------------------------- */
 // Middlewares:
 
 // Accept JSON:
-app.use(express.json())
+app.use(express.json());
 
 // Logger:
-app.use(require('./src/middlewares/logging'))
+app.use(require("./src/middlewares/logging"));
 
 // Auhentication:
-app.use(require('./src/middlewares/authentication'))
+app.use(require("./src/middlewares/authentication"));
 
 // findSearchSortPage / res.getModelList:
-app.use(require('./src/middlewares/queryHandler'))
+app.use(require("./src/middlewares/queryHandler"));
 
 /* ------------------------------------------------------- */
 // Routes:
 
 // HomePath:
-app.all('/', (req, res) => {
-    res.send({
-        error: false,
-        message: 'Welcome to PIZZA API',
-        docs: {
-            swagger: "/documents/swagger",
-            redoc: "/documents/redoc",
-            json: "/documents/json",
-        },
-        user: req.user,
-    })
-})
+app.all("/", (req, res) => {
+  res.send({
+    error: false,
+    message: "Welcome to PIZZA API",
+    docs: {
+      swagger: "/documents/swagger",
+      redoc: "/documents/redoc",
+      json: "/documents/json",
+    },
+    user: req.user,
+  });
+});
 
 // routes/index.js:
-app.use(require('./src/routes/'))
+app.use(require("./src/routes/"));
 
+//* static files served
+app.use("/uploads", express.static("./uploads"));
 
 //* eşleşmeyen routeları yakalar
 app.use((req, res, next) => {
@@ -90,9 +92,9 @@ app.use((req, res, next) => {
 /* ------------------------------------------------------- */
 
 // errorHandler:
-app.use(require('./src/middlewares/errorHandler'))
+app.use(require("./src/middlewares/errorHandler"));
 
 // RUN SERVER:
-app.listen(PORT, () => console.log('http://127.0.0.1:' + PORT))
+app.listen(PORT, () => console.log("http://127.0.0.1:" + PORT));
 
 /* ------------------------------------------------------- */

@@ -61,9 +61,15 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Update User"
         */
+    if (req.file) {
+      req.body.avatar = "/uploads/" + req.file.filename;
+    }
+
     const data = await User.updateOne({ _id: req.params.id }, req.body, {
       runValidators: true,
     });
+
+    //* eski resmi silme islemi
 
     res.status(202).send({
       error: false,
@@ -76,6 +82,9 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Delete User"
         */
+
+    //* eski resmi silme islemi
+
     const data = await User.deleteOne({ _id: req.params.id });
     res.status(data.deletedCount ? 204 : 404).send({
       error: !data.deletedCount,
