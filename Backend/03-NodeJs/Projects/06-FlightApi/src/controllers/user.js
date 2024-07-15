@@ -33,6 +33,11 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Create User"
         */
+    console.log(req.file);
+    if (req.file) {
+      req.body.avatar = "/uploads/" + req.file.filename;
+    }
+
     const data = await User.create(req.body);
 
     res.status(201).send({
