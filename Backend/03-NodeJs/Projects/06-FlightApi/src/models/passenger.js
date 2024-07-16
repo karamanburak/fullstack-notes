@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
@@ -26,18 +26,18 @@ const PassengerSchema = new mongoose.Schema(
       type: String,
       trim: true,
       required: true,
-      index: true,
+      index:true,
       unique: [true, "Email already exists! Email field must be unique!"],
       validate: [
         (email) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email),
         "Email type is not correct.",
       ],
     },
-    createdId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
-    },
+    createdId:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
   },
   {
     collection: "passengers",
@@ -45,4 +45,4 @@ const PassengerSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Passenger", PassengerSchema);
+module.exports = mongoose.model("Passenger",PassengerSchema);

@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
@@ -6,20 +6,18 @@
 const router = require("express").Router();
 
 //* URL => /passengers
-
-const Passenger = require("../models/passenger");
+const Passenger = require("../models/passenger")
 const passenger = require("../controllers/passenger");
 const idValidation = require("../middlewares/idValidation");
-const permission = require("../middlewares/permissions");
+const permission = require("../middlewares/permissions")
 
 //* login olan kullanıcı kendi yolcularını görüntüleyebilir, yolcu oluşturabilir.
 //? Yolcu editleme işlemini staff yada Admin yapabilir.
-//! Yoclu silme işlemini Admin yapabilir.
-
-const getModel = (req, res, next) => {
+//! Yolcu silme işlemini Admin yapabilir.
+const getModel = (req,res,next)=>{
   req.model = Passenger;
-  next();
-};
+  next()  
+}
 
 router
   .route("/")
@@ -29,12 +27,7 @@ router
 router
   .route("/:id")
   .all(idValidation)
-  .get(
-    permission.isLogin,
-    getModel,
-    permission.isAdminOrStaffOrOwn,
-    passenger.read
-  )
+  .get(permission.isLogin,getModel, permission.isAdminOrStaffOrOwn, passenger.read)
   .put(permission.isLoginStaffOrAdmin, passenger.update)
   .patch(permission.isLoginStaffOrAdmin, passenger.update)
   .delete(permission.isLoginAdmin, passenger.delete);

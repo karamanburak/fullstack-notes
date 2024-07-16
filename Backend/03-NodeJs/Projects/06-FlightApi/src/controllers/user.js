@@ -4,6 +4,7 @@
 ------------------------------------------------------- */
 
 const User = require("../models/user");
+const fs = require("node:fs")
 
 module.exports = {
   list: async (req, res) => {
@@ -33,6 +34,7 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Create User"
         */
+
     console.log(req.file);
     if (req.file) {
       req.body.avatar = "/uploads/" + req.file.filename;
@@ -61,15 +63,26 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Update User"
         */
+    // kullanıcı statusu değiştime yetkisi sadece adminde olacak   
+    if(!req.user.isAdmin){
+      delete req.body.isAdmin
+      delete req.body.isStaff
+      delete req.body.isActive
+    }
+
+    console.log(req.file)
     if (req.file) {
       req.body.avatar = "/uploads/" + req.file.filename;
     }
-
-    const data = await User.updateOne({ _id: req.params.id }, req.body, {
+    const data = await User.findOneAndUpdate({ _id: req.params.id }, req.body, {
       runValidators: true,
     });
+    //* eski resmi silme işlemi
 
-    //* eski resmi silme islemi
+    if(req.file && data.avatar) {
+      fs.unlink(`.${data.avatar}`, err=>console.log(err))
+    }
+
 
     res.status(202).send({
       error: false,
@@ -82,12 +95,14 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Delete User"
         */
-
-    //* eski resmi silme islemi
-
-    const data = await User.deleteOne({ _id: req.params.id });
-    res.status(data.deletedCount ? 204 : 404).send({
-      error: !data.deletedCount,
+    // const data = await User.deleteOne({ _id: req.params.id });
+    const data = await User.findOneAndDelete({ _id: req.params.id });
+    //* eski resmi silme işlemi
+    if(data.avatar) {
+      fs.unlink(`.${data.avatar}`, err=>console.log(err))
+    }
+    res.status(data ? 204 : 404).send({
+      error: !data,
       data,
       message: "User not found!",
     });

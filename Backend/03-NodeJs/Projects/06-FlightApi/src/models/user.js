@@ -51,7 +51,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
-
     isActive: {
       type: Boolean,
       default: true,
@@ -90,7 +89,7 @@ UserSchema.pre("save", function (next) {
   next();
 });
 
-//? update icin
+//? update için
 const updateEncryptValidatePassword = function (next) {
   const update = this.getUpdate();
   if (update.password) {
@@ -125,4 +124,5 @@ const updateEncryptValidatePassword = function (next) {
 //   next()
 // });
 UserSchema.pre("updateOne", updateEncryptValidatePassword);
+
 module.exports = mongoose.model("User", UserSchema);

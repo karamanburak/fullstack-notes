@@ -11,6 +11,7 @@ const flight = require("../controllers/flight");
 const idValidation = require("../middlewares/idValidation");
 const permission = require("../middlewares/permissions");
 
+
 //* Login olan herkes uçuşları listeleyebilir.
 //! Staff yada Admin olan post,put,patch işlemlerini yapabilir.
 //? sadece admin delete işlemini yapabilir.
