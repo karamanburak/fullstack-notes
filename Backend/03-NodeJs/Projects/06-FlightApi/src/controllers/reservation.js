@@ -1,4 +1,5 @@
 "use strict";
+const { CustomError } = require("../errors/customError");
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
@@ -19,11 +20,18 @@ module.exports = {
                 </ul>
             `
         */
-    const data = await res.getModelList(Reservation);
+
+    let customFilter = {};
+    if (!req.user.isAdmin && !req.user.isStaff) {
+      //* isAdmin ve isStaff degerlerinin ikisinin de false olmasi lazim
+      customFilter = { createdId: req.user._id };
+    }
+
+    const data = await res.getModelList(Reservation, customFilter);
 
     res.status(200).send({
       error: false,
-      details: await res.getModelListDetails(Reservation),
+      details: await res.getModelListDetails(Reservation, customFilter),
       results: data.length,
       data,
     });
@@ -39,6 +47,16 @@ module.exports = {
     });
   },
   read: async (req, res) => {
+    if (!req.user.isAdmin && !req.user.isStaff) {
+      const checkData = await Reservation.findOne({ _id: req.params.id });
+      if (checkData.createdId?.toString() != req.user._id.toString()) {
+        throw new CustomError(
+          "NoPermission: You must be Admin or Staff or own!",
+          403
+        );
+      }
+    }
+
     const data = await Reservation.findOne({ _id: req.params.id }).populate(
       "createdId"
     );
