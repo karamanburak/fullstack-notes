@@ -68,6 +68,15 @@ module.exports = {
   },
   update: async (req, res) => {
     req.body.createdId = req.user._id;
+    if (!req.user.isAdmin && !req.user.isStaff) {
+      const checkData = await Reservation.findOne({ _id: req.params.id });
+      if (checkData.createdId?.toString() != req.user._id.toString()) {
+        throw new CustomError(
+          "NoPermission: You must be Admin or Staff or own!",
+          403
+        );
+      }
+    }
     const data = await Reservation.updateOne({ _id: req.params.id }, req.body, {
       runValidators: true,
     });
