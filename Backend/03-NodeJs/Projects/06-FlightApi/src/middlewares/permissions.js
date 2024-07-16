@@ -56,4 +56,16 @@ module.exports = {
       throw new CustomError("NoPermission: You must to be Admin.", 403);
     }
   },
+  isAdminOrStaffOrOwn: async (req, res, next) => {
+    if (!req.user.isAdmin && !req.user.isStaff) {
+      const checkData = await req.model.findOne({ _id: req.params.id });
+      if (checkData.createdId?.toString() != req.user._id.toString()) {
+        throw new CustomError(
+          "NoPermission: You must be Admin or Staff or own!",
+          403
+        );
+      }
+    }
+    next();
+  },
 };
