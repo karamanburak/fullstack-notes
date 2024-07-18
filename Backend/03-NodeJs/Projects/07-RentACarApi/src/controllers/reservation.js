@@ -89,7 +89,7 @@ module.exports = {
 
     req.body.updatedId = req.user._id;
 
-    const data = await Reservation.updateOne(customFilter, req.body, {
+    const data = await Reservation.updateOne({ _id: req.params.id }, req.body, {
       runValidators: true,
     });
 
