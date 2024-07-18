@@ -25,7 +25,7 @@ module.exports = {
             }
         */
 
-    const { username, password } = req.body;
+    const { username, email, password } = req.body;
 
     if ((username || email) && password) {
       const user = await User.findOne({ $or: [{ email }, { username }] });
