@@ -96,7 +96,7 @@ module.exports = {
     res.status(202).send({
       error: false,
       data,
-      new: await Car.findOne({ _id: req.params.id }),
+      new: await Reservation.findOne({ _id: req.params.id }),
     });
   },
 
