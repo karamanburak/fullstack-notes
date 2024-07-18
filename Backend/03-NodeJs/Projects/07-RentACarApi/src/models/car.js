@@ -38,6 +38,23 @@ const CarSchema = new mongoose.Schema(
       type: String,
       trim: true,
       unique: true,
+      required: true,
+    },
+    brand: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    model: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    year: {
+      type: Number,
+      min: 1950,
+      max: new Date().getFullYear(),
+      required: true,
     },
   },
   {
