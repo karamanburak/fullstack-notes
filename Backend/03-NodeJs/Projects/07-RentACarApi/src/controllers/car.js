@@ -71,8 +71,8 @@ module.exports = {
 
   update: async (req, res) => {
     /*
-            #swagger.tags = ["Users"]
-            #swagger.summary = "Update User"
+            #swagger.tags = ["Cars"]
+            #swagger.summary = "Update Car"
             #swagger.parameters['body'] = {
                 in: 'body',
                 required: true,
