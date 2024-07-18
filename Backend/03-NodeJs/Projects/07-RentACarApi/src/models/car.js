@@ -56,6 +56,33 @@ const CarSchema = new mongoose.Schema(
       max: new Date().getFullYear(),
       required: true,
     },
+    isAutomatic: {
+      type: Boolean,
+      default: false,
+    },
+    pricePerDay: {
+      type: Number,
+      required: true,
+    },
+    // images: [],
+    images: {
+      type: Array,
+      default: [],
+    },
+    isAvailable: {
+      type: Boolean,
+      default: true,
+    },
+    createdId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    updatedId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
   {
     collection: "cars",
