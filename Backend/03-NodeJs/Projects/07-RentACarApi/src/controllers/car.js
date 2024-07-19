@@ -21,7 +21,9 @@ module.exports = {
             `
         */
 
-    const data = await res.getModelList(Car, {}, [
+    // Available olmayan araclari listeleme!
+    let customFilter = { isAvailable: true };
+    const data = await res.getModelList(Car, customFilter, [
       { path: "createdId", select: "username -_id" },
       { path: "updatedId", select: "username -_id" },
     ]);
@@ -29,6 +31,7 @@ module.exports = {
     res.status(200).send({
       error: false,
       details: await res.getModelListDetails(Car),
+      results: data.length,
       data,
     });
   },
