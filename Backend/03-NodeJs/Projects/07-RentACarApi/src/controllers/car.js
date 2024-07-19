@@ -21,25 +21,42 @@ module.exports = {
             `
         */
 
-    // Available olmayan araclari listeleme!
+    // Müsait olmayan araçları listeleme:
     let customFilter = { isAvailable: true };
 
+    /* tarıhe gore listele */
+
     const { startDate: getStartDate, endDate: getEndDate } = req.query;
-    // console.log(getStartDate, getEndDate);
-    // console.log(req.query);
+
     if (getStartDate && getEndDate) {
-      const data = await res.getModelList(Car, customFilter, [
-        { path: "createdId", select: "username -_id" },
-        { path: "updatedId", select: "username -_id" },
-      ]);
+      const reservedCars = await Reservation.find(
+        {
+          $nor: [
+            { startDate: { $gt: getEndDate } }, // gt: >
+            { endDate: { $lt: getStartDate } }, // lt: <
+          ],
+        },
+        { _id: 0, carId: 1 }
+      ).distinct("carId");
+
+      console.log(" reservedCars >> ", reservedCars);
+
+      if (reservedCars.length) {
+        customFilter._id = { $nin: reservedCars };
+      }
     } else {
       res.errorStatusCode = 404;
-      throw new Error("startDate and endDate queries are required!");
+      throw new Error("startDate and endDate queries are required.");
     }
+
+    const data = await res.getModelList(Car, customFilter, [
+      { path: "createdId", select: "username" },
+      { path: "updatedId", select: "username" },
+    ]);
+
     res.status(200).send({
       error: false,
       details: await res.getModelListDetails(Car),
-      results: data.length,
       data,
     });
   },
