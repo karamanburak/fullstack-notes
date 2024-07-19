@@ -21,7 +21,10 @@ module.exports = {
             `
         */
 
-    const data = await res.getModelList(Car);
+    const data = await res.getModelList(Car, {}, [
+      { path: "createdId", select: "username -_id" },
+      { path: "updatedId", select: "username -_id" },
+    ]);
 
     res.status(200).send({
       error: false,
@@ -61,7 +64,9 @@ module.exports = {
             #swagger.summary = "Get Single Car"
         */
 
-    const data = await Car.findOne({ _id: req.params.id });
+    const data = await Car.findOne({ _id: req.params.id }).populate([
+      { path: "createdId", select: "username -_id" },
+    ]);
 
     res.status(200).send({
       error: false,
