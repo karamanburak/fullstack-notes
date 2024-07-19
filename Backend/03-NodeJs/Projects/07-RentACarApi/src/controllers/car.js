@@ -23,11 +23,19 @@ module.exports = {
 
     // Available olmayan araclari listeleme!
     let customFilter = { isAvailable: true };
-    const data = await res.getModelList(Car, customFilter, [
-      { path: "createdId", select: "username -_id" },
-      { path: "updatedId", select: "username -_id" },
-    ]);
 
+    const { startDate: getStartDate, endDate: getEndDate } = req.query;
+    // console.log(getStartDate, getEndDate);
+    // console.log(req.query);
+    if (getStartDate && getEndDate) {
+      const data = await res.getModelList(Car, customFilter, [
+        { path: "createdId", select: "username -_id" },
+        { path: "updatedId", select: "username -_id" },
+      ]);
+    } else {
+      res.errorStatusCode = 404;
+      throw new Error("startDate and endDate queries are required!");
+    }
     res.status(200).send({
       error: false,
       details: await res.getModelListDetails(Car),
@@ -103,5 +111,17 @@ module.exports = {
     });
   },
 
-  delete: async (req, res) => {},
+  delete: async (req, res) => {
+    /*
+           #swagger.tags = ["Cars"]
+           #swagger.summary = "Delete Car"
+       */
+
+    const data = await Car.deleteOne({ _id: req.params.id });
+
+    res.status(data.deletedCount ? 204 : 404).send({
+      error: !data.deletedCount,
+      data,
+    });
+  },
 };

@@ -21,8 +21,15 @@ module.exports = {
             `
         */
 
-    const data = await res.getModelList(Reservation, {}, [
+    let customFilter = {};
+    if (!req.user.isAdmin && !req.user.isStaff);
+    customFilter = { userId: req.user._id };
+
+    const data = await res.getModelList(Reservation, customFilter, [
       { path: "userId", select: "username firstName lastName email" },
+      { path: "carId" },
+      { path: "createdId" },
+      { path: "updatedId" },
     ]);
 
     res.status(200).send({
@@ -91,8 +98,9 @@ module.exports = {
        */
 
     req.body.updatedId = req.user._id;
+    let custom = { _id: req.params.id };
 
-    const data = await Reservation.updateOne({ _id: req.params.id }, req.body, {
+    const data = await Reservation.updateOne(custom, req.body, {
       runValidators: true,
     });
 
