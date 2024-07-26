@@ -1,0 +1,14 @@
+# Altyapi
+FROM node:current-alpine3.20
+
+# Calisma Alani
+WORKDIR /app
+
+# Dosyalari Aktar
+# COPY docker.js /app
+
+COPY . .
+
+# Komut calistir
+CMD node docker.js
+
