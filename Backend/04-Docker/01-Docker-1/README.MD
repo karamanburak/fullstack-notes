@@ -1,42 +1,46 @@
 # Docker-1
 
+- [Documentation](https://docs.docker.com/?source=post_page-----901b37742ee0--------------------------------)
+
 ## Server Systems
 
-* Docker, geliştiricilerin, sistem yöneticilerinin vb. uygulamalarını ana işletim sisteminde (yani Linux) çalıştırmak üzere bir sanal alan (konteyner olarak adlandırılır) içinde kolayca dağıtmalarına olanak tanıyan bir araçtır. Docker, kullanıcıların bir uygulamayı tüm bağımlılıklarıyla birlikte yazılım geliştirme için standart bir birime paketlemelerine olanak tanır.
+- Docker, geliştiricilerin, sistem yöneticilerinin vb. uygulamalarını ana işletim sisteminde (yani Linux) çalıştırmak üzere bir sanal alan (konteyner olarak adlandırılır) içinde kolayca dağıtmalarına olanak tanıyan bir araçtır. Docker, kullanıcıların bir uygulamayı tüm bağımlılıklarıyla birlikte yazılım geliştirme için standart bir birime paketlemelerine olanak tanır.
 
-* Docker, kullanıcıların bir uygulamayı tüm bağımlılıklarıyla birlikte yazılım geliştirme için standart bir birime paketlemelerine olanak tanır.
+- Docker, kullanıcıların bir uygulamayı tüm bağımlılıklarıyla birlikte yazılım geliştirme için standart bir birime paketlemelerine olanak tanır.
 
-* Physical Servers (BareMetal Servers):
-  * Bilgisayar -> Yüksek donanım, özel işlemciler, özel işletim sistemleri.
-  * Kurulum: zor
-  * VeriTaşıma: zor
-  * Maliyet: yüksek
-  * Dedicated Servers
+- Physical Servers (BareMetal Servers):
 
-* Virtual Servers (VMs: Virtual Machines):
-  * Bir fiziksel makina içinde çok sanal makina.
-  * Kurulum: orta (iso image)
-  * VeriTaşıma: orta
-  * Maliyet: orta
-  * Bir makinaden diğer makinaya geçiş zorluğu.
-  * Hypervisor yazılımları -> vmware.com
-  * VPS (Virtual Private Server), VDS (Virtual Dedicated Server)
+  - Bilgisayar -> Yüksek donanım, özel işlemciler, özel işletim sistemleri.
+  - Kurulum: zor
+  - VeriTaşıma: zor
+  - Maliyet: yüksek
+  - Dedicated Servers
 
-* Containers:
-  * Bir fiziksel/sanal makina içinde çok konteyner.
-  * Kurulum: kolay (docker image)
-  * VeriTaşıma: kolay
-  * Maliyet: düşük
-  * Tüm konteynerları aynı ortamdan yönetebilme.
-  * Microservice mimarisi.
-  * Container yazılımları -> docker.com
+- Virtual Servers (VMs: Virtual Machines):
+
+  - Bir fiziksel makina içinde çok sanal makina.
+  - Kurulum: orta (iso image)
+  - VeriTaşıma: orta
+  - Maliyet: orta
+  - Bir makinaden diğer makinaya geçiş zorluğu.
+  - Hypervisor yazılımları -> vmware.com
+  - VPS (Virtual Private Server), VDS (Virtual Dedicated Server)
+
+- Containers:
+  - Bir fiziksel/sanal makina içinde çok konteyner.
+  - Kurulum: kolay (docker image)
+  - VeriTaşıma: kolay
+  - Maliyet: düşük
+  - Tüm konteynerları aynı ortamdan yönetebilme.
+  - Microservice mimarisi.
+  - Container yazılımları -> docker.com
 
 ## Temel Bilgiler
 
-* IP ve Port:
-  * Default portlar -> 80 443 * <https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers>
-  * http -> 80 * <http://clarusway.com> == <http://clarusway.com:80>
-  * https -> 443 * <https://clarusway.com> == <https://clarusway.com:443> (need SSL)
+- IP ve Port:
+  - Default portlar -> 80 443 \* <https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers>
+  - http -> 80 \* <http://clarusway.com> == <http://clarusway.com:80>
+  - https -> 443 \* <https://clarusway.com> == <https://clarusway.com:443> (need SSL)
 
 ---
 
@@ -44,17 +48,18 @@
 
 ## Yüklemeler
 
-* Docker Desktop -> <https://www.docker.com/products/docker-desktop/>
-  * Windows ve Macos için setup dosyası mevcut.
-  * Linux sistemlere CLI üzerinden kurulum yapılabilir. -> <https://docs.docker.com/desktop/install/linux-install/>
+- Docker Desktop -> <https://www.docker.com/products/docker-desktop/>
 
-* Docker Hub -> <https://hub.docker.com>
+  - Windows ve Macos için setup dosyası mevcut.
+  - Linux sistemlere CLI üzerinden kurulum yapılabilir. -> <https://docs.docker.com/desktop/install/linux-install/>
 
-* VSCode Docker Extension -> <https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker>
+- Docker Hub -> <https://hub.docker.com>
+
+- VSCode Docker Extension -> <https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker>
 
 ## DOCKER
 
-* <https://docs.docker.com/get-started/docker_cheatsheet.pdf>
+- <https://docs.docker.com/get-started/docker_cheatsheet.pdf>
 
 ```sh
 
@@ -62,7 +67,7 @@
     docker version
 
     docker info
-    
+
     docker --help
     docker help
     docker build --help
