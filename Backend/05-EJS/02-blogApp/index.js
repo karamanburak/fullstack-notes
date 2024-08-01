@@ -62,8 +62,14 @@ app.all("/", (req, res) => {
   }
 });
 
-app.use("/blog", require("./src/routes/blogRoute"));
-app.use("/user", require("./src/routes/user.route"));
+// app.use("/blog", require("./src/routes/blogRoute"));
+// app.use("/user", require("./src/routes/user.route"));
+
+app.use("/api/blog", require("./src/routes/blogRoute"));
+app.use("/api/user", require("./src/routes/user.route"));
+app.use("/", require("./src/routes/views"));
+
+
 
 // errorHandler:
 app.use(require("./src/middlewares/errorHandler"));
