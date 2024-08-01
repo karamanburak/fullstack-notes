@@ -1,44 +1,54 @@
-'use strict'
+"use strict";
 /*
     EXPRESSJS 
     ! TODO CONTROLLER
 */
-
-const Todo = require('../models/todoModel')
-
+const priority ={
+    "1" : "High",
+    "0" : "Medium",
+    "-1": "Low"
+}
+const Todo = require("../models/todoModel");
 
 module.exports = {
-    list: async (req, res) => {
+    list:async (req,res) => {
         const data = await Todo.findAndCountAll();
-        res.render("todoList", { data })
-    },
-    create: async (req, res) => {
-        if (req.method == "GET") {
-            res.render("todoCreate")
-        } else {
 
-            if (req.body.isDone) {
-                req.body.isDone = true
+        res.render("todoList", { data, priority });
+    },
+    create:async (req,res) => {
+        if(req.method == "GET"){
+            res.render("todoCreate")
+        }else{
+            console.log(req.body)
+            if(req.body.isDone){
+                req.body.isDone=true
             }
             const data = await Todo.create(req.body)
-            res.redirect("/view") //* yönlendirme icin kullanilan method. route adini yaziyoruz.
+
+            res.redirect("/view") //* yönlendirme için kullanılan method. route adını yazıyoruz.
         }
     },
-
-    read: async (req, res) => {
+    read: async (req,res) => {
         const data = await Todo.findByPk(req.params.todoId)
-
         //* ilgili veri dataValues olarak geliyor
-        res.render("todoRead", { todo: data.dataValues })
+        res.render("todoRead", {todo: data.dataValues,priority})
     },
-
-    update: async (req, res) => {
-        if (req.method == "GET") {
-            const data = await Todo.findByPk(req.params.todoId)
-            res.render("todoUpdate", { todo: data.dataValues })
-        } else {
-            const data = await Todo.updae(req.body, { where: { id: req.params.todoId } })
-            res.redirect("/view")
+    update:async (req,res) => {
+        if(req.method == "GET") {
+            const data = await Todo.findByPk(req.params.todoId);
+            res.render("todoUpdate", { todo: data.dataValues });
+        }else{
+            const data = await Todo.update(req.body,{where:{id:req.params.todoId}})
+            res.redirect("/view");
+        }
+    },
+    delete: async (req,res) => {
+        const data = await Todo.destroy({where: {id:req.params.todoId}})
+        if(data == 1){
+            res.redirect("/view");
+        }else{
+            throw new Error("todo not found")
         }
     }
 
