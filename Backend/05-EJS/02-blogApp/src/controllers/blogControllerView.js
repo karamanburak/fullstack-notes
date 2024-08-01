@@ -64,6 +64,7 @@ module.exports.BlogPostController = {
     ]);
 
     const categories = await BlogCategory.find();
+    const recentPost = await BlogPost.find().sort({ createdAt: "desc" }).limit(3)
 
     // res.status(200).send({
     //   error: false,
@@ -73,7 +74,8 @@ module.exports.BlogPostController = {
     res.render('index', {
       posts: data,
       categories,
-      selectedCategory: req.query?.filter?.blogCategoryId
+      selectedCategory: req.query?.filter?.blogCategoryId,
+      recentPost
     })
   },
   create: async (req, res) => {
