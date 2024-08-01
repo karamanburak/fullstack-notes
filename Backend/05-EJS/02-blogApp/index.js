@@ -23,9 +23,9 @@ app.use(
   })
 );
 
-/* ---------------------------------- */
-/*              Template              */
-/* ---------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  Template                                  */
+/* -------------------------------------------------------------------------- */
 
 app.set("view engine", "ejs");//! express de template engine olarak ejs i kullanacam diye ayar yapıyorum. Ayar yaparken set() metodu kullanılır.
 // app.set("views", "./views"); Default klasör
@@ -37,6 +37,9 @@ app.set("views", "./public");//* views klasörü yerine public klasörünü kull
 // app.use(express.urlencoded({extended:false}));
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/assets", express.static("./public/assets"));
+
+
 //? user control
 app.use(require("./src/middlewares/userControl"));
 
@@ -47,20 +50,20 @@ app.use(require("./src/middlewares/findSearchSortPagi"));
 // app.all('/', (req, res) => {
 //     res.send("<h1 style='text-align:center;margin-top:150px'>WELCOME TO BLOG API</h1>");
 // })
-app.all("/", (req, res) => {
-  if (req.isLogin) {
-    res.send({
-      message: "Welcome to BlogApi",
-      session: req.session,
-      user: req.user
-    });
-  } else {
-    res.send({
-      message: "Welcome to BlogApi",
-      session: req.session,
-    });
-  }
-});
+// app.all("/", (req, res) => {
+//   if (req.isLogin) {
+//     res.send({
+//       message: "Welcome to BlogApi",
+//       session: req.session,
+//       user: req.user
+//     });
+//   }else {
+//     res.send({
+//       message: "Welcome to BlogApi",
+//       session: req.session,
+//     });
+//   }
+// });
 
 // app.use("/blog", require("./src/routes/blogRoute"));
 // app.use("/user", require("./src/routes/user.route"));
@@ -68,8 +71,6 @@ app.all("/", (req, res) => {
 app.use("/api/blog", require("./src/routes/blogRoute"));
 app.use("/api/user", require("./src/routes/user.route"));
 app.use("/", require("./src/routes/views"));
-
-
 
 // errorHandler:
 app.use(require("./src/middlewares/errorHandler"));
