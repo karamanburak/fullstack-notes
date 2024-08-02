@@ -117,7 +117,8 @@ module.exports.BlogPostController = {
       res.render('postForm', {
         user: req.session,
         categories: await BlogCategory.find(),
-        title: "New Post"
+        title: "New Post",
+        post: null
       })
     }
   },
@@ -133,14 +134,27 @@ module.exports.BlogPostController = {
     res.render('postRead', { post: data, user: req.session })
   },
   update: async (req, res) => {
-    // const data = await BlogPost.findByIdAndUpdate(req.params.id,req.body,{new:true}) // {new:true} => return new data
-    const data = await BlogPost.updateOne({ _id: req.params.id }, req.body); //* datayı döndürmez yaptığı işlemin özetini döner. O nedenle bu yöntemde newData şeklinde sorgu yazıp güncellenmiş halini gönderebiliriz
+    if (req.method == 'POST') {
+      // const data = await BlogPost.findByIdAndUpdate(req.params.id,req.body,{new:true}) // {new:true} => return new data
+      const data = await BlogPost.updateOne(
+        { _id: req.params.postId },
+        req.body
+      ); //* datayı döndürmez yaptığı işlemin özetini döner. O nedenle bu yöntemde newData şeklinde sorgu yazıp güncellenmiş halini gönderebiliriz
 
-    res.status(202).send({
-      error: false,
-      blog: data,
-      newData: await BlogPost.findOne({ _id: req.params.id }),
-    });
+      // res.status(202).send({
+      //   error: false,
+      //   blog: data,
+      //   newData: await BlogPost.findOne({ _id: req.params.id }),
+      // });
+      res.redirect('/post/' + req.params.postId)
+    } else {
+      res.render("postForm", {
+        user: req.session,
+        categories: await BlogCategory.find(),
+        title: 'Update Post',
+        post: await BlogPost.findOne({ _id: req.params.postId })
+      });
+    }
   },
 
   delete: async (req, res) => {
