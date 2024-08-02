@@ -63,14 +63,13 @@ module.exports.BlogPostController = {
     ]);
 
     // console.log(req.query)
-    console.log(req.session);
-
+    // console.log(req.session)
 
     const categories = await BlogCategory.find();
     const recentPosts = await BlogPost.find()
       .sort({ createdAt: "desc" })
       .limit(3);
-    console.log(req.url);
+    // console.log(req.url);
 
     if (req.url.includes("?")) {
       //  req.url += '&'
@@ -105,13 +104,22 @@ module.exports.BlogPostController = {
     });
   },
   create: async (req, res) => {
-    // req.body.userId = req.session.id
-    const data = await BlogPost.create(req.body);
+    if (req.method == 'POST') {
+      req.body.userId = req.session.id
+      const data = await BlogPost.create(req.body);
 
-    res.status(201).send({
-      error: false,
-      blog: data,
-    });
+      // res.status(201).send({
+      //   error: false,
+      //   blog: data,
+      // });
+      res.redirect("/post/" + data._id)
+    } else {
+      res.render('postForm', {
+        user: req.session,
+        categories: await BlogCategory.find(),
+        title: "New Post"
+      })
+    }
   },
   read: async (req, res) => {
     const data = await BlogPost.findOne({ _id: req.params.postId }).populate(
