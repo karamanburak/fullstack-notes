@@ -63,6 +63,8 @@ module.exports.BlogPostController = {
     ]);
 
     // console.log(req.query)
+    console.log(req.session);
+
 
     const categories = await BlogCategory.find();
     const recentPosts = await BlogPost.find()
@@ -99,6 +101,7 @@ module.exports.BlogPostController = {
       recentPosts,
       details: await res.getModelListDetails(BlogPost),
       pageUrl: req.url,
+      user: req.session
     });
   },
   create: async (req, res) => {
