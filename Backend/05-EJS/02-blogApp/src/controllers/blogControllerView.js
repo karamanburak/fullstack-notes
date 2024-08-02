@@ -122,7 +122,7 @@ module.exports.BlogPostController = {
     //   blog: data,
     // });
     // console.log("merhaba",data)
-    res.render('postRead', { post: data })
+    res.render('postRead', { post: data, user: req.session })
   },
   update: async (req, res) => {
     // const data = await BlogPost.findByIdAndUpdate(req.params.id,req.body,{new:true}) // {new:true} => return new data
