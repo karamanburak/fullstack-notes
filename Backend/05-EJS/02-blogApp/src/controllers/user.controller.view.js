@@ -35,6 +35,7 @@ module.exports = {
                         //   message: "Login Ok!",
                         //   user,
                         // });
+                        req.session.message = null
                         res.redirect("/");
                     } else {
                         throw new Error("Login parameters not true!");
@@ -47,7 +48,8 @@ module.exports = {
             }
         } else {
             res.render('loginForm', {
-                user: req.session
+                user: req.session,
+                message: req.session?.message
             })
         }
     },
