@@ -28,7 +28,9 @@
                   {% toppings.forEach(topping => { %}
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="toppingIds[]" value="{%= topping.id %}"
-                      id="flexCheckDefault" />
+                      id="flexCheckDefault" {%=pizza?.toppingIds.some(pizzaTop=> pizzaTop.id == topping.id) ? 'checked'
+                    : '' %}
+                    />
                     <label class="form-check-label" for="flexCheckDefault">
                       {%= topping.name %}
                     </label>
@@ -39,6 +41,15 @@
               <tr>
                 <td>Pizza Images</td>
                 <td>
+                  <span>Old Images</span>
+                  {% if(pizza?.images.length) { %}
+                  <div>
+                    {% pizza.images.forEach(image => { %}
+                    <img src="{%= image %}" class="m-2" width="200px" height="200px" alt="">
+                    {% }) %}
+                  </div>
+                  {% } %}
+                  <hr>
                   <div id="imageGallery">
 
                   </div>
