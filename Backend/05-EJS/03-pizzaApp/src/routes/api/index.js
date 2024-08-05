@@ -7,7 +7,7 @@ const router = require('express').Router()
 // ROUTER INDEX:
 
 // URL: /
-app.all("/", (req, res) => {
+router.all("/", (req, res) => {
   res.send({
     error: false,
     message: "Welcome to PIZZA API",

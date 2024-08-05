@@ -37,6 +37,17 @@ require('express-async-errors')
 /* ------------------------------------------------------- */
 // TEMPLATE:
 
+// let ejs = require("ejs");
+
+// ejs.delimiter = "?"; // % sembolü yerine ? sembolü kullan
+// ejs.openDelimiter = "{";// < sembolü yerine { sembolü kullan
+// ejs.closeDelimiter = "}";// > sembolü yerine } sembolü kullan
+
+app.set("view options", {
+  openDelimiter: "{",
+  closeDelimiter: "}"
+})
+
 app.set('views', './public')
 app.set('view engine', 'ejs')
 
@@ -103,7 +114,7 @@ app.use(require('./src/middlewares/queryHandler'))
 
 // HomePath:
 app.all('/', (req, res) => {
-    res.redirect('/pizzas')
+  res.redirect('/pizzas')
 })
 // auth:
 app.use('/auth', require('./src/routes/view/auth'))

@@ -27,7 +27,7 @@ module.exports = {
         // const data = await res.getModelList(Order, {}, ['userId', 'pizzaId'])
         const data = await res.getModelList(Order, filter, [
             'userId',
-            { path: 'pizzaId', populate: 'toppings' }
+            { path: 'pizzaId', populate: 'toppingIds' }
         ])
 
         // res.status(200).send({
@@ -44,7 +44,7 @@ module.exports = {
             details: await res.getModelListDetails(Order, filter),
             orders: data,
             pageUrl: req.originalUrl.replace(/[?|&]page=([^&]+)/gi, ''),
-            user:req.session?.user
+            user: req.session?.user
         })
     },
 
@@ -81,7 +81,7 @@ module.exports = {
                 pizzas: null,
                 pizza: await Pizza.findOne({ _id: req.query.pizza }),
                 pizzaSizes,
-                user:req.session?.user
+                user: req.session?.user
             })
         }
     },
@@ -90,17 +90,17 @@ module.exports = {
 
         const data = await Order.findOne({ _id: req.params.id }).populate([
             'userId',
-            { path: 'pizzaId', populate: 'toppings' }
+            { path: 'pizzaId', populate: 'toppingIds' }
         ])
 
         // res.status(200).send({
         //     error: false,
         //     data
         // })
-        
+
         res.render('orderRead', {
             order: data,
-            user:req.session?.user
+            user: req.session?.user
         })
 
     },
@@ -136,7 +136,7 @@ module.exports = {
                 order: await Order.findOne({ _id: req.params.id }),
                 pizzas: await Pizza.find(),
                 pizzaSizes,
-                user:req.session?.user
+                user: req.session?.user
             })
         }
 
@@ -145,7 +145,7 @@ module.exports = {
     delete: async (req, res) => {
 
         const data = await Order.deleteOne({ _id: req.params.id })
-        
+
         // Go to home:
         res.redirect('/orders')
 
