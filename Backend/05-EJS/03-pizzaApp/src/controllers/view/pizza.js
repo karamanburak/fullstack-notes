@@ -5,6 +5,7 @@
 // Pizza Controller:
 
 const Pizza = require('../../models/pizza')
+const Topping = require('../../models/topping')
 
 module.exports = {
   list: async (req, res) => {
@@ -50,6 +51,7 @@ module.exports = {
     } else {
       res.render("pizzaForm", {
         pizza: null,
+        toppings: await Topping.find(),
         user: req.user,
       });
     }
